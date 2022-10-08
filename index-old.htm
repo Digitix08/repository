@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<title>Use the form below to search for</title>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../_themes/blends/blen1011.css"><meta name="Microsoft Theme" content="blends 1011, default">
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'button17.jpg',/*url*/'button16.jpg',/*url*/'buttonA.jpg',/*url*/'buttonB.jpg',/*url*/'buttonE.jpg',/*url*/'buttonF.jpg')">
+
+<p><a href="index.htm">
+<img border="0" id="img4" src="buttonD.jpg" height="20" width="100" alt="Home" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'buttonE.jpg')" fp-style="fp-btn: Border Bottom 1" fp-title="Home"></a><a href="new_page_2.htm"><img border="0" id="img2" src="button15.jpg" height="20" width="100" alt="Register" fp-style="fp-btn: Border Bottom 2; fp-orig: 0" fp-title="Register" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button16.jpg')"></a><a href="http://www.google.com"><img border="0" id="img3" src="button9.jpg" height="20" width="100" alt="Actual search" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'buttonA.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button9.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'buttonB.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'buttonA.jpg')" fp-style="fp-btn: Border Bottom 4" fp-title="Actual search"></a></p>
+<p>
+<!--webbot bot="PurpleText" preview="Text Search - This page lets you search through the default text index that is created whenever web pages are saved or web links are recalculated. No customization is required." --><a name="top">
+</a></p>
+<hr>
+<p>Use the form below to search for documents in this Web site containing 
+specific words or combinations of words. The text search engine will display a 
+weighted list of matching documents, with better matches shown first. Each list 
+item is a link to a matching document; if the document has a title it will be 
+shown, otherwise only the document's file name is displayed. A brief
+<a href="#querylang">explanation</a> of the query language is available, along 
+with examples.</p>
+<!--webbot bot="Search" s-link s-fields="TimeStamp,DocumentK," s-index="All" s-dsn="default" tag="BODY" s-text="Search for:" i-size="20" s-submit="Start Search" s-clear="Reset" b-useindexserver="0" startspan --><form action="../_derived/nortbots.htm" method="POST" onsubmit="location.href='../_derived/nortbots.htm';return false;"><input type="hidden" name="VTI-GROUP" value="0"><p><b>Search for: </b><input type="text" name="search" size="20" value></p><p><input type="submit" value="Start Search"><input type="reset" value="Reset"></p></form><!--webbot bot="Search" i-checksum="32213" endspan --><hr>
+<h2><a name="querylang">Query Language</a></h2>
+<p>The text search engine allows queries to be formed from arbitrary Boolean 
+expressions containing the keywords AND, OR, and NOT, and grouped with 
+parentheses. For example:</p>
+<blockquote>
+	<dl>
+		<dt><strong><tt>information retrieval</tt></strong></dt>
+		<dd>finds documents containing 'information' or 'retrieval'<br>
+		<br>
+		</dd>
+		<dt><strong><tt>information or retrieval</tt></strong></dt>
+		<dd>same as above<br>
+		<br>
+		</dd>
+		<dt><strong><tt>information and retrieval</tt></strong></dt>
+		<dd>finds documents containing both 'information' and 'retrieval'<br>
+		<br>
+		</dd>
+		<dt><strong><tt>information not retrieval</tt></strong></dt>
+		<dd>finds documents containing 'information' but not 'retrieval'<br>
+		<br>
+		</dd>
+		<dt><strong><tt>(information not retrieval) and WAIS</tt></strong></dt>
+		<dd>finds documents containing 'WAIS', plus 'information' but not 
+		'retrieval'<br>
+		<br>
+		</dd>
+		<dt><strong><tt>web*</tt></strong></dt>
+		<dd>finds documents containing words starting with 'web'<br>
+		<br>
+		</dd>
+	</dl>
+</blockquote>
+<h5><a href="#top">Back to Top</a></h5>
+<hr>
+<h5>Author information goes here.<br>
+Copyright © 2022 [OrganizationName]. All rights reserved.<br>
+Revised: <!--webbot bot="TimeStamp" s-format="%m/%d/%y" s-type="EDITED" startspan -->10/02/22<!--webbot bot="TimeStamp" i-checksum="12621" endspan -->.</h5>
+
+</body>
+
+</html>
