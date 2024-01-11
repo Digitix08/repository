@@ -26,6 +26,17 @@ P
 	MARGIN-TOP: 0px;
 	PADDING-RIGHT: 10px
 }
+.ctrltable
+{
+	BACKGROUND-COLOR: #ead858;
+	BORDER-BOTTOM: #ffffff 0px solid;
+	BORDER-COLLAPSE: collapse;
+	BORDER-LEFT: #ffffff 0px solid;
+	BORDER-RIGHT: #ffffff 0px solid;
+	BORDER-TOP: #ffffff 0px solid;
+	FONT-SIZE: 70%;
+	MARGIN-LEFT: 0px
+}
 .infotable
 {
 	BACKGROUND-COLOR: #f0f0e0;
