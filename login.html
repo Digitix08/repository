@@ -41,10 +41,10 @@ table<!DOCTYPE html>
     
 
     <script type="module">
-const cors = require('cors');
+import * as cors from 'cors';
 const corsHandler = cors({origin: true});
 
-exports.pingFunctionWithCorsAllowed = functions.https.onRequest((request, response) => {
+export const pingFunctionWithCorsAllowed = functions.https.onRequest((request, response) => {
   corsHandler(request, response, () => {
     response.send(`Ping from Firebase (with CORS handling)! ${new Date().toISOString()}`);
   });
