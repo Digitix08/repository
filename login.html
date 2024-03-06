@@ -41,7 +41,7 @@ table<!DOCTYPE html>
     
 
     <script type="module">
-import * as cors from 'cors';
+import * as cors from '/cors';
 const corsHandler = cors({origin: true});
 
 export const pingFunctionWithCorsAllowed = functions.https.onRequest((request, response) => {
