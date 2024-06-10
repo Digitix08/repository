@@ -6,11 +6,10 @@
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/blends/blen1011-1250.css"><meta name="Microsoft Theme" content="blends 1011">
 <script>
-   $(window).on('load resize',function(){
-        if($(window).width() < 950){
-            window.location= "index_mobile.html"
-        }
-    });
+   function redirect() {
+   if (screen.width <= 950) {
+      window.location = "https://www.google.com/";
+   }
 var urlpref = window.location.hostname;
 console.log(urlpref)
 if(urlpref == "htmlpreview.github.io")
@@ -20,7 +19,7 @@ open("http://user15263.github.io/repository", name="_self")</script>
 <body>
 
 
-</body>
+</body onload="setTimeout('redirect()', 300)">
 		<table border="1" cellpadding="0" cellspacing="0" width="885" height="740">
 			<!-- MSTableType="layout" -->
 			<tr>
