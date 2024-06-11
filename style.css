@@ -141,10 +141,15 @@ A:hover
 }
 H1
 {
-	MARGIN-LEFT: 30px;
+	BACKGROUND-COLOR: #003366;
+	BORDER-BOTTOM: #336699 6px solid;
+	COLOR: #ffffff;
 	FONT-SIZE: 130%;
 	FONT-WEIGHT: normal;
-	padding-top: 10px;
+	MARGIN: 0em 0em 0em -20px;
+	PADDING-BOTTOM: 8px;
+	PADDING-LEFT: 30px;
+	PADDING-TOP: 16px
 }
 H2
 {
