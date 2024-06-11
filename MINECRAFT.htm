@@ -1,44 +1,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
-<!-- #BeginTemplate "master.dwt" -->
-
 <head>
 <meta content="text/html; charset=windows-1250" http-equiv="Content-Type" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="style.css"/>
-<!-- #BeginEditable "doctitle" -->
 <title>Minecraft</title>
-<!-- #EndEditable -->
-<!-- #BeginEditable "style&script" -->
 <script language="javascript" type="text/javascript">
-			 var login = 0;
-			 function ValidatePassword() {
-			 	if (login==1){console.log("logged out");
-				document.getElementById("login-status").innerHTML= "to see password";
-				document.getElementById("login").innerHTML = "Log in";
-				login = 0;
-				return true;
-				}
-			 	var user = prompt("Who are you");
-				var password = prompt("Please enter password to proceed", "");
-				if (login==0 && user == "gabi"&&password == "123456") {document.getElementById("login-status").innerHTML= "1234567890";
-				document.getElementById("login").innerHTML = "Log out";
-				login = 1;console.log("Hello, "+user);
-				return true;
-				}
-				console.log("login fail");
-				document.getElementById("login-status").innerHTML= "login failure, user not in login database";
-				login = 0;
-				return false;
+	var login = 0;
+	function ValidatePassword() {
+		if (login==1)
+			{console.log("logged out");
+			document.getElementById("login-status").innerHTML= "to see password";
+			document.getElementById("login").innerHTML = "Log in";
+			login = 0;
+			return true;
+			}
+	 	var user = prompt("Who are you");
+		var password = prompt("Please enter password to proceed", "");
+		if (login==0 && user == "gabi"&&password == "123456") 
+			{document.getElementById("login-status").innerHTML= "1234567890";
+			document.getElementById("login").innerHTML = "Log out";
+			login = 1;console.log("Hello, "+user);
+			return true;
+			}
+		console.log("login fail");
+		document.getElementById("login-status").innerHTML= "login failure, user not in login database";
+		login = 0;
+		return false;
 }
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
 </script>
 <style type="text/css">
 .auto-style2 {
 	color: #808080;
 }
 </style>
-<!-- #EndEditable -->
 <style type="text/css">
 
 .auto-style1 {
@@ -56,36 +68,21 @@
 }
 </style>
 </head>
-
-<!-- #BeginEditable "login only" --><body></body>
-<!-- #EndEditable -->
+<body>
+<h1>Minecraft</h1>
 <table style="width: 100%" cellspacing="1">
-	<tr style="background-color:#2861B2">
-		<td class="ctrltable2" style=" width: 107px">
-		<p>
-				<a style="color:#FFFFFF" href="/download/index.htm">Download</a></p>
-				<p> 
-				<a style="color:#FFFFFF" href="basic_view.html">Basic mode</a></p>
-				</td>
-		<td class="auto-style1">
-		<div id="main-content"style="height: 50px"><!-- #BeginEditable "title2" -->
-					<h1>Minecraft</h1><!-- #EndEditable --></div>
-		</td>
-	</tr>
 	<tr class="ctrltable" style="background-color:#ead858">
-		<td style="width: 107px"><!-- #BeginEditable "backhref" -->
-			<a style="text-align: right; color:blue" href="index.htm">Home</a>
-			<a style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
-			<!-- #EndEditable --></td>
-		<td><!-- #BeginEditable "href" -->
+		<td style="width: 95px">
+		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
+		</td>
+		<td>
 		<a style="color:blue" href="http://www.google.com">Google</a>
 		<a style="color:blue" href="index-old.htm">Search</a>
 		<a style="color:blue" href="login%26register/login.html">Login</a>
 		<a style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
-		<!-- #EndEditable --></td>
+		</td>
 	</tr>
 		</table>
-<!-- #BeginEditable "body" -->
 <div>
 <h2>Servers</h2>
 <h3>1:gabiblog (nebunii de pe mc)</h3>
@@ -125,10 +122,7 @@ aternos</a></p>
 	</tr>
 </table>-->
 </div>
-<!-- #EndEditable -->
 
 </body>
-
-<!-- #EndTemplate -->
 
 </html>
