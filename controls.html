@@ -102,6 +102,8 @@
 		}
 		function search() {
 			var term = document.getElementById("Text2").value;
+			if (document.getElementById('Checkbox3').checked&&document.getElementById('Checkbox4').checked)
+				{document.getElementById("Label1").innerText="Please deselect http or https";return;}
 			if (document.getElementById('Checkbox3').checked){
 				document.getElementById("I1").src="http://"+"www.google.com/search?igu=1&q="+term;
 				document.getElementById("Label1").innerText=" ";}
