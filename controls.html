@@ -102,7 +102,13 @@
 		}
 		function search() {
 			var term = document.getElementById("Text2").value;
-			document.getElementById("I1").src="http://www.google.com/search?igu=1&q="+term;
+			if (document.getElementById('Checkbox3').checked){
+				document.getElementById("I1").src="http://"+"www.google.com/search?igu=1&q="+term;
+				document.getElementById("Label1").innerText=" ";}
+			if (document.getElementById('Checkbox4').checked){
+				document.getElementById("I1").src="https://"+"www.google.com/search?igu=1&q="+term;
+				document.getElementById("Label1").innerText=" ";}
+
 		}
 		function exit() {
 			var exit = document.getElementById("I1").src;
