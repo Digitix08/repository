@@ -9,6 +9,38 @@
 <title>Download</title>
 <meta name="Microsoft Theme" content="none, default">
 <script type="text/javascript">
+			function setCookie(cname, cvalue, exdays){
+			const d = new Date();
+  			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  			var expires = "expires="+ d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			function getCookie(cname) {
+				var name=cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var cookie=decodedCookie.split(';');
+				for(var i=0; i<cookie.length;i++){
+					var c=cookie[i];
+					while (c.charAt(0)==' '){
+					c=c.substring(1);
+					}
+					if(c.indexOf(name)==0){
+					return c.substring(name.length, c.length);
+					}
+				}	
+				return"";
+			}
+			function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}	
 			function FP_swapImg() {//v1.0
  				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
  				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
@@ -46,6 +78,6 @@
 <p><a href="download_android_apps.htm">Download Android apps (games)</a></p>
 <p><a href="download_windows_software.htm">Download windows software</a></p>
 <p><a href="download_win_mobile_sofware.htm">Download Win mobile sofware</a></p>
-<p><a href="http://dedomil.net">Download more software (games)</a> (external link)</p>
+<p><a href="http://dedomil.net">Download more software (games)</a> (external link)<input name="Button1" onclick="makeCookie();checkCookie()" type="button" value="button"></p>
 </body>
 </html>
