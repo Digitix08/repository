@@ -5,34 +5,17 @@
 		<link rel="stylesheet" href="style.css">
 		<link href="dark.css" rel="stylesheet" type="text/css">
 		<title>index</title>
-		
+		<script src="dark.js"></script>
 		<script language="javascript" type="text/javascript">
-						function setCookie(cname, cvalue, exdays){
-			const d = new Date();
-  			d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  			var expires = "expires="+ d.toUTCString();
-			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-			}
-			function getCookie(cname) {
-				var name=cname + "=";
-				var decodedCookie = decodeURIComponent(document.cookie);
-				var cookie=decodedCookie.split(';');
-				for(var i=0; i<cookie.length;i++){
-					var c=cookie[i];
-					while (c.charAt(0)==' '){
-					c=c.substring(1);
-					}
-					if(c.indexOf(name)==0){
-					return c.substring(name.length, c.length);
-					}
-				}	
-				return"";
-			}
 			function checkCookie() {
 			  	var darkmode = getCookie("dark");
 			  	if (darkmode == "yes"){
 			  	document.getElementById("dark").className="dark";
 				document.getElementById("darknote").className="dark ;note";
+				document.getElementById("darkH1").className="darkH1";
+				document.getElementById("darkctrltable").className="darkctrltable";
+				document.getElementById("darklnk").className="darklnk";
+
 			  	}
 			}
 			function makeCookie() {
@@ -88,16 +71,16 @@ function FP_preloadImgs() {//v1.0
 				
 		<style type="text/css">
 		.collapsed{
-			DISPLAY: nsone
+			DISPLAY: none
 		}
 		</style>
 				
 	</head>
 	<body id="dark" topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();" onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
-		<h1>Tests</h1>
+		<h1 id="darkH1">Tests</h1>
 		
 		
-		<table style="width: 100%" class="ctrltable">
+		<table id="darkctrltable" style="width: 100%" class="ctrltable">
 			<tr>
 				<td style="width: 99px">
 		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
@@ -132,29 +115,29 @@ function FP_preloadImgs() {//v1.0
 			</table>
 		<p><span id="darknote" class="note">
 		<b>Last modified:  </b>03.03.2024 17:09</span></p>
-		
-		<ol>
-			<li id="dark" style="list-style-type: decimal">
-			<a href="controls.html">Browser in browser (minibrowser)</a> - uses 
+		<ol id="dark">
+			<li style="list-style-type: decimal">
+			<a id="darklnk" href="controls.html">Browser in browser (minibrowser)</a> - uses 
 			iframes to show pages you visit</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			2 temp data test<input name="Button1" onclick="makeCookie()" type="button" value="button"></li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			3</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			4</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			5</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			6</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			7</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			8</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			9</li>
-			<li id="dark" style="list-style-type: decimal">
+			<li style="list-style-type: decimal">
 			0</li>
 		</ol>
+
 
 		
