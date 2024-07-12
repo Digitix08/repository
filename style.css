@@ -153,7 +153,6 @@ H1
 }
 H2
 {
-	COLOR: #000000;
 	FONT-SIZE: 90%;
 	FONT-WEIGHT: bold;
 	MARGIN-BOTTOM: 3px;
@@ -163,7 +162,6 @@ H2
 }
 H3
 {
-	COLOR: #000000;
 	FONT-SIZE: 80%;
 	FONT-WEIGHT: bold;
 	MARGIN-BOTTOM: -5px;
@@ -172,7 +170,6 @@ H3
 }
 H4
 {
-	COLOR: #000000;
 	FONT-SIZE: 70%;
 	FONT-WEIGHT: bold;
 	MARGIN-BOTTOM: 0px;
@@ -181,7 +178,6 @@ H4
 }
 UL
 {
-	COLOR: #000000;
 	FONT-SIZE: 70%;
 	LIST-STYLE: square;
 	MARGIN-BOTTOM: 0pt;
@@ -189,7 +185,6 @@ UL
 }
 OL
 {
-	COLOR: #000000;
 	FONT-SIZE: 70%;
 	LIST-STYLE: square;
 	MARGIN-BOTTOM: 0pt;
