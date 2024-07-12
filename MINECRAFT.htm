@@ -6,7 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="style.css"/>
 <title>Minecraft</title>
+<script src="dark.js"></script>
 <script language="javascript" type="text/javascript">
+	function checkCookie() {
+	  	var darkmode = getCookie("dark");
+	  	if (darkmode == "yes"){
+	  	document.getElementById("dark").className="dark";
+		document.getElementById("darkH1").className="darkH1";
+		document.getElementById("darkctrltable").className="darkctrltable";
+		document.getElementById("darklnk").className="darklnk";
+  	}
 	var login = 0;
 	function ValidatePassword() {
 		if (login==1)
@@ -51,27 +60,11 @@ function FP_getObjectByID(id,o) {//v1.0
 	color: #808080;
 }
 </style>
-<style type="text/css">
-
-.auto-style1 {
-	BACKGROUND-COLOR: #003366;
-	BORDER-BOTTOM: #336699 6px solid;
-	BORDER-RIGHT: #335285 6px solid;
-	COLOR: #ffffff;
-	FONT-SIZE: 100%;
-	FONT-WEIGHT: normal;
-	MARGIN: 0em 0em 0em -20px;
-	PADDING-BOTTOM: 0px;
-	PADDING-LEFT: 0px;
-	PADDING-TOP: 0px;
-	background-image: url('images/banner.png');
-}
-</style>
 </head>
-<body>
-<h1>Minecraft</h1>
+<body id="dark" onload="checkCookie()">
+<h1 id="darkH1">Minecraft</h1>
 <table style="width: 100%" cellspacing="1">
-	<tr class="ctrltable" style="background-color:#ead858">
+	<tr id="darkctrltable" class="ctrltable" style="background-color:#ead858">
 		<td style="width: 95px">
 		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
 		</td>
@@ -87,9 +80,9 @@ function FP_getObjectByID(id,o) {//v1.0
 <h2>Servers</h2>
 <h3>1:gabiblog (nebunii de pe mc)</h3>
 	<p>Minecraft bedrock v<span>1.20.80.01</span></p>
-	<p><a href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">Add to MCPE</a>
+	<p><a id="darklnk" href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">Add to MCPE</a>
 	<p>Server hostat pe <a href="http://aternos.org/server">aternos</a></p>
-<table style="width: 350px" class="auto-style6">
+<table style="width: 350px">
 	<tr>
 		<td width="40px">ip</td>
 		<td style="border-style: solid; border-width: 2px">iamdumb20<span class="auto-style2">.aternos.me</span></td>
@@ -103,7 +96,7 @@ function FP_getObjectByID(id,o) {//v1.0
 	<p>Server hostat pe <a href="http://aternos.org/server">
 aternos</a></p>
 	<p>Minecraft java v<span>1.20.4</span></p>
-<table style="width: 350px" class="auto-style6">
+<table style="width: 350px">
 	<tr>
 		<td width="40px">ip</td>
 		<td style="border-style: solid; border-width: 2px">iamdumb20uVvn<span class="auto-style2">.aternos.me:18052</span></td>
