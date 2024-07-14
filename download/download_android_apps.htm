@@ -4,45 +4,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="style.css">
 <title>Download Android apps</title>
+<script src="../dark.js"></script>
 <script language="javascript" type="text/javascript">
-			function FP_swapImg() {//v1.0
- 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 				elm.$src=elm.src; elm.src=args[n+1]; } }
+	function checkCookie() {
+	  	var darkmode = getCookie("dark");
+		var color = 1;
+	  	if (darkmode == "yes"){
+	  	document.getElementById("dark").href="../dark.css";
+		while (color != 10){
+			document.getElementById("lnk"+color).style="color:#AAB3FF";
+			color=color+1;
 			}
-			
-			function FP_getObjectByID(id,o) {//v1.0
- 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- 				return null;
-			}
-
-
-			function outliner () {
-				oMe = window.event.srcElement
-				//get child element
-				var child = document.all[event.srcElement.getAttribute("child",false)];
-				//if child element exists, expand or collapse it.
-				if (null != child)
-					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
-			}
-		
-			function changepic() {
-				uMe = window.event.srcElement;
-				var check = uMe.src.toLowerCase();
-				if (check.lastIndexOf("plus.gif") != -1)
-				{
-					uMe.src = "Minus.gif"
-				}
-				else
-				{
-					uMe.src = "Plus.gif"
-				}
-			}
+		}
+	}
+	function FP_swapImg() {//v1.0
+ 		var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ 		n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ 		elm.$src=elm.src; elm.src=args[n+1]; } }
+	}
+	function FP_getObjectByID(id,o) {//v1.0
+ 		var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ 		else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ 		if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ 		for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ 		f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ 		for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ 		return null;
+	}
+	function outliner () {
+		oMe = window.event.srcElement
+		//get child element
+		var child = document.all[event.srcElement.getAttribute("child",false)];
+		//if child element exists, expand or collapse it.
+		if (null != child)
+			child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+	}	
+	function changepic() {
+		uMe = window.event.srcElement;
+		var check = uMe.src.toLowerCase();
+		if (check.lastIndexOf("plus.gif") != -1)
+		{
+			uMe.src = "Minus.gif"
+		}
+		else
+		{
+			uMe.src = "Plus.gif"
+		}
+	}
 </script>
 <style type="text/css">
 	.collapsed 
@@ -58,12 +66,12 @@
 <td style="width: 99px"><a href="index.htm"><img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
 </td>			
 <td>
-<a style="color:blue" href="../index.htm">Home</a>
-<a style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
-<a style="color:blue" href="http://www.google.com">Google</a>
-<a style="color:blue" href="../index-old.htm">Search</a>
-<!--<a style="color:blue" href="../login&register/login.html">Login</a>-->
-<a style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
+<a id="lnk1" style="color:blue" href="../index.htm">Home</a>
+<a id="lnk2" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
+<a id="lnk3" style="color:blue" href="http://www.google.com">Google</a>
+<a id="lnk4" style="color:blue" href="../index-old.htm">Search</a>
+<!--<a id="lnk6" style="color:blue" href="../login&register/login.html">Login</a>-->
+<a id="lnk5" style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
 </td>			
 </tr>
 </table>
