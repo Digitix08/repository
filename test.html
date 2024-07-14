@@ -10,12 +10,7 @@
 			function checkCookie() {
 			  	var darkmode = getCookie("dark");
 			  	if (darkmode == "yes"){
-			  	document.getElementById("dark").className="dark";
-				document.getElementById("darknote").className="dark ;note";
-				document.getElementById("darkH1").className="darkH1";
-				document.getElementById("darkctrltable").className="darkctrltable";
-				document.getElementById("darklnk").className="darklnk";
-
+			  	document.getElementById("dark").href="dark.css";
 			  	}
 			}
 			function makeCookie() {
@@ -76,11 +71,11 @@ function FP_preloadImgs() {//v1.0
 		</style>
 				
 	</head>
-	<body id="dark" topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();" onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
+	<body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();" onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
 		<h1 id="darkH1">Tests</h1>
 		
 		
-		<table id="darkctrltable" style="width: 100%" class="ctrltable">
+		<table style="width: 100%" class="ctrltable">
 			<tr>
 				<td style="width: 99px">
 		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
@@ -113,9 +108,9 @@ function FP_preloadImgs() {//v1.0
 
 	</td>			</tr>
 			</table>
-		<p><span id="darknote" class="note">
+		<p><span class="note">
 		<b>Last modified:  </b>03.03.2024 17:09</span></p>
-		<ol id="dark">
+		<ol>
 			<li style="list-style-type: decimal">
 			<a id="darklnk" href="controls.html">Browser in browser (minibrowser)</a> - uses 
 			iframes to show pages you visit</li>
