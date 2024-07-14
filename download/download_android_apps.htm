@@ -10,10 +10,10 @@
 	  	var darkmode = getCookie("dark");
 		var color = 1;
 	  	if (darkmode == "yes"){
-	  	document.getElementById("dark").href="../dark.css";
-		while (color != 6){
-			document.getElementById("lnk"+color).style="color:#AAB3FF";
-			color=color+1;
+	  	document.getElementById("dark").href="dark.css";
+		var elements = document.getElementsByName("lnk");
+		for (var i = 0; i < elements.length; i++) {
+ 			elements[i].style.color = "#AAB3FF";
 			}
 		}
 	}
@@ -66,12 +66,12 @@
 <td style="width: 99px"><a href="index.htm"><img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
 </td>			
 <td>
-<a id="lnk1" style="color:blue" href="../index.htm">Home</a>
-<a id="lnk2" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
-<a id="lnk3" style="color:blue" href="http://www.google.com">Google</a>
-<a id="lnk4" style="color:blue" href="../index-old.htm">Search</a>
-<!--<a id="lnk6" style="color:blue" href="../login&register/login.html">Login</a>-->
-<a id="lnk5" style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
+<a name="lnk" style="color:blue" href="../index.htm">Home</a>
+<a name="lnk" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
+<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
+<a name="lnk" style="color:blue" href="../index-old.htm">Search</a>
+<!--<a name="lnk" style="color:blue" href="../login&register/login.html">Login</a>-->
+<a name="lnk" style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
 </td>			
 </tr>
 </table>
