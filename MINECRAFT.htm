@@ -12,10 +12,8 @@
 	function checkCookie() {
 	  	var darkmode = getCookie("dark");
 	  	if (darkmode == "yes"){
-	  	document.getElementById("dark").className="dark";
-		document.getElementById("darkH1").className="darkH1";
-		document.getElementById("darkctrltable").className="darkctrltable";
-		document.getElementById("darklnk").className="darklnk";
+	  	document.getElementById("dark").href="dark.css";
+		document.getElementById("lnk").style="darkH1";
 		}
   	}
 	var login = 0;
@@ -63,27 +61,27 @@ function FP_getObjectByID(id,o) {//v1.0
 }
 </style>
 </head>
-<body id="dark" onload="checkCookie()">
+<body onload="checkCookie()">
 <h1 id="darkH1">Minecraft</h1>
 <table style="width: 100%" cellspacing="1">
-	<tr id="darkctrltable" class="ctrltable">
+	<tr class="ctrltable">
 		<td style="width: 95px">
 		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
 		</td>
 		<td>
-		<a style="color:#327fa8" href="http://www.google.com">Google</a>
-		<a style="color:#327fa8" class="ctrlnk" href="index-old.htm">Search</a>
-		<a style="color:#327fa8" class="ctrlnk" href="login%26register/login.html">Login</a>
-		<a style="color:#327fa8" class="ctrlnk" href="photo_gallery.htm">Photo Gallery</a>
+		<a id="lnk" style="color:blue" href="http://www.google.com">Google</a>
+		<a id="lnk" style="color:blue" href="index-old.htm">Search</a>
+		<a id="lnk" style="color:blue" href="login%26register/login.html">Login</a>
+		<a id="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
 		</td>
 	</tr>
 		</table>
 <div>
-<h2 id="dark">Servers</h2>
-<h3 id="dark">1:gabiblog (nebunii de pe mc)</h3>
+<h2>Servers</h2>
+<h3>1:gabiblog (nebunii de pe mc)</h3>
 	<p>Minecraft bedrock v<span>1.20.80.01</span></p>
-	<p><a id="darklnk" href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">Add to MCPE</a>
-	<p>Server hostat pe <a id="darklnk" href="http://aternos.org/server">aternos</a></p>
+	<p><a href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">Add to MCPE</a>
+	<p>Server hostat pe <a href="http://aternos.org/server">aternos</a></p>
 <table style="width: 350px">
 	<tr>
 		<td width="40px">ip</td>
@@ -94,9 +92,8 @@ function FP_getObjectByID(id,o) {//v1.0
 		<td style="border-style: solid; border-width: 2px">56560</td>
 	</tr>
 </table>
-<h3 id="dark">2:server2</h3>
-	<p>Server hostat pe <a id="darklnk" href="http://aternos.org/server">
-aternos</a></p>
+<h3>2:server2</h3>
+	<p>Server hostat pe <a href="http://aternos.org/server">aternos</a></p>
 	<p>Minecraft java v<span>1.20.4</span></p>
 <table style="width: 350px">
 	<tr>
