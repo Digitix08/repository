@@ -12,7 +12,7 @@
 	  	var darkmode = getCookie("dark");
 	  	if (darkmode == "yes"){
 	  	document.getElementById("dark").href="dark.css";
-		document.getElementById("lnk").style="color:#AAB3FF";
+		document.getElementsByName("lnk").style="color:#AAB3FF";
 		}
   	}
 	var login = 0;
@@ -68,10 +68,10 @@ function FP_getObjectByID(id,o) {//v1.0
 		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
 		</td>
 		<td>
-		<a id="lnk" style="color:blue" href="http://www.google.com">Google</a>
-		<a id="lnk" style="color:blue" href="index-old.htm">Search</a>
-		<a id="lnk" style="color:blue" href="login%26register/login.html">Login</a>
-		<a id="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
+		<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
+		<a name="lnk" style="color:blue" href="index-old.htm">Search</a>
+		<a name="lnk" style="color:blue" href="login%26register/login.html">Login</a>
+		<a name="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
 		</td>
 	</tr>
 		</table>
