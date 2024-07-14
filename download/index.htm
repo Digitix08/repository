@@ -5,25 +5,36 @@
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" href="style.css">
+<link id="dark" rel="stylesheet" href="style.css">
 <title>Download</title>
 <meta name="Microsoft Theme" content="none, default">
-<script type="text/javascript">
-			function FP_swapImg() {//v1.0
- 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 				elm.$src=elm.src; elm.src=args[n+1]; } }
+<script src="dark.js"></script>
+<script language="javascript" type="text/javascript">
+	function checkCookie() {
+	  	var darkmode = getCookie("dark");
+		var color = 1;
+	  	if (darkmode == "yes"){
+	  	document.getElementById("dark").href="../dark.css";
+		while (color != 10){
+			document.getElementById("lnk"+color).style="color:#AAB3FF";
+			color=color+1;
 			}
-			
-			function FP_getObjectByID(id,o) {//v1.0
- 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- 				return null;
-			}
+		}
+	}
+	function FP_swapImg() {//v1.0
+ 		var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ 		n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ 		elm.$src=elm.src; elm.src=args[n+1]; } }
+	}
+	function FP_getObjectByID(id,o) {//v1.0
+ 		var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ 		else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ 		if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ 		for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ 		f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ 		for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ 		return null;
+	}
 </script>
 </head>
 <body>
@@ -32,8 +43,8 @@
 <tr>
 <td style="width: 99px"><a href="../index.htm"><img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a></td>
 <td>&nbsp;<a style="color:blue" href="../index.htm">Home</a>
-<a style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
-<a style="color:blue" href="http://www.google.com">Google</a>
+<a id="lnk1" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
+<a id="lnk2" style="color:blue" href="http://www.google.com">Google</a>
 <a style="color:blue" href="../index-old.htm">Search</a>
 <!--<a style="color:blue" href="../login&register/login.html">Login</a>-->
 <a style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
