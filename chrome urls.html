@@ -3,8 +3,18 @@
 <head>
 <meta charset='utf-8'>
 <meta name='color-scheme' content='light dark'>
+<link id="dark" rel="stylesheet" href="#">
 <title>Chrome URLs</title>
-<!--mstheme--><link rel="stylesheet" type="text/css" href="../_themes/blends/blen1011-1250.css"><meta name="Microsoft Theme" content="blends 1011, default">
+<script src="dark.js"></script>
+<script language="javascript" type="text/javascript">
+			function checkCookie() {
+			  	var darkmode = getCookie("dark");
+				var color = 1;
+			  	if (darkmode == "yes"){
+			  	document.getElementById("dark").href="dark.css";
+				}
+			}
+</script>
 </head>
 <body>
 <h2>List of Chrome URLs</h2><a href='index.htm'>back</a>
