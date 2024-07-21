@@ -39,6 +39,26 @@ P
 input[type="button"]{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
+	BORDER-BOTTOM: #000000 2px solid;
+	BORDER-LEFT: ##696969 2px solid;
+	BORDER-RIGHT: #000000 2px solid;
+	BORDER-TOP: ##696969 2px solid;
+}
+input[type="button"]:active{
+	BACKGROUND-COLOR:#383636;
+	color: #ffffff;
+	BORDER-BOTTOM: ##696969 2px solid;
+	BORDER-LEFT: #000000 2px solid;
+	BORDER-RIGHT: ##696969 2px solid;
+	BORDER-TOP: #000000 2px solid;
+}
+input[type="text"]{
+	BACKGROUND-COLOR:#383636;
+	color: #ffffff;
+	BORDER-BOTTOM: ##696969 2px solid;
+	BORDER-LEFT: #000000 2px solid;
+	BORDER-RIGHT: ##696969 2px solid;
+	BORDER-TOP: #000000 2px solid;
 }
 .ctrltable2
 {
