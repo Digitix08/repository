@@ -41,6 +41,14 @@ input[type="button"]{
 	BACKGROUND-COLOR:#383636;
 	color: #ffffff;
 }
+input[type="text"]{
+	BACKGROUND-COLOR:#383636;
+	color: #ffffff;
+	BORDER-BOTTOM: #545454 2px solid;
+	BORDER-LEFT: #000000 2px solid;
+	BORDER-RIGHT: #545454 2px solid;
+	BORDER-TOP: #000000 2px solid;
+}
 .ctrltable2
 {
 	BACKGROUND-COLOR:#003366;
