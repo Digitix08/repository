@@ -7,24 +7,35 @@
 <link rel="stylesheet" href="../style.css"/>
 <title>login</title>
 <script language="javascript" type="text/javascript">
-			 var login = 0;
-			 function ValidatePassword() {
+			var login = 0;
+			var darkmode = getCookie("login");
+			  	if (login == 1){
+			  	login = 1;
+				console.log("Hello, " + user);changepic();outliner ();return true;
+				}
+			function ValidatePassword() {
+				if (login == 0){
 			 	var user = prompt("Who are you");
 				var password = prompt("Please enter password to proceed", "");
-				if (user == "gabi"&&password == "123456") {document.getElementById("login-status").innerHTML = "logged in as "+user;
-				document.getElementById("title").innerHTML = user+"'s account page";
-				login = 1;console.log("Hello, "+user);changepic();outliner ();return true;}
+				if (user == "gabi"&&password == "123456") {
+					document.getElementById("login-status").innerHTML = "logged in as "+user;
+					document.getElementById("title").innerHTML = user + "'s account page";
+					setCookie("login", 1, "user", user);
+					login = 1;console.log("Hello, " + user);changepic();outliner ();return true;
+					}
 				console.log("login fail");
 				document.getElementById("login-status").innerHTML = "login failure, user not in login database";
 				login = 0;
 				return false;
+				}
 			}
 			function LogOut() {
+				login = 0;
 				console.log("logged out");
 				document.getElementById("login-status").innerHTML = "not logged in";
 				document.getElementById("title").innerHTML = "Login";
-
-    			changepic();
+				etCookie("login", 0, "user", "");
+    				changepic();
    				outliner ();
 				login = 0;
    				return true;
