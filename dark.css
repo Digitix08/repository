@@ -37,6 +37,10 @@ P
 	font-size: 80%;
 	MARGIN-LEFT: 0px
 }
+input[type="button"]{
+	BACKGROUND-COLOR:#383636;
+	color: #ffffff;
+}
 .ctrltable2
 {
 	BACKGROUND-COLOR:#003366;
