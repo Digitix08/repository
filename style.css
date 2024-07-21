@@ -36,8 +36,9 @@ P
 	FONT-SIZE: 80%;
 	MARGIN-LEFT: 0px
 }
-.ctrlnk{
-	color:blue;
+input[type="button"]{
+	BACKGROUND-COLOR:#f0f0f0;
+	color: #000000;
 }
 .ctrltable2
 {
