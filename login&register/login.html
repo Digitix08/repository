@@ -12,7 +12,7 @@
 			var darkmode = getCookie("login");
 			  	if (login == 1){
 			  	login = 1;
-				console.log("Hello, " + user);changepic();outliner ();
+				console.log("Hello, " + user);outliner ();
 				}
 			function ValidatePassword() {
 				if (login == 0){
@@ -22,7 +22,7 @@
 					document.getElementById("login-status").innerHTML = "logged in as "+user;
 					document.getElementById("title").innerHTML = user + "'s account page";
 					setCookie("login", 1, "user", user);
-					login = 1;console.log("Hello, " + user);changepic();outliner ();return true;
+					login = 1;console.log("Hello, " + user);outliner ();return true;
 					}
 				console.log("login fail");
 				document.getElementById("login-status").innerHTML = "login failure, user not in login database";
@@ -36,7 +36,6 @@
 				document.getElementById("login-status").innerHTML = "not logged in";
 				document.getElementById("title").innerHTML = "Login";
 				etCookie("login", 0, "user", "");
-    				changepic();
    				outliner ();
 				login = 0;
    				return true;
@@ -64,19 +63,6 @@
 				if (null != child)
 					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
 			}
-			function changepic() {
-				uMe = window.event.srcElement;
-				var check = uMe.src.toLowerCase();
-				if (check.lastIndexOf("plus.gif") != -1)
-				{
-					uMe.src = "Minus.gif"
-				}
-				else
-				{
-					uMe.src = "Plus.gif"
-				}
-			}
-
 function FP_preloadImgs() {//v1.0
  var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
  for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
@@ -128,7 +114,7 @@ function FP_preloadImgs() {//v1.0
 			<tr class="row">
 			<td class="content" style="width: 112px" >
 		
-  <button class="expandable"onclick="ValidatePassword();FP_swapImg(1,0,/*id*/'banner',/*url*/'../images/user.png')"child="issue1" >Log in </button>
+  				<input type="button" class="expandable"onclick="ValidatePassword();FP_swapImg(1,0,/*id*/'banner',/*url*/'../images/user.png')"child="issue1" value="Log in">
 				</td>
 			<td class="content">
 			<p id="login-status"style="margin-top:0px;font-size:100%">not logged in</p>
@@ -142,26 +128,21 @@ function FP_preloadImgs() {//v1.0
 						&nbsp;</td></tr>
 					<tr><td width="10" class="issuecontent" style="height: 19px">1</td>
 						<td class="issuecontent"style="height: 19px"></td>
-						<td class="issuecontent"style="height: 19px">link for school 
-						subsite: <a href="../school/index.htm">
-				../school/index.htm</a></td>
+						<td class="issuecontent"style="height: 19px">link for school subsite: <a href="../school/index.htm">../school/index.htm</a></td>
 					</tr>
 					<tr><td width="10" class="issuecontent" style="height: 19px">2</td>
 						<td class="issuecontent"style="height: 19px">&nbsp;</td>
-						<td class="issuecontent"style="height: 19px">link index 
-						melodii casete: <a href="../index_casete.html">
-						../index_casete.html</a></td>
+						<td class="issuecontent"style="height: 19px">link index melodii casete: <a href="../index_casete.html">../index_casete.html</a></td>
 					</tr>
 					<tr><td width="10" class="issuecontent" style="height: 19px">3</td>
 						<td class="issuecontent"style="height: 19px">&nbsp;</td>
-						<td class="issuecontent"style="height: 19px">
-						&nbsp;</td>
+						<td class="issuecontent"style="height: 19px">&nbsp;</td>
 					</tr>
 					<tr><td width="10" class="issuecontent" style="height: 19px">
 						&nbsp;</td>
 						<td class="issuecontent"style="height: 19px">&nbsp;</td>
 						<td class="auto-style2"style="height: 19px">
-					<button class="expandable"onclick="LogOut()"child="issue1" >Log out</button>
+						<input type="button" class="expandable"onclick="LogOut()"child="issue1" value="Log out">
 						</td>
 					</tr>
 					</table>
