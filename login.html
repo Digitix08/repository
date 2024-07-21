@@ -1,156 +1,167 @@
-table<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {text-align: center;}
-        #enterDetails {float: left; width: 50%;  background-color: darkslategray; color: floralwhite;}
-        #findDetails {float: left; width: 50%; background-color: floralwhite; color: darkslategray;}
-        input {width: 120px;}
-    </style>
+<meta content="text/html; charset=windows-1250" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="../style.css"/>
+<title>login</title>
+<script language="javascript" type="text/javascript">
+			 var login = 0;
+			 function ValidatePassword() {
+			 	var user = prompt("Who are you");
+				var password = prompt("Please enter password to proceed", "");
+				if (user == "gabi"&&password == "123456") {document.getElementById("login-status").innerHTML = "logged in as "+user;
+				document.getElementById("title").innerHTML = user+"'s account page";
+				login = 1;console.log("Hello, "+user);changepic();outliner ();return true;}
+				console.log("login fail");
+				document.getElementById("login-status").innerHTML = "login failure, user not in login database";
+				login = 0;
+				return false;
+			}
+			function LogOut() {
+				console.log("logged out");
+				document.getElementById("login-status").innerHTML = "not logged in";
+				document.getElementById("title").innerHTML = "Login";
+
+    			changepic();
+   				outliner ();
+				login = 0;
+   				return true;
+			}
+			function FP_swapImg() {//v1.0
+ 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ 				elm.$src=elm.src; elm.src=args[n+1]; } }
+			}
+			function FP_getObjectByID(id,o) {//v1.0
+ 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ 				return null;
+			}
+			function outliner () {
+				oMe = window.event.srcElement
+				//get child element
+				var child = document.all[event.srcElement.getAttribute("child",false)];
+				//if child element exists, expand or collapse it.
+				if (login==1)
+				if (null != child)
+					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+			}
+			function changepic() {
+				uMe = window.event.srcElement;
+				var check = uMe.src.toLowerCase();
+				if (check.lastIndexOf("plus.gif") != -1)
+				{
+					uMe.src = "Minus.gif"
+				}
+				else
+				{
+					uMe.src = "Plus.gif"
+				}
+			}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+</script>
+<style type="text/css">
+
+
+
+
+
+
+.auto-style1 {
+	text-align: right;
+}
+.auto-style2 {
+	BACKGROUND-COLOR: #ffffff;
+	BORDER-BOTTOM: #dcdcdc 1px solid;
+	BORDER-TOP: #dcdcdc 1px solid;
+	PADDING-LEFT: 3px;
+	text-align: right;
+}
+.auto-style3 {
+	text-align: left;
+}
+</style>
 </head>
-<body>
-    <div id="enterDetails">
-        <h1>Enter details</h1>
 
-        <h4>ID</h4> 
-        <input id="enterID" type="text"> 
+<!-- #BeginEditable "login only" -->
+<body onclick="outliner();" onload="FP_preloadImgs(/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif',/*url*/'../images/user.png')">
+<!-- #EndEditable -->
+		<div id="main-content">
+					<h1 id="title" class="auto-style3">Login</h1></div>
+<table style="width: 100%">
+	<tr class="ctrltable" style="background-color:#ead858">
+		<td style="width: 107px">
+		<a href="../index.htm"><img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a></td>
+		<td>
+		<a style="color:blue" href="../index.htm">Home</a>
+		<a style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
+		<a style="color:blue" href="http://www.google.com">Google</a>
+		<a style="color:blue" href="../MINECRAFT.htm">Minecraft server(s)</a>
+		<a style="color:blue" href="../index-old.htm">Search</a>
+		<a style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
+		</td>
+	</tr>
+		</table>
+		<table cellpadding="2" cellspacing="0" width="98%" border="1"bordercolor="white" class="infotable">
+			<tr class="row">
+			<td class="content" style="width: 112px" >
+		
+  <button class="expandable"onclick="ValidatePassword();FP_swapImg(1,0,/*id*/'banner',/*url*/'../images/user.png')"child="issue1" >Log in </button>
+				</td>
+			<td class="content">
+			<p id="login-status"style="margin-top:0px;font-size:100%">not logged in</p>
+				</td>
+		</tr>
+			<tr class="collapsed" id="issue1" bgcolor="#ffffff">
+				<td colspan="2" style="height: 19px">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="3" class="issuetitle">&nbsp;</td></tr><tr><td width="10" class="issuehdr">#</td>
+						<td class="issuehdr" nowrap style="width: 68px">&nbsp;</td><td class="issuehdr">
+						&nbsp;</td></tr>
+					<tr><td width="10" class="issuecontent" style="height: 19px">1</td>
+						<td class="issuecontent"style="height: 19px"></td>
+						<td class="issuecontent"style="height: 19px">link for school 
+						subsite: <a href="../school/index.htm">
+				../school/index.htm</a></td>
+					</tr>
+					<tr><td width="10" class="issuecontent" style="height: 19px">2</td>
+						<td class="issuecontent"style="height: 19px">&nbsp;</td>
+						<td class="issuecontent"style="height: 19px">link index 
+						melodii casete: <a href="../index_casete.html">
+						../index_casete.html</a></td>
+					</tr>
+					<tr><td width="10" class="issuecontent" style="height: 19px">3</td>
+						<td class="issuecontent"style="height: 19px">&nbsp;</td>
+						<td class="issuecontent"style="height: 19px">
+						&nbsp;</td>
+					</tr>
+					<tr><td width="10" class="issuecontent" style="height: 19px">
+						&nbsp;</td>
+						<td class="issuecontent"style="height: 19px">&nbsp;</td>
+						<td class="auto-style2"style="height: 19px">
+					<button class="expandable"onclick="LogOut()"child="issue1" >Log out</button>
+						</td>
+					</tr>
+					</table>
+				</td></tr>
+		<tr valign="top">
+			<td class="foot" style="width: 112px">4 File(s)</td>
+			<td class="foot">
+			
+			</td>
+		</tr>
+		</table>
 
-        <h4>Name</h4> 
-        <input id="enterName" type="text"> 
-
-        <h4>Age</h4> 
-        <input id="enterAge" type="number"> <br><br>
-
-        <button id="insert">INSERT</button>
-        <button id="update">UPDATE</button>
-        <button id="remove">REMOVE</button> <br><br>
-    </div>
-
-    <div id="findDetails">
-        <h1>Find by ID</h1>
-        <h4>ID</h4>
-        <input id="findID" type="text"> <br><br>
-        <button id="find">FIND</button>
-        <h3 id="findName" type="text"></h3>
-        <h3 id="findAge" type="number"></h3> <br><br>
-    </div>
-    
-
-    <script type="module">
-import * as cors from 'cors';
-const corsHandler = cors({origin: true});
-
-export const pingFunctionWithCorsAllowed = functions.https.onRequest((request, response) => {
-  corsHandler(request, response, () => {
-    response.send(`Ping from Firebase (with CORS handling)! ${new Date().toISOString()}`);
-  });
-});
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCXq2NyMN9vwXxm_9rK1BSQmP1sEcI7_Pg",
-    authDomain: "attempt-at-login-page.firebaseapp.com",
-    projectId: "attempt-at-login-page",
-    storageBucket: "attempt-at-login-page.appspot.com",
-    messagingSenderId: "503075785604",
-    appId: "1:503075785604:web:fcdaa54d4104aaf87b6bd1",
-    measurementId: "G-PGHTK7H84K"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-        import {getDatabase, ref, get, set, child, update, remove}
-        from "https://attempt-at-login-page-default-rtdb.europe-west1.firebasedatabase.app";
-        // (the one where you imported "initializeApp" from),
-        //but change "firebase-app" to "firebase-database"
-        
-
-        const db = getDatabase();
-
-        var enterID = document.querySelector("#enterID");
-        var enterName = document.querySelector("#enterName");
-        var enterAge = document.querySelector("#enterAge");
-        var findID = document.querySelector("#findID");
-        var findName = document.querySelector("#findName");
-        var findAge = document.querySelector("#findAge");
-      
-
-        var insertBtn = document.querySelector("#insert");
-        var updateBtn = document.querySelector("#update");
-        var removeBtn = document.querySelector("#remove");
-        var findBtn = document.querySelector("#find");
-
-        function InsertData() {
-            set(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                ID: enterID.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data added successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        function FindData() {
-            const dbref = ref(db);
-
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
-            
-        }
-
-        function UpdateData(){
-            update(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data updated successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        function RemoveData(){
-            remove(ref(db, "People/"+ enterID.value))
-            .then(()=>{
-                alert("Data deleted successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        insertBtn.addEventListener('click', InsertData);
-        updateBtn.addEventListener('click', UpdateData);
-        removeBtn.addEventListener('click', RemoveData);
-        findBtn.addEventListener('click', FindData);
-
-      </script>
 </body>
+
 </html>
