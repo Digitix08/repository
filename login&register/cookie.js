@@ -2,7 +2,7 @@
 	const d = new Date();
 //	d.setTime(d.getTime() + (exdays*24*60*60*1000));
 //	var expires = "expires="+ d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + ";path=/";
+	document.cookie = cname + "=" + cvalue + ";" + cname2 + "=" + cvalue2 + ";path=/";
 }
 function getCookie(cname) {
 	var name=cname + "=";
