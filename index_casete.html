@@ -7,20 +7,19 @@
 		
 		<script src="dark.js"></script>
 		<script language="javascript" type="text/javascript">
-			function checkCookie() {
-			 	var darkmode = getCookie("dark");
+				var darkmode = getCookie("dark");
 			  	if (darkmode == "yes"){
-				  	document.getElementById("dark").href="dark.css";
-				  	document.getElementById("lnk").style="color:#AAB3FF";
+			  	document.getElementById("dark").href="dark.css";
+				}
+			function checkCookie() {
+			  	if (darkmode == "yes"){
+				document.getElementById("issue-1").style.backgroundColor="#383636";
+				var elements = document.getElementsByName("lnk");
+				for (var i = 0; i < elements.length; i++) {
+ 					elements[i].style.color = "#AAB3FF";
+					}
 			  	}
 			}
-			function makeCookie() {
-				darkmode = prompt("dark mode (yes/no):", "");
-				if (darkmode == "yes" || darkmode == "no") {
-				setCookie("dark", darkmode, 365);
-				}
-			}
-
 			function FP_swapImg() {//v1.0
  				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
  				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
@@ -83,12 +82,12 @@
 				</a>
 				</td>			
 				<td>
-				<a id="lnk" style="color:blue" href="index.htm">Home</a>
-				<a id="lnk" style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
-				<a id="lnk" style="color:blue" href="http://www.google.com">Google</a>
-				<a id="lnk" style="color:blue" href="index-old.htm">Search</a>
-				<a id="lnk" style="color:blue" href="../login&register/login.html">Login</a>
-				<a id="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
+				<a name="lnk" style="color:blue" href="index.htm">Home</a>
+				<a name="lnk" style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
+				<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
+				<a name="lnk" style="color:blue" href="index-old.htm">Search</a>
+				<a name="lnk" style="color:blue" href="../login&register/login.html">Login</a>
+				<a name="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
 				</td></tr>
 			</table>
 		<p><span class="note">
