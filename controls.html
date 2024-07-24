@@ -31,7 +31,7 @@
 					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
 			}
 			function changevalue(val2, val1){
-				if(this.value==val2)this.value=val1;
+				if(this.value == val2){this.value=val1;}
 				else this.value=val2;
 			}
 		</script>	
@@ -50,7 +50,7 @@
 					<a href="javascript:history.reload()">reload</a>
 					<a href="javascript:history.forward()">forward</a></td>
 				<td style="width: 75px">
-					<input id="Button1" type="button" child="issue0" value="search &darr;" onclick="changevalue("collapse","search &darr;");" style="width: 71px">
+					<input id="Button1" type="button" child="issue0" value="search &darr;" onclick="changevalue('collapse','search &darr;');" style="width: 71px">
 				<td style="width: 25%">
 					<input id="Text1" type="text" name="Text1" style="width: 250px" placeholder="url...">
 					<input type="button" onclick="navi();" value="Go to">
