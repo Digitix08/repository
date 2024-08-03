@@ -31,9 +31,9 @@
 					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
 			}
 			function changevalue(val2, val1){
-				if(document.getElementById("Button1").value == val2)
-document.getElementById("Button1").value=val1;
-				else document.getElementById("Button1").value=val2;
+				if(document.getElementById("Changeval").value == val2)
+document.getElementById("Changeval").value=val1;
+else document.getElementById("Changeval").value=val2;
 			}
 		</script>	
 		
@@ -51,7 +51,7 @@ document.getElementById("Button1").value=val1;
 					<a href="javascript:history.reload()">reload</a>
 					<a href="javascript:history.forward()">forward</a></td>
 				<td style="width: 75px">
-					<input id="Button1" type="button" child="issue0" value="search &darr;" onclick="changevalue('collapse','search &darr;');" style="width: 71px">
+					<input id="Changeval" type="button" child="issue0" value="search &darr;" onclick="changevalue('collapse &uarr;','search &darr;');" style="width: 71px">
 				<td style="width: 25%">
 					<input id="Text1" type="text" name="Text1" style="width: 250px" placeholder="url...">
 					<input type="button" onclick="navi();" value="Go to">
