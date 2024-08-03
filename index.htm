@@ -4,9 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
 <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
-<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/blends/blen1011-1250.css"><meta name="Microsoft Theme" content="blends 1011">
+<!--mstheme--><link rel="stylesheet" id="dark" type="text/css" href="_themes/blends/blen1011-1250.css"><meta name="Microsoft Theme" content="blends 1011">
 <title>Home page</title>
-<script>
+<script src="dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="_themes/blends/blen1011-1250.css";
+}
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // redirects if mobile
  window.location="http://user15263.github.io/repository/index_mobile.html"}
