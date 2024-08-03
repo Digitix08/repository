@@ -31,8 +31,9 @@
 					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
 			}
 			function changevalue(val2, val1){
-				if(this.value == val2){this.value=val1;}
-				else this.value=val2;
+				if(document.getElementById("Button1").value == val2)
+document.getElementById("Button1").value=val1;
+				else document.getElementById("Button1").value=val2;
 			}
 		</script>	
 		
