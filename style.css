@@ -36,6 +36,22 @@ P
 	FONT-SIZE: 80%;
 	MARGIN-LEFT: 0px
 }
+button{
+	BACKGROUND-COLOR:#f0f0f0;
+	color: #000000;
+	BORDER-BOTTOM: #a0a0a0 2px solid;
+	BORDER-LEFT: #ffffff 2px solid;
+	BORDER-RIGHT: #a0a0a0 2px solid;
+	BORDER-TOP: #ffffff 2px solid;
+}
+button:active{
+	BACKGROUND-COLOR:#f0f0f0;
+	color: #000000;
+	BORDER-BOTTOM: #ffffff 2px solid;
+	BORDER-LEFT: #a0a0a0 2px solid;
+	BORDER-RIGHT: #ffffff 2px solid;
+	BORDER-TOP: #a0a0a0 2px solid;
+}
 input[type="button"]{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
