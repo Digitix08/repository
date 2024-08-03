@@ -4,22 +4,27 @@
 <head>
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link href="_themes/blends/blen1011-1250.css" rel="stylesheet" type="text/css"/>
+<link id="dark" href="_themes/blends/blen1011-1250.css" rel="stylesheet" type="text/css"/>
 <title>Home page</title>
-<script>
-			function FP_swapImg() {//v1.0
- 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 				elm.$src=elm.src; elm.src=args[n+1]; } }
-			}
-			function outliner () {
-				oMe = window.event.srcElement
-				//get child element
-				var child = document.all[event.srcElement.getAttribute("child",false)];
-				//if child element exists, expand or collapse it.
-				if (null != child)
-					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
-			}
+<script src="dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="_themes/blends_dark/blen1011-1250.css";
+}
+function FP_swapImg() {//v1.0
+	var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+	n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+	elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+function outliner () {
+	oMe = window.event.srcElement
+	//get child element
+	var child = document.all[event.srcElement.getAttribute("child",false)];
+	//if child element exists, expand or collapse it.
+	if (null != child)
+		child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+}
 </script>
 <style type="text/css">
 		.collapsed{
