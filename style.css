@@ -242,7 +242,8 @@ LI
 }
 .expanded
 {
-	color: black
+	color: black;
+	background-color: #ffffff
 }
 .collapsed
 {
