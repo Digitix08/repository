@@ -7,16 +7,14 @@
 <title>Chrome URLs</title>
 <script src="dark.js"></script>
 <script language="javascript" type="text/javascript">
-function checkCookie() {
-  	var darkmode = getCookie("dark");
-	var color = 1;
-  	if (darkmode == "yes"){
-  	document.getElementById("dark").href="dark.css";
-	}
+var darkmode = getCookie("dark");
+var color = 1;
+if (darkmode == "yes"){
+	document.getElementById("dark").href="dark.css";
 }
 </script>
 </head>
-<body onload="checkCookie();">
+<body>
 <h2>List of Chrome URLs</h2><a href='index.htm'>back</a>
 <ul>
 <li><a href='chrome://about/'>chrome://about</a></li>
