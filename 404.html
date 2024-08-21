@@ -13,7 +13,8 @@
   <script>
     function geturl(){
       var url = window.location.href;
-      document.getElementById("URLlabel") = url;
+      var label = document.getElementById("URLlabel");
+      label.innerHTML = url;
     }
   </script>
 </body>
