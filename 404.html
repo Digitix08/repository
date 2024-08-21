@@ -3,11 +3,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>404 not found</title>
 </head>
-<body>
+<body onload="geturl()">
   <h1>404 not found</h1>
   <hr>
   <h2>The page you are looking for does not exist on this server</h2>
+  <p>The URL <label id="URLlabel"><em>page.html</em></label> does not correspond to a page</p>
   <p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">reload</a>ing the page.</p>
   <p>If you got here via external (not in site) navigation, please <a href="http://user15263.github.io/repository/">go to home page</a></p>
+  <script>
+    function geturl(){
+      var url = window.location.href;
+      document.getElementById("URLlabel") = url;
+    }
+  </script>
 </body>
 </html>
