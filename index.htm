@@ -15,9 +15,10 @@ if (darkmode == "yes"){
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  // redirects if mobile
  window.location="http://user15263.github.io/repository/index_mobile.html"}
+var url = window.location.href;
 var urlpref = window.location.hostname;
 console.log(urlpref)
-if(urlpref == "htmlpreview.github.io")
+if(urlpref == "htmlpreview.github.io"||url == "https://htmlpreview.github.io/?https%3A%2F%2Fraw.githubusercontent.com%2Fuser15263%2Frepository%2Fmain%2Findex.htm")
 open("http://user15263.github.io/repository", name="_self")
 </script>
 </head>
