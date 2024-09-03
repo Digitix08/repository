@@ -10,6 +10,12 @@
 			  	if (darkmode == "yes"){
 			  	document.getElementById("dark").href="dark.css";
 				}
+			function devtools() { 
+				var script = document.createElement('script'); 
+				script.src="https://cdn.jsdelivr.net/npm/eruda"; 
+				document.body.append(script); 
+				script.onload = function () { eruda.init(); } 
+			}
 			function checkCookie() {
 			  	if (darkmode == "yes"){
 				document.getElementById("issue-1").style.backgroundColor="#383636";
@@ -43,7 +49,6 @@
  				return null;
 			}
 
-
 			function outliner () {
 				oMe = window.event.srcElement
 				//get child element
@@ -65,11 +70,10 @@
 					uMe.src = "download/Plus.gif"
 				}
 			}
-		
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+			function FP_preloadImgs() {//v1.0
+				var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+				for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+			}
 </script>	
 				
 		<style type="text/css">
@@ -125,7 +129,7 @@ function FP_preloadImgs() {//v1.0
 			<li style="list-style-type: decimal">
 			2 temp data test <input name="Button1" onclick="makeCookie()" type="button" value="set dark mode"> (pressing "cancel" no longer sets theme)</li>
 			<li style="list-style-type: decimal">
-			3 <input type="button" onclick="function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } }();" value="javascript console"> for chrome mobile (for some reason)</li>
+			3 <input type="button" onclick="devtools()" value="javascript console"> for chrome mobile (for some reason)</li>
 			<li style="list-style-type: decimal">
 			4</li>
 			<li style="list-style-type: decimal">
