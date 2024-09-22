@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
+<title>Untitled 2</title>
+<link id="dark" href="style.css" rel="stylesheet" type="text/css" />
+<script src="dark.js"></script>
+		<script language="javascript" type="text/javascript">
+			function checkCookie() {
+			 	var darkmode = getCookie("dark");
+			  	if (darkmode == "yes"){
+				  	document.getElementById("dark").href="dark.css";
+				  	document.getElementById("lnk").style="color:#AAB3FF";
+			  	}
+			}
+			function makeCookie() {
+				var darksel = document.getElementsByName("Theme");
+				var expdate = document.getElementsByName("Exp").value;
+				var autosel = document.getElementsByName("auto");
+				var date = new Date();
+				for (var i = 0; i < darksel.length; i++) {
+ 					var darkmode = darksel[i].value;
+					if (darkmode == "no"){
+						setCookie("dark", darkmode, 365);
+						return;
+					}
+					if (darkmode == "auto"){
+							
+					}
+					else
+					{
+						if (expdate == "date"){
+							document.getElementByName("Date").value
+    							var input = this.value;
+    							var dateEntered = new Date(input);
+    							console.log(input); //e.g. 2015-11-13
+    							console.log(dateEntered); //e.g. Fri Nov 13 2015 00:00:00 GMT+0000 (GMT Standard Time)
+    						setCookie("dark", darkmode, dateEntered);
+						}
+						if (expdate == "altdate"){
+							var value = document.getElementByName("Select1").value
+							console.log(value);
+							if (value == "day")
+							date = date + date.setDate(date.getDate() + 1)
+						}
+						if (expdate == "default")
+							setCookie("dark", darkmode, 365);
+					}
+				}
+			}
+			function prevtheme(){
+				var darkview = document.getElementsByName("Theme");
+				var autosel = document.getElementsByName("auto");
+				for (var i = 0; i < darkview.length; i++) {
+ 					if (darkview[i].checked){
+ 						var darkprev = darkview[i].value;
+ 						console.log(darkprev);
+						if (darkprev == "yes"){
+							document.getElementById("dark").href="dark.css";
+							return;
+						}
+						else if (darkprev == "oled"){
+							alert("oled dark is not available")
+							document.getElementById("dark").href="black.css";
+							return;
+						}
+
+						else if (darkprev == "auto"){
+							let mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
+							let isDarkMode = mediaQueryObj.matches;
+							if (isDarkMode){
+							 for (var j = 0; j < autosel.length; j++) {
+ 					   if (autosel[j].checked){
+ 					   	var autoprev = autosel[j].value;
+						   	alert(isDarkMode);
+							   if(autoprev == "oled"){
+							   	document.getElementById("dark").href="black.css";
+							   	alert("oled dark is not available");
+							   	return;
+						   	}
+						   	else{
+						   	 document.getElementById("dark").href="dark.css";
+						   	 return;
+						   	}
+						   }
+						 	else{
+						  	document.getElementById("dark").href="style.css";
+							 }
+	 					}
+						}
+						else document.getElementById("dark").href="style.css";
+					}
+				}
+			}
+		}
+</script>
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+.auto-style2 {
+	border-collapse: collapse;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.auto-style3 {
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+.auto-style4 {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.auto-style5 {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.auto-style6 {
+	text-align: right;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+</style>
+</head>
+
+<body onload="checkCookie();">
+
+<h1>Settings</h1><h2>Theme &amp; Aspect</h2>
+<h3>Theme setting</h3>
+<span style="font-size:80%">
+&nbsp;
+<table style="width: 90%" class="auto-style2">
+		<tr class="header">
+			<td colspan="2" style="border-top-color: #C0C0C0; border-top-width: 2px">Theme mode</td>
+			<td style="height: 22px; border-right-color: #A0A0A0; border-right-width: 2px; border-top-color: #C0C0C0; border-top-width: 2px;" class="auto-style3">Time span</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+	<input checked="checked" name="Theme" type="radio" value="no" />Light<br />
+	<input name="Theme" type="radio" value="yes" />Dark<br />
+	<input name="Theme" type="radio" value="oled" />Oled black<br />
+			</td>
+			<td rowspan="3" style="border-right-color: #A0A0A0; border-right-width: 2px" class="auto-style3">
+				<input name="Exp" type="radio" value="date"/><input name="Date" type="date" /><br/>
+				<input name="Exp" type="radio" value="altdate"/><select name="Select1">
+					<option selected="selected" value="day">In 1 day</option>
+					<option value="week">In 1 week</option>
+					<option value="month">In 1 month</option>
+					<option value="year">In 1 year</option>
+					<option value="9999">Until 31dec9999</option>
+					</select><br />
+				<input name="Exp" type="radio" value="default" checked="checked"/> Default<br />
+				<input name="Exp" type="radio" value="none"/> None<span style="font-size:80%"><span style="font-size:80%" class="auto-style3"><br />
+				<input onclick="makeCookie();" name="erase" type="button" value="Erase Cookie" /></span></span></td>
+
+		</tr>
+		<tr>
+			<td style="width: 71px" class="auto-style3">
+	<input name="Theme" type="radio" value="auto" />Auto</td>
+			<td class="auto-style4">
+			Auto mode</td>
+		</tr>
+		<tr>
+			<td class="auto-style3"></td>
+			<td class="auto-style5">
+				<input checked="checked" name="auto" type="radio" value="dark" />Dark<br/>
+				<input name="auto" type="radio" value="oled" />Oled
+			</td>
+		</tr>
+		<tr class="issuehdr">
+			<td>&nbsp;</td>
+			<td class="auto-style6">
+			&nbsp;</td>
+			<td class="auto-style1" style="border-right-color: #A0A0A0; border-right-width: 2px">
+			<span style="font-size:80%">
+			<span style="font-size:80%" class="auto-style3">
+<span style="font-size:80%">
+				<input onclick="prevtheme();" name="preview" type="button" value="Preview" /></span><input onclick="makeCookie();" name="set" type="button" value="Apply" /></span></span></td>
+		</tr>
+		</table>
+</span>
+<p></p>
+
+</body>
+
+</html>
