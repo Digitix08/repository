@@ -3,6 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link id="dark" rel="stylesheet" href="#">
   <title>404 not found</title>
+  <script src="dark.js"></script>
+  <script language="javascript" type="text/javascript">
+    var darkmode = getCookie("dark");
+    if (darkmode == "yes"){
+      document.getElementById("dark").href="dark.css";
+    }
+  </script>
 </head>
 <body onload="geturl()">
   <h1>404 not found</h1>
@@ -11,15 +18,7 @@
   <p>The URL "<label id="URLlabel"><em>page.html</em></label>" does not correspond to a page</p>
   <p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">reload</a>ing the page.</p>
   <p>If you got here via external (not in site) navigation, please <a href="http://user15263.github.io/repository/">go to home page</a></p>
-  <script src="dark.js"></script>
-	<script language="javascript" type="text/javascript">
-		function checkCookie() {
-	  	var darkmode = getCookie("dark");
-			var color = 1;
-	  	if (darkmode == "yes"){
-		  	document.getElementById("dark").href="dark.css";
-			}
-		}
+  <script>
     function geturl(){
       if (window.location.pathname != "/repository/404.html"){
         var url = window.location.pathname;
