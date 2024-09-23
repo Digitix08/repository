@@ -8,7 +8,6 @@
 <title>Useful links</title>
 <script src="dark.js"></script>
 <script language="javascript" type="text/javascript">
-function checkCookie() {
   	var darkmode = getCookie("dark");
 	var color = 1;
   	if (darkmode == "yes"){
@@ -18,7 +17,6 @@ function checkCookie() {
  		elements[i].style.color = "#AAB3FF";
 		}
 	}
-}
 <!--
 function FP_swapImg() {//v1.0
  var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
@@ -41,7 +39,7 @@ function FP_preloadImgs() {//v1.0
 // -->
 </script>
 </head>
-<body onclick="outliner();" onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
+<body onclick="outliner();" onload="FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
 <h1>Useful links</h1>
 <table style="width: 100%" cellspacing="1">
 	<tr class="ctrltable">
