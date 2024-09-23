@@ -26,13 +26,12 @@ function FP_getObjectByID(id,o) {//v1.0
  for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
  return null;
 }
-
-// -->
 function FP_swapImg() {//v1.0
 	var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
 	n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
 	elm.$src=elm.src; elm.src=args[n+1]; } }
 }
+// -->
 function outliner () {
 	oMe = window.event.srcElement
 	//get child element
