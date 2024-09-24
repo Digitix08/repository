@@ -6,13 +6,10 @@
 		<title>index</title>
 		<script src="dark.js"></script>
 		<script language="javascript" type="text/javascript">
-			function checkCookie() {
-			  	var darkmode = getCookie("dark");
-				var color = 1;
-			  	if (darkmode == "yes"){
+			var darkmode = getCookie("dark");
+			if (darkmode == "yes"){
 			  	document.getElementById("dark").href="dark.css";
 				}
-			}
 			function FP_getObjectByID(id,o) {//v1.0
  				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
  				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
