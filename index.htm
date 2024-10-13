@@ -40,7 +40,7 @@ function FP_getObjectByID(id,o) {//v1.0
  f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
  for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
  return null;
-
+}
 </script>
 </head>
 
