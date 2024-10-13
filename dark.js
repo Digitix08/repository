@@ -1,9 +1,9 @@
-﻿function setCookie(cname, cvalue, exdays){
+function setCookie(cname, cvalue, exdays){
 	const d = new Date();
 	d.setTime(d.getTime() + (exdays*24*60*60*1000));
 	var expires = "expires="+ d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+};
 function getCookie(cname) {
 	var name=cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -18,7 +18,7 @@ function getCookie(cname) {
 		}
 	}	
 return"";
-}
+};
 function checkPrompt() {
 	var darkmode = getCookie("prompt");
 	if(prompt == "accept")return;
@@ -41,4 +41,4 @@ function promptRemove(yes) {
 	else {
 		document.getElementById("prompt").outerHTML = "";
     }
-}
+};
