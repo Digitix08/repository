@@ -22,7 +22,7 @@ return"";
 };
 function checkPrompt() {
 	if(document.body) console.log("correct");
-	else console.log("no")
+	else console.log("no");
 	var prompt = getCookie("prompt");
 	if(prompt != "accept"){
 		const newDiv = document.createElement("div");
