@@ -21,7 +21,8 @@ function getCookie(cname) {
 return"";
 };
 function checkPrompt() {
-	if(document.body)console.log("correct")
+	if(document.body) console.log("correct");
+	elce console.log("no")
 	var prompt = getCookie("prompt");
 	if(prompt != "accept"){
 		const newDiv = document.createElement("div");
