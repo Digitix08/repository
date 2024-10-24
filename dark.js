@@ -1,4 +1,15 @@
-window.onload = checkPrompt();
+window.onload = function checkPrompt() {
+	if(document.body) console.log("correct");
+	else console.log("no");
+	var prompt = getCookie("prompt");
+	if(prompt != "accept"){
+		const newDiv = document.createElement("div");
+		newDiv.style= "position:fixed; width: 100%; height: 100px; z-index: 1; left: 0px; bottom: 0px; background-color: #C0C0C0;";
+		newDiv.id= "prompt";
+		document.getElementsByTagName("body")[0].append(newDiv);
+		document.getElementById("prompt").innerHTML += "To use &quot;premium&quot; features such as dark theme you <strong>MUST</strong> agree to save <strong>LOCAL</strong> cookies containing the theme preference<br>Do you want to use cookies?<br><img id=\"img2\" alt=\"Yes\" fp-style=\"fp-btn: Border Bottom 2; fp-font-size: 20\" fp-title=;\"Yes\" height=\"40\" onclick=\"promptRemove(1)\" onmousedown=\"FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button14.jpg')\" onmouseout=\"FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button1E.jpg')\" onmouseover=\"FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button1F.jpg')\" onmouseup=\"FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button1F.jpg')\" src=\"images/buttons/button1E.jpg\" style=\"border: 0\" width=\"200\"><img id=\"img3\" alt=\"No\" fp-style=\"fp-btn: Border Bottom 3; fp-font-size: 20\" fp-title=\"No\" height=\"40\" onclick=\"promptRemove(0)\" onmousedown=\"FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button1D.jpg')\" onmouseout=\"FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button1B.jpg')\" onmouseover=\"FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button1C.jpg')\" onmouseup=\"FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button1C.jpg')\" src=\"images/buttons/button1B.jpg\" style=\"border: 0\" width=\"200\">";
+	}
+};
 function setCookie(cname, cvalue, exdays){
 	const d = new Date();
 	d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -19,18 +30,6 @@ function getCookie(cname) {
 		}
 	}	
 return"";
-};
-function checkPrompt() {
-	if(document.body) console.log("correct");
-	else console.log("no");
-	var prompt = getCookie("prompt");
-	if(prompt != "accept"){
-		const newDiv = document.createElement("div");
-		newDiv.style= "position:fixed; width: 100%; height: 100px; z-index: 1; left: 0px; bottom: 0px; background-color: #C0C0C0;";
-		newDiv.id= "prompt";
-		document.getElementsByTagName("body")[0].append(newDiv);
-		document.getElementById("prompt").innerHTML += "To use &quot;premium&quot; features such as dark theme you <strong>MUST</strong> agree to save <strong>LOCAL</strong> cookies containing the theme preference<br>Do you want to use cookies?<br><img id=\"img2\" alt=\"Yes\" fp-style=\"fp-btn: Border Bottom 2; fp-font-size: 20\" fp-title=;\"Yes\" height=\"40\" onclick=\"promptRemove(1)\" onmousedown=\"FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button14.jpg')\" onmouseout=\"FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button1E.jpg')\" onmouseover=\"FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button1F.jpg')\" onmouseup=\"FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button1F.jpg')\" src=\"images/buttons/button1E.jpg\" style=\"border: 0\" width=\"200\"><img id=\"img3\" alt=\"No\" fp-style=\"fp-btn: Border Bottom 3; fp-font-size: 20\" fp-title=\"No\" height=\"40\" onclick=\"promptRemove(0)\" onmousedown=\"FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button1D.jpg')\" onmouseout=\"FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button1B.jpg')\" onmouseover=\"FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button1C.jpg')\" onmouseup=\"FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button1C.jpg')\" src=\"images/buttons/button1B.jpg\" style=\"border: 0\" width=\"200\">";
-	}
 };
 function promptRemove(yes) {
 	if(yes){
