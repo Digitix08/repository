@@ -8,13 +8,13 @@
 <link id="dark" rel="stylesheet" href="#">
 <title>info</title>
 <base target="contents">
-<script src="dark.js"></script>
+<script src="../dark.js"></script>
 <script language="javascript" type="text/javascript">
 function checkCookie() {
   	var darkmode = getCookie("dark");
 	var color = 1;
   	if (darkmode == "yes"){
-  	document.getElementById("dark").href="css/dark.css";
+  	document.getElementById("dark").href="../css/dark.css";
 	}
 }
 <!--
@@ -26,7 +26,7 @@ function FP_swapImg() {//v1.0
 
 function FP_preloadImgs() {//v1.0
  var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new ../image; d.FP_imgs[i].src=a[i]; }
 }
 
 function FP_getObjectByID(id,o) {//v1.0
@@ -42,7 +42,7 @@ function FP_getObjectByID(id,o) {//v1.0
 </script>
 <meta name="Microsoft Theme" content="none, default">
 </head>
-<body onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/buttonE.jpg', /*url*/'images/buttons/buttonF.jpg', /*url*/'images/buttons/buttonC.jpg', /*url*/'images/buttons/buttonD1.jpg')">
+<body onload="checkCookie();FP_preloadImgs(/*url*/'../images/buttons/buttonE.jpg', /*url*/'../images/buttons/buttonF.jpg', /*url*/'../images/buttons/buttonC.jpg', /*url*/'../images/buttons/buttonD1.jpg')">
 <table border="1" width="100%">
 	<tr>
 		<td>
@@ -58,10 +58,10 @@ Then use the Search/Replace feature to change all instances of the text [Name of
 such as &quot;New Ideas Web&quot; or &quot;Employee Discussion Web&quot;. 
 Save this page in the Root Web site. Next, change the permissions for the target sub site using the Server command on the Tools menu. 
 Make the permissions unique for the target sub site, and change the User access controls so that only registered users may enter.</p>
-		<a href="user_registration.htm" target="_self"><img border="0" id="img1" src="images/buttons/buttonB1.jpg" height="40" width="200" alt="OK" fp-style="fp-btn: Border Bottom 3; fp-font-size: 24; fp-proportional: 0" fp-title="OK" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/buttonC.jpg')" 
-onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/buttonB1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/buttonD1.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/buttonC.jpg')"></a>
-		<a href="../index.htm" target="_self"><img border="0" id="img4" src="images/buttons/buttonD.jpg" height="40" width="200" alt="Home" fp-style="fp-btn: Border Bottom 1; fp-font-size: 24; fp-proportional: 0" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/buttonE.jpg')" 
-onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/buttonE.jpg')" ></a>
+		<a href="user_registration.htm" target="_self"><img border="0" id="img1" src="../images/buttons/buttonB1.jpg" height="40" width="200" alt="OK" fp-style="fp-btn: Border Bottom 3; fp-font-size: 24; fp-proportional: 0" fp-title="OK" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/buttonC.jpg')" 
+onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/buttonB1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'../images/buttons/buttonD1.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'../images/buttons/buttonC.jpg')"></a>
+		<a href="../index.htm" target="_self"><img border="0" id="img4" src="../images/buttons/buttonD.jpg" height="40" width="200" alt="Home" fp-style="fp-btn: Border Bottom 1; fp-font-size: 24; fp-proportional: 0" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/buttonE.jpg')" 
+onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/buttonE.jpg')" ></a>
 		</td>
 	</tr>
 </table>
