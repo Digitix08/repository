@@ -5,13 +5,13 @@
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
 <title>Untitled 2</title>
-<link id="dark" href="style.css" rel="stylesheet" type="text/css" />
+<link id="dark" href="css/style.css" rel="stylesheet" type="text/css" />
 <script src="dark.js"></script>
 		<script language="javascript" type="text/javascript">
 			function checkCookie() {
 			 	var darkmode = getCookie("dark");
 			  	if (darkmode == "yes"){
-				  	document.getElementById("dark").href="dark.css";
+				  	document.getElementById("dark").href="css/dark.css";
 				  	//document.getElementById("lnk").style="color:#AAB3FF";
 			  	}
 			}
@@ -58,12 +58,12 @@
  						var darkprev = darkview[i].value;
  						console.log(darkprev);
 						if (darkprev == "yes"){
-							document.getElementById("dark").href="dark.css";
+							document.getElementById("dark").href="css/dark.css";
 							return;
 						}
 						else if (darkprev == "oled"){
 							alert("oled dark is not available")
-							document.getElementById("dark").href="black.css";
+							document.getElementById("dark").href="css/black.css";
 							return;
 						}
 
@@ -76,21 +76,21 @@
  					   	var autoprev = autosel[j].value;
 						   	alert(isDarkMode);
 							   if(autoprev == "oled"){
-							   	document.getElementById("dark").href="black.css";
+							   	document.getElementById("dark").href="css/black.css";
 							   	alert("oled dark is not available");
 							   	return;
 						   	}
 						   	else{
-						   	 document.getElementById("dark").href="dark.css";
+						   	 document.getElementById("dark").href="css/dark.css";
 						   	 return;
 						   	}
 						   }
 						 	else{
-						  	document.getElementById("dark").href="style.css";
+						  	document.getElementById("dark").href="css/style.css";
 							 }
 	 					}
 						}
-						else document.getElementById("dark").href="style.css";
+						else document.getElementById("dark").href="css/style.css";
 					}
 				}
 			}
