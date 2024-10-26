@@ -10,17 +10,8 @@
 <meta name="Microsoft Theme" content="none, default">
 <script src="../dark.js"></script>
 <script language="javascript" type="text/javascript">
-			function checkCookie() {
-			  	var darkmode = getCookie("dark");
-				var color = 1;
-			  	if (darkmode == "yes"){
-			  	document.getElementById("dark").href="../css/dark.css";
-				var elements = document.getElementsByName("lnk");
-				for (var i = 0; i < elements.length; i++) {
- 					elements[i].style.color = "#AAB3FF";
-					}
-				}
-			}
+			var darkmode = getCookie("dark");
+			if (darkmode == "yes") document.getElementById("dark").href="../css/dark.css";
 			function FP_swapImg() {//v1.0
  				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
  				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
