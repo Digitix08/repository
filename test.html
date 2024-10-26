@@ -27,11 +27,15 @@
 			  	}
 			}
 			function makeCookie() {
-				darkmode = prompt("dark mode (yes/no):", "");
-				if (darkmode || darkmode == "") {
-				setCookie("dark", darkmode, 365);
-				}
+				var accept = getCookie("prompt");
+				if(accept == "accept"){
+					darkmode = prompt("dark mode (yes/no):", "");
+					if (darkmode || darkmode == "") {
+						setCookie("dark", darkmode, 365);
+					}
 				location.reload();
+				}
+				else checkPrompt();
 			}
 			function FP_swapImg() {//v1.0
  				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
