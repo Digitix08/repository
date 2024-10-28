@@ -36,6 +36,10 @@ P
 	FONT-SIZE: 80%;
 	MARGIN-LEFT: 0px
 }
+.buy
+{
+	BORDER-BOTTOM: #CC6600 3px solid	
+}
 button{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
@@ -81,7 +85,7 @@ input[type=text]{
 	background-color:#CC6600;
 	color:#ffffff;
 	MARGIN-bottom:-10px;
-	border-top:#663300 3px solid;
+	border-top:#ff9933 3px solid;
 	position:static;
 	bottom:0px;
 	PADDING-TOP: 10px;
