@@ -1,0 +1,291 @@
+﻿<html>
+<head>
+	<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link id="dark" href="../css/style.css" rel="stylesheet" type="text/css">
+	<title>index melodii casete</title>
+	<script src="../dark.js"></script>
+	<script language="javascript" type="text/javascript">
+		var srcset=0;
+		var darkmode = getCookie("dark");
+		if (darkmode == "yes"){
+		  	document.getElementById("dark").href="../css/dark.css";
+			}
+		function FP_swapImg() {//v1.0
+			var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+			n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+			elm.$src=elm.src; elm.src=args[n+1]; } }
+		}
+		function FP_getObjectByID(id,o) {//v1.0
+			var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+			else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+			if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+			for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+			f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+			for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+			return null;
+		}
+		function outliner () {
+			oMe = window.event.srcElement
+			//get child element
+			var child = document.all[event.srcElement.getAttribute("child",false)];
+			//if child element exists, expand or collapse it.
+			if (null != child)
+				child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+		}
+		function changepic() {
+			uMe = window.event.srcElement;
+			var check = uMe.src.toLowerCase();
+			if (check.lastIndexOf("../download/Plus.gif") != -1)
+			{
+				uMe.src = "../download/Minus.gif"
+			}
+			else
+			{
+				uMe.src = "../download/Plus.gif"
+			}
+		}
+		function setsrc(){
+			if(!srcset){
+				document.getElementById("mov").src="https://drive.google.com/file/d/1rVO5p0Si97nHuxdZvbHhldUjNTPuSOTM/preview";
+				document.getElementById("smallview").src="index.html";
+			}
+			srcset=1;
+		}
+	</script>	
+	<style type="text/css">
+		.collapsed{
+			DISPLAY: none
+		}
+	</style>
+</head>
+	<body topmargin="0" leftmargin="0" rightmargin="0" onload="checkCookie();" onclick="outliner();">
+		<h1>Index-ul melodiilor de pe casete</h1>
+		<table style="width: 100%" class="ctrltable">
+			<tr>
+				<td style="width: 99px"><a href="../index.htm">
+				<img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" 
+				onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" 
+				onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" 
+				onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" 
+				onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
+				</td>
+				<td>
+				<a name="lnk" style="color:blue" href="../index.htm">Home</a>
+				<a name="lnk" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
+				<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
+				<a name="lnk" style="color:blue" href="../index-old.htm">Search</a>
+				<a name="lnk" style="color:blue" href="../account/login.html">Login</a>
+				<a name="lnk" style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
+				</td>
+			</tr>
+		</table>
+		<p><span class="note">
+		<b>Last modified:  </b>25.10.2024 14:52</span></p>
+		<h2>List of Files</h2>
+		<table bgcolor="#1ba2e0" cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+			<tr>
+				<td class="header" style="width: 100px">Filename</td>
+				<td class="header" style="width: 100px">Tape Type</td>
+			</tr>
+			<tr class="row">
+			<td class="content" child="issue20" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue20">
+			&nbsp;Agfa superferro c90+6</td>
+			<td class="content" style="background-color: #331c05; color: #ffffff">ferric</td>
+		</tr>
+			<tr class="collapsed" id="issue20"><td colspan="2">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
+						<tr><td class="issuehdr" style="width: 20px">#</td>
+						<td class="issuehdr" style="width: 50%">Artist</td>
+						<td class="issuehdr">Name</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+						Champaign</td><td class="issuecontent">How 'Bout Us</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+						Smokey Robinson</td><td class="issuecontent">Being With 
+						You</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+						Marvin Gaye</td><td class="issuecontent">Praise</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">
+						Laveside</td><td class="issuecontent">Fantastic Voyage</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+						Patrice Rushen</td><td class="issuecontent">Look Up</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">
+						Funkadelic</td><td class="issuecontent">Connections and 
+						Disconnections</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+						Con Funk Shun</td><td class="issuecontent">Play Widit</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
+						Earth, Wind &amp; Fire</td><td class="issuecontent">Win or 
+						Lose</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">9</td><td class="issuecontent">
+						The Whispers</td><td class="issuecontent">Girl I Need 
+						You</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">10</td><td class="issuecontent">
+						The Gap Band</td><td class="issuecontent">Nothin Comes 
+						To Sleepers</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">
+						Tom Browne</td><td class="issuecontent">Midnight 
+						Interlude</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">12</td><td class="issuecontent">
+						The Police</td><td class="issuecontent">Don't Stand So 
+						Close to Me</td></tr>
+					<tr><td class="issuetitle" colspan="3">Side B</td>
+						</tr>
+					<tr><td class="issuehdr" style="width: 10px">#</td>
+						<td class="issuehdr">Name</td>
+						<td class="issuehdr">Name</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+						Con Funk Shun</td><td class="issuecontent">Too Tight</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+						Yarbrough &amp; Peoples</td><td class="issuecontent">Don't 
+						Stop The Music</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+						Earth Wind &amp; Fire</td><td class="issuecontent">And Love 
+						Goes On</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">
+						Fantasy</td><td class="issuecontent">You're Too Late</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+						The Gap Band</td><td class="issuecontent">Burn Rubber On 
+						Me (Why You Wanna Hurt Me)</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">&nbsp;</td><td class="issuecontent">
+						&nbsp;</td><td class="issuecontent">&nbsp;</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+						Modern Folk Üçlüsü</td><td class="issuecontent">
+						Hoşgeldin Dünyama</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">&nbsp;</td><td class="issuecontent">
+						&nbsp;</td><td class="issuecontent">&nbsp;</td></tr>
+					</table>
+			</td></tr>
+
+			<tr class="row">
+			<td class="content" child="issue21" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue21">
+			&nbsp;BASF Cromdioxid c60 nr4</td>
+			<td class="content">chrome</td>
+		</tr>
+			<tr class="collapsed" id="issue21"><td colspan="2">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
+					<tr><td class="issuehdr" style="width: 20px">#</td>
+					<td class="issuehdr" nowrap style="width: 50%">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">Whitney Houston</td>
+					<td class="issuecontent">Didn't we almost have it all</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">Frida</td>
+					<td class="issuecontent">To Turn the Stone</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">Amazulu</td>
+					<td class="issuecontent">Mony Mony</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">George Harrison</td>
+					<td class="issuecontent">Got my mind set on you</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">Samantha Fox</td>
+					<td class="issuecontent">I promise You (Get Ready) [Extended Version]</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">Sandra</td>
+					<td class="issuecontent">Everlasting Love</td></tr>
+				<tr><td class="issuetitle" colspan="3">Side 2</td>
+					</tr>
+				<tr><td class="issuehdr" style="width: 10px">#</td>
+					<td class="issuehdr">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">Pat Boone</td>
+					<td class="issuecontent">Love Letters In the Sand</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">Bo Andersen &amp; Bernie Paul</td>
+					<td class="issuecontent">Our Love</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">T'Pau</td>
+					<td class="issuecontent">China In Your Hand</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">Judy Boucher</td>
+					<td class="issuecontent">You Caught My Eye</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">The Other Ones</td>
+					<td class="issuecontent">Holiday</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">Pseudo Echo</td>
+					<td class="issuecontent">Funky Town</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+					<a href="melodii_necunoscute.html">necunoscut</a></td><td class="issuecontent">???engleza</td></tr>
+				</table>
+			</td></tr>
+						<tr class="row">
+			<td class="content" child="issue22" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue22">
+			&nbsp;Basf chromdioxid c90</td>
+			<td class="content" style="width: 100px">chrome</td>
+		</tr>
+			<tr class="collapsed" id="issue22"><td colspan="2">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+					<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
+						<tr><td class="issuehdr" style="width: 20px">#</td>
+						<td class="issuehdr" style="width: 50%">Artist</td>
+						<td class="issuehdr">Name</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">Prince &amp; The Revolution</td>
+						<td class="issuecontent">Kiss</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">Richard Marx</td>
+						<td class="issuecontent">Hazard</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">Right Said Fred</td>
+						<td class="issuecontent">Don't Talk Just Kiss</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">Shakin' Stevens</td>
+						<td class="issuecontent">Breaking Up My Heart</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">Commodores</td>
+						<td class="issuecontent">Nightshift</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">Rod Stewart</td>
+						<td class="issuecontent">Young Turks</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">Santana</td>
+						<td class="issuecontent">Say it again</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">Modern Talking</td>
+						<td class="issuecontent">You're My Heart, You're My Soul</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">9</td><td class="issuecontent">Moti Special</td>
+						<td class="issuecontent">Cold Days, Hot Nights</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">10</td><td class="issuecontent">Bobby Vee</td>
+						<td class="issuecontent">Devil or Angel</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">Pat Boone</td>
+						<td class="issuecontent">April Love</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">12</td><td class="issuecontent"><a href="melodii_necunoscute.html">necunoscut</a></td>
+						<td class="issuecontent">???Instrumental remix</td></tr>
+					<tr><td class="issuetitle" colspan="3">Side 2</td>
+						</tr>
+					<tr><td class="issuehdr" style="width: 10px">#</td>
+						<td class="issuehdr">Artist</td>
+						<td class="issuehdr">Name</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">Disco Connection</td>
+						<td class="issuecontent">Rock Your Baby</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">Elvis Presley</td>
+						<td class="issuecontent">The last Farewell</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">Mary Ross</td>
+						<td class="issuecontent">Ich bin stark, nur mit Dir</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">Opus</td>
+						<td class="issuecontent">Live is Life</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">Udo Jurgens</td>
+						<td class="issuecontent">Paris, einfach so nur zum Spaß</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">Wind</td>
+						<td class="issuecontent">Für Alle</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">Genesis</td>
+						<td class="issuecontent">That's All</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">Barry Manilow</td>
+						<td class="issuecontent">Let's Hang On</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">9</td><td class="issuecontent">Cat Stevens</td>
+						<td class="issuecontent">Morning has Broken</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">10</td><td class="issuecontent">Air Supply</td>
+						<td class="issuecontent">Making Love Out Of Nothing At All (Live)</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">Fats Domino</td>
+						<td class="issuecontent">Blue Monday</td></tr>
+					<tr><td class="issuecontent" style="width: 10px">12</td><td class="issuecontent">Elton John</td>
+						<td class="issuecontent">Blue Eyes</td></tr>
+					</table>
+			</td></tr>
+
+			<tr class="row">
+			<td class="content" onclick="setsrc();" child="issue109" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="issue109">
+			&nbsp;Masura-pentru-masura-Greutatea-si-energia - Google Drive (requires @csantipa account)</td>
+			<td class="content">movie</td>
+		</tr>
+			<tr class="collapsed" id="issue109"><td colspan="2">
+					<iframe id="mov" style="width:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allowfullscreen allow="autoplay" name="film">
+					web browser does not support iframes or https certificates, or you are not loggen in to an @csantipa account</iframe><br>
+					<iframe id="smallview" style="width:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allow="autoplay" name="I2" id="I1">
+					web browser does not support iframes or https certificates, or you are not loggen in to an @csantipa account</iframe>
+			</td></tr>
+		<tr valign="top">
+			<td class="foot" style="width: 955px">22 Cassettes (page 2/2)</td>
+			<td class="foot">&nbsp;</td>
+		</tr>
+		</table>
+		<a href="pg1.html"><img alt="previous page" height="42" src="../images/buttons/arrow_back.gif" width="42"></a> 
+		2/2
+</body>
+</html>

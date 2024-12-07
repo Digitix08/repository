@@ -1,139 +1,89 @@
-﻿<html>
-	<head>
-		<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link id="dark" rel="stylesheet" href="css/style.css">
-		<title>index</title>
-		<script src="dark.js"></script>
-		<script language="javascript" type="text/javascript">
-			var darkmode = getCookie("dark");
-			  	if (darkmode == "yes"){
-			  	document.getElementById("dark").href="css/dark.css";
-				}
-			function devtools() { 
-				var script = document.createElement('script'); 
-				script.src="https://cdn.jsdelivr.net/npm/eruda"; 
-				document.body.append(script); 
-				script.onload = function () { eruda.init(); } 
-			}
-			function checkCookie() {
-			  	if (darkmode == "yes"){
-				document.getElementById("issue-1").style.backgroundColor="#383636";
-				document.getElementById("issue-2").style.backgroundColor="#000054";
-				var elements = document.getElementsByName("lnk");
-				for (var i = 0; i < elements.length; i++) {
- 					elements[i].style.color = "#AAB3FF";
-					}
-			  	}
-			}
-			function makeCookie() {
-				var accept = getCookie("prompt");
-				if(accept == "accept"){
-					darkmode = prompt("dark mode (yes/no):", "");
-					if (darkmode || darkmode == "") {
-						setCookie("dark", darkmode, 365);
-					}
-				location.reload();
-				}
-				else checkPrompt();
-			}
-			function FP_swapImg() {//v1.0
- 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 				elm.$src=elm.src; elm.src=args[n+1]; } }
-			}
-			
-			function FP_getObjectByID(id,o) {//v1.0
- 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- 				return null;
-			}
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
-			function outliner () {
-				oMe = window.event.srcElement
-				//get child element
-				var child = document.all[event.srcElement.getAttribute("child",false)];
-				//if child element exists, expand or collapse it.
-				if (null != child)
-					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
-			}
-		
-			function changepic() {
-				uMe = window.event.srcElement;
-				var check = uMe.src.toLowerCase();
-				if (check.lastIndexOf("download/plus.gif") != -1)
-				{
-					uMe.src = "download/Minus.gif"
-				}
-				else
-				{
-					uMe.src = "download/Plus.gif"
-				}
-			}
-			function FP_preloadImgs() {//v1.0
-				var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
-				for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-			}
-</script>	
-				
-		<style type="text/css">
-		.collapsed{
-			DISPLAY: none
+<!-- #BeginTemplate "tabbed_desktop.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
+    <title>tests page</title>
+<script src="dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// redirects if mobile
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
+function devtools() { 
+	var script = document.createElement('script'); 
+	script.src="https://cdn.jsdelivr.net/npm/eruda"; 
+	document.body.append(script); 
+	script.onload = function () { eruda.init(); } 
+}
+function makeCookie() {
+	var accept = getCookie("prompt");
+	if(accept == "accept"){
+		darkmode = prompt("dark mode (yes/no):", "");
+		if (darkmode || darkmode == "") {
+			setCookie("dark", darkmode, 365);
 		}
-		</style>
-				
-	</head>
-	<body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();" onload="checkCookie();FP_preloadImgs(/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')">
-		<h1 id="darkH1">Tests</h1>
-		
-		
-		<table style="width: 100%" class="ctrltable">
+	location.reload();
+	}
+	else checkPrompt();
+}
+</script>
+<!-- #EndEditable -->
+</head>
+
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('images/unnamed.jpg')">
+
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
+	<tr>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
+		</td>
+	</tr>
+	<!-- #BeginEditable "menu" -->
+		<tr><td class="menu">
+			<a class="menu" style="" href="index.htm">Home</a>
+			<a class="menu" href="index-old.htm">Search</a>
+			<a class="menu" href="account/login.html">Login</a>
+			<a class="menu" href="games/index.html">Games</a>
+			<a class="menu" href="MINECRAFT.htm">Minecraft srvrs</a>
+			<a class="menucurrent">Tests</a>
+		</td></tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+		<tr>
+				<td>
+		<table class="body" style="width: 100%; max-width: 1000px" align="center">
 			<tr>
-				<td style="width: 99px">
-		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
-				</td>			
-				<td><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="download/Plus.gif" width="9" child="issue-1">links...
-
-				&nbsp;<div class="collapsed" id="issue-1" style="background-color:white;position: absolute; width: 100px; height: 100px; z-index: 1; left: 104px; top: 80px;">
-					<a name="lnk" style="color:blue" href="index.htm">Home</a>
-<a name="lnk" style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
-<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
-<a name="lnk" style="color:blue" href="index-old.htm">Search</a>
-<a name="lnk" style="color:blue" href="loginregister/login.html">Login</a>
-<a name="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a></div>
-<IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="download/Plus.gif" width="9" child="issue-2">links...
-<div class="collapsed" id="issue-2" style="background-color:blue;position: absolute; width: 100px; height: 100px; z-index: 1; left: 167px; top: 80px;">
-					<a name="lnk" style="color:blue" href="index.htm">Home</a>
-<a name="lnk" style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
-<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
-<a name="lnk" style="color:blue" href="index-old.htm">Search</a>
-<a name="lnk" style="color:blue" href="loginregister/login.html">Login</a>
-<a name="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a></div>
-<IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="download/Plus.gif" width="9" child="issue-3">links...
-<div class="collapsed" id="issue-3" style="background-color:green;position: absolute; width: 100px; height: 100px; z-index: 1; left: 226px; top: 80px;">
-					<a style="color:blue" href="index.htm">Home</a>
-<a style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
-<a style="color:blue" href="http://www.google.com">Google</a>
-<a style="color:blue" href="index-old.htm">Search</a>
-<a style="color:blue" href="loginregister/login.html">Login</a>
-<a style="color:blue" href="photo_gallery.htm">Photo Gallery</a></div>
-
-	</td>			</tr>
-			</table>
+				<td><h1 id="darkH1">Tests</h1>
+		
+		
 		<p><span class="note">
-		<b>Last modified:  </b>03.03.2024 17:09</span></p>
+		<b>Last modified:  </b>
+		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->05.12.2024 21:31<!--webbot bot="TimeStamp" endspan i-checksum="25204" --></span></p>
 		<ol>
 			<li style="list-style-type: decimal">
-			<a id="darklnk" href="controls.html">Browser in browser (minibrowser)</a> - uses 
-			iframes to show pages you visit</li>
+			<a id="darklnk" href="controls.html">Browser in browser 
+			(minibrowser)</a> - uses iframes to show pages you visit</li>
 			<li style="list-style-type: decimal">
-			2 temp data test <input name="Button1" onclick="makeCookie()" type="button" value="set dark mode"> (pressing "cancel" no longer sets theme)</li>
+			2 temp data test <input name="Button1" onclick="makeCookie()" type="button" value="set dark mode"/> 
+			(pressing "cancel" no longer sets theme)</li>
 			<li style="list-style-type: decimal">
-			3 <input type="button" onclick="devtools()" value="javascript console"> for chrome mobile (for some reason)</li>
+			3 <input type="button" onclick="devtools()" value="javascript console"/> 
+			for chrome mobile (for some reason)</li>
 			<li style="list-style-type: decimal">
 			4 <a href="settings.html">setting page</a></li>
 			<li style="list-style-type: decimal">
@@ -149,6 +99,20 @@
 			<li style="list-style-type: decimal">
 			0</li>
 		</ol>
+		</td>
+	</tr>
+</table>
+		
 
 
 		
+				</td>
+		</tr>
+	<!-- #EndEditable -->
+</table>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

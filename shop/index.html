@@ -1,135 +1,154 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../tabbed_desktop.dwt" -->
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="../css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
+<link href="style.css" rel="stylesheet"/>
 <title>InterShop</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-	function FP_swapImg() {//v1.0
- 		var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 		n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 		elm.$src=elm.src; elm.src=args[n+1]; } }
-	}
-	function FP_getObjectByID(id,o) {//v1.0
- 		var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- 		else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- 		if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- 		for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- 		f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- 		for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- 		return null;
-	}
+<script src="../dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="../css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// redirects if mobile
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
 </script>
+<!-- #EndEditable -->
 </head>
 
-<body>
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('../images/unnamed.jpg')">
 
-<h1 lang="en-us">Inter<em>shop</em></h1>
-<table class="ctrltable" style="width: 100%">
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
 	<tr>
-		<td style="width: 99px"><a href="../index.htm">
-		<img id="img4" alt="Back" height="21" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" src="../images/buttons/back_cmp_aftrnoon000_back.gif" width="100" /></a>
-		</td>
-		<td><a href="../index.htm" name="lnk" style="color: blue">Home</a>
-		<a href="../chrome%20urls.html" name="lnk" style="color: blue">Chrome URLs</a>
-		<a href="http://www.google.com" name="lnk" style="color: blue">Google</a>
-		<a href="../index-old.htm" name="lnk" style="color: blue">Search</a>
-		<a href="../photo_gallery.htm" name="lnk" style="color: blue">Photo Gallery</a>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
 		</td>
 	</tr>
+	<!-- #BeginEditable "menu" -->
+	<tr>
+		<td class="shopmenu"><a class="menu" href="../index.htm" style="">Home</a>
+		<a class="menu" href="../index-old.htm">Search</a>
+		<a class="menu" href="../account/login.html">Login</a>
+		<a class="menu" href="../games/index.html">Games</a>
+		<a class="menu" href="../MINECRAFT.htm">Minecraft srvrs</a>
+		<a class="shopmenucurrent">Shop</a> </td>
+	</tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+	<tr>
+		<td>
+		<h1 lang="en-us">Inter<em>shop</em></h1>
+		<h2>Featured products</h2>
+		<div id="featured" style="overflow: scroll">
+			<table style="width: 1200px">
+				<tr>
+					<td id="featured1" lang="en-us">
+					<div id="feat1" style="position: relative">
+						<a href="smartkey_mobile/index.html">
+						<img alt="Tastatura SmartKeyMobile" height="250" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" width="400" /></a>
+						<div id="text1" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+							Tastatura SmartKeyMobile</div>
+					</div>
+					</td>
+					<td id="featured2" lang="en-us">
+					<div id="feat2" style="position: relative">
+						<a href="#">
+						<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
+						<div id="text2" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+							no element :(</div>
+					</div>
+					</td>
+					<td id="featured3" lang="en-us">
+					<div id="feat3" style="position: relative;">
+						<a href="#">
+						<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
+						<div id="text3" style="position: absolute; left: 0px; bottom: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+							no element :(</div>
+					</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<h2>All products</h2>
+		<div id="prod1" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="smartkey_mobile/index.html">
+			<img alt="Tastatura SmartKeyMobile" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text10" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1;">
+				Tastatura SmartKeyMobile</div>
+		</div>
+		<div id="prod2" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text11" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(2</div>
+		</div>
+		<div id="prod3" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text12" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(3</div>
+		</div>
+		<div id="prod4" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text4" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(4</div>
+		</div>
+		<div id="prod5" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text5" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(5</div>
+		</div>
+		<div id="prod6" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text6" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(6</div>
+		</div>
+		<div id="prod7" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text7" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(7</div>
+		</div>
+		<div id="prod8" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text8" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(8</div>
+		</div>
+		<div id="prod9" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%; width: 100%">
+			<a href="#">
+			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
+			<div id="text9" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+				no element :(9</div>
+		</div>
+		<p></p>
+		<div class="footer">
+			<p>Copyright 2024 IntercomGăbitec</p>
+			<p>Copying of this page permitted</p>
+		</div>
+		</td>
+	</tr>
+	<!-- #EndEditable -->
 </table>
-<h2>Featured products</h2>
-<div id="featured" style="overflow:scroll">
-	<table style="width: 1200px">
-		<tr>
-			<td id="featured1" lang="en-us">
-			<div id="feat1" style="position: relative">
-				<a href="smartkey_mobile/index.html">
-				<img alt="Tastatura SmartKeyMobile" height="250" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" width="400" /></a>
-				<div id="text1" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
-					Tastatura SmartKeyMobile</div>
-			</div>
-			</td>
-			<td id="featured2" lang="en-us">
-			<div id="feat2" style="position: relative">
-				<a href="#">
-				<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
-				<div id="text2" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
-					no element :(</div>
-			</div>
-			</td>
-			<td id="featured3" lang="en-us">
-			<div id="feat3" style="position: relative;">
-				<a href="#">
-				<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
-				<div id="text3" style="position: absolute; left: 0px; bottom: 0px; background-color: #F47820; width: 400px; z-index: 1;">
-					no element :(</div>
-			</div>
-			</td>
-		</tr>
-	</table>
-</div>
-<h2>All products</h2>
-<div id="prod1" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="smartkey_mobile/index.html">
-	<img alt="Tastatura SmartKeyMobile" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text1" style="position: absolute; bottom:0px; left: 0px; background-color: #F47820; max-width:400px; width:100%; z-index: 1;">
-		Tastatura SmartKeyMobile</div>
-</div>
-<div id="prod2" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text2" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(2</div>
-</div>
-<div id="prod3" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text3" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(3</div>
-</div>
-<div id="prod4" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text4" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(4</div>
-</div>
-<div id="prod5" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text5" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(5</div>
-</div>
-<div id="prod6" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%"/></a>
-	<div id="text6" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(6</div>
-</div>
-<div id="prod7" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%"/></a>
-	<div id="text7" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(7</div>
-</div>
-<div id="prod8" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%"/></a>
-	<div id="text8" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(8</div>
-</div>
-<div id="prod9" style="position: relative; display: inline-block; max-height:250px; max-width:400px; width:100%; width:100%">
-	<a href="#">
-	<img alt="no image :(" src="error.jpg" style="max-height:250px; max-width:400px; width:100%" /></a>
-	<div id="text9" style="position: absolute; bottom:0; left: 0; background-color: #F47820; max-width:400px; width:100%; z-index: 1;display:inline-block">
-		no element :(9</div>
-</div>
-<p></p>
-<div class="footer"><p>Copyright 2024 IntercomG�bitec</p>
-	<p>Copying of this page permitted</p>
-</div>
+
 </body>
+
+<!-- #EndTemplate -->
 
 </html>

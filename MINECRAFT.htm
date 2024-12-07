@@ -1,89 +1,80 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
+<!-- #BeginTemplate "tabbed_desktop.dwt" -->
+
 <head>
-<meta content="text/html; charset=windows-1250" http-equiv="Content-Type" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link id="dark" rel="stylesheet" href="css/style.css"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
 <title>Minecraft</title>
 <script src="dark.js"></script>
 <script language="javascript" type="text/javascript">
-	var darkmode = getCookie("dark");
-	if (darkmode == "yes"){
-	  	document.getElementById("dark").href="css/dark.css";
-		}
-	function checkCookie() {
-	  	if (darkmode == "yes"){
-		var elements = document.getElementsByName("lnk");
-		for (var i = 0; i < elements.length; i++) {
- 			elements[i].style.color = "#AAB3FF";
-			}
-	  	}
-	}
-	var login = 0;
-	function ValidatePassword() {
-		if (login==1)
-			{console.log("logged out");
-			document.getElementById("login-status").innerHTML= "to see password";
-			document.getElementById("login").innerHTML = "Log in";
-			login = 0;
-			return true;
-			}
-	 	var user = prompt("Who are you");
-		var password = prompt("Please enter password to proceed", "");
-		if (login==0 && user == "gabi"&&password == "123456") 
-			{document.getElementById("login-status").innerHTML= "1234567890";
-			document.getElementById("login").innerHTML = "Log out";
-			login = 1;console.log("Hello, "+user);
-			return true;
-			}
-		console.log("login fail");
-		document.getElementById("login-status").innerHTML= "login failure, user not in login database";
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
+var login = 0;
+function ValidatePassword() {
+	if (login==1){
+		console.log("logged out");
+		document.getElementById("login-status").innerHTML= "to see password";
+		document.getElementById("login").innerHTML = "Log in";
 		login = 0;
-		return false;
+		return true;
+	}
+	var user = prompt("Who are you");
+	var password = prompt("Please enter password to proceed", "");
+	if (login==0 && user == "gabi"&&password == "123456"){
+		document.getElementById("login-status").innerHTML= "1234567890";
+		document.getElementById("login").innerHTML = "Log out";
+		login = 1;console.log("Hello, "+user);
+		return true;
+	}
+	console.log("login fail");
+	document.getElementById("login-status").innerHTML= "login failure, user not in login database";
+	login = 0;
+	return false;
 }
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
 </script>
-<style type="text/css">
-.auto-style2 {
-	color: #808080;
-}
-</style>
+<!-- #EndEditable -->
 </head>
-<body onload="checkCookie()">
-<h1 id="darkH1">Minecraft</h1>
-<table style="width: 100%" cellspacing="1">
-	<tr class="ctrltable">
-		<td style="width: 95px">
-		<a href="index.htm"><img border="0" id="img4" src="images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
-		</td>
-		<td>
-		<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
-		<a name="lnk" style="color:blue" href="index-old.htm">Search</a>
-		<a name="lnk" style="color:blue" href="loginregister/login.html">Login</a>
-		<a name="lnk" style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
+
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('images/unnamed.jpg')">
+
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
+	<tr>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
 		</td>
 	</tr>
-</table>
+	<!-- #BeginEditable "menu" -->
+		<tr><td class="menu">
+			<a class="menu" style="" href="index.htm">Home</a>
+			<a class="menu" href="index-old.htm">Search</a>
+			<a class="menu" href="account/login.html">Login</a>
+			<a class="menu" href="games/index.html">Games</a>
+			<a class="menucurrent">Minecraft srvrs</a>
+			<a class="menu" href="photo_gallery.htm">Photo Gallery</a>
+		</td></tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+		<tr>
+				<td><h1 id="darkH1">Minecraft</h1>
 <h2>Servers</h2>
 <h3>1:gabiblog (nebunii de pe mc)</h3>
 	<p>Minecraft bedrock v<span>1.20.80.01</span></p>
-	<p><a href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">Add to MCPE</a>
+	<p><a href="minecraft://?addExternalServer=Iamdumb20.aternos.me|Iamdumb20.aternos.me:56560">
+	Add to MCPE</a></p>
 	<p>Server hostat pe <a href="http://aternos.org/server">aternos</a></p>
 <table style="width: 350px">
 	<tr>
@@ -116,7 +107,13 @@ function FP_getObjectByID(id,o) {//v1.0
 		<td id="login-status" style="border-style: solid; border-width: 2px">to see password</td>
 	</tr>
 </table>-->
+</td>
+		</tr>
+	<!-- #EndEditable -->
+</table>
 
 </body>
+
+<!-- #EndTemplate -->
 
 </html>

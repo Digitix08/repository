@@ -1,53 +1,149 @@
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../tabbed_desktop.dwt" -->
+
 <head>
-<meta http-equiv="Content-Language" content="ro">
-<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
-<meta name="ProgId" content="FrontPage.Editor.Document">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link id="dark" rel="stylesheet" href="style.css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="../css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
 <title>Download Win mobile sofware</title>
-<meta name="Microsoft Theme" content="none, default">
 <script src="../dark.js"></script>
 <script language="javascript" type="text/javascript">
-			var darkmode = getCookie("dark");
-			if (darkmode == "yes") document.getElementById("dark").href="../css/dark.css";
-			function FP_swapImg() {//v1.0
- 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- 				elm.$src=elm.src; elm.src=args[n+1]; } }
-			}
-			
-			function FP_getObjectByID(id,o) {//v1.0
- 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- 				return null;
-			}
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="../css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// redirects if mobile
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
+function outliner () {
+		oMe = window.event.srcElement
+		//get child element
+		var child = document.all[event.srcElement.getAttribute("child",false)];
+		//if child element exists, expand or collapse it.
+		if (null != child)
+			child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+	}	
+	function changepic() {
+		uMe = window.event.srcElement;
+		var check = uMe.src.toLowerCase();
+		if (check.lastIndexOf("plus.gif") != -1)
+		{
+			uMe.src = "Minus.gif"
+		}
+		else
+		{
+			uMe.src = "Plus.gif"
+		}
+	}
 </script>
+<style type="text/css">
+
+
+
+
+	.collapsed 
+		{
+			DISPLAY: none
+		}
+</style>
+<!-- #EndEditable -->
 </head>
-<body onload="checkCookie();">
-<h1>Download Win mobile sofware</h1>
-<table style="width: 100%" class="ctrltable">
-<tr>
-<td style="width: 99px"><a href="index.htm"><img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"></a>
-</td>			
-<td>
-<a name="lnk" style="color:blue" href="../index.htm">Home</a>
-<a name="lnk" style="color:blue" href="../chrome%20urls.html">Chrome URLs</a>
-<a name="lnk" style="color:blue" href="http://www.google.com">Google</a>
-<a name="lnk" style="color:blue" href="../index-old.htm">Search</a>
-<!--<a name="lnk" style="color:blue" href="../login&register/login.html">Login</a>-->
-<a name="lnk" style="color:blue" href="../photo_gallery.htm">Photo Gallery</a>
-</td></tr>
+
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('../images/unnamed.jpg')">
+
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
+	<tr>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
+		</td>
+	</tr>
+	<!-- #BeginEditable "menu" -->
+	<tr>
+		<td class="menu"><a class="menu" href="../index.htm" style="">Home</a>
+		<a class="menu" href="../index-old.htm">Search</a>
+		<a class="menu" href="../account/login.html">Login</a>
+		<a class="menu" href="../games/index.html">Games</a>
+		<a class="menu" href="index.htm">Download</a> <a class="menucurrent">Dl 
+		Win mob SW</a> </td>
+	</tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+	<tr>
+		<td>
+		<h1>Download Win mobile sofware</h1>
+		<p><span class="note"><b>Last modified: </b>
+		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->05.12.2024 21:01<!--webbot bot="TimeStamp" endspan i-checksum="25012" --></span></p>
+		<h2>List of Files</h2>
+		<table cellpadding="2" cellspacing="0" width="98%" border="1"bordercolor="white" class="infotable">
+			<tr>
+				<td class="header" style="width: 950px">Filename</td>
+				<td class="header" style="width: 100px">File Type</td>
+			</tr>
+		<tr class="row">
+			<td class="content" style="width: 950px"><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="Plus.gif" width="9" child="issue0"/>&nbsp;(Global 
+			contents)</td>
+			<td class="content"></td>
+		</tr>
+			<tr class="collapsed" id="issue0" bgcolor="#ffffff"><td colspan="2">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td class="issuetitle" style="width: 10px">&nbsp;</td>
+					<td class="issuetitle">Global issues:</td></tr><tr>
+						<td class="issuenone" style="width: 10px">&nbsp;</td><td class="issuenone">
+						None</td></tr>
+				</table>
+			</td></tr>
+			<tr class="row">
+			<td class="content" style="width: 950px"><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="Plus.gif" width="9" child="issue2"/>&nbsp;Minecraft</td>
+			<td class="content">apk file</td>
+		</tr>
+			<tr class="collapsed" id="issue2" bgcolor="#ffffff"><td colspan="2">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="3" class="issuetitle">Available versions of 
+					minecraft (for more versions,please visit <a href="http://mcpedl.org/downloading">
+					mcpedl.org/downloading</a>)</td></tr><tr><td width="10" class="issuehdr">
+						#</td>
+					<td class="issuehdr" style="width: 46">Version</td>
+					<td class="issuehdr">Download</td></tr>
+					<tr><td width="10" class="issuecontent">1</td>
+						<td class="issuecontent" style="width: 46">0.10.4</td>
+						<td class="issuecontent">
+						<a href="https://archive.org/details/MinecraftPocketEditionV0.10.4.40">
+						http://archive.org/details/MinecraftPocketEditionV0.10.4.40</a></td></tr>
+					<tr><td width="10" class="issuecontent">2</td>
+						<td class="issuecontent" style="width: 46">1.14 (?)</td>
+						<td class="issuecontent">
+						<a href="https://drive.google.com/file/d/1EWPeB7AytJTW25Q13lRh05RgVBBwCYFB/view?usp=sharing">
+						https://drive.google.com/file/d/1EWPeB7AytJTW25Q13lRh05RgVBBwCYFB/view?usp=sharing</a></td></tr>
+					</table>
+				<strong style="color:#FF0000">NOTE: THE APP(s) with #<span>≥</span>2 
+				DO CRASH IF NOT "BOUGHT" ON MS ACCOUNT</strong></td></tr>
+		<tr valign="top">
+			<td class="foot" style="width: 950px">4 File(s)</td>
+			<td class="foot">&nbsp;</td>
+		</tr>
+		</table>
+		<p>
+		here are even more Win mobile games:
+		<a href="http://wp-store.neocities.org/games">
+		http://wp-store.neocities.org/games</a></p>
+		<p><a href="http://dedomil.net/games/category/7/all/page/1">more</a> 
+		(external link)</p>
+		</td>
+	</tr>
+	<!-- #EndEditable -->
 </table>
-<p><span class="note">
-<b>Last modified:  </b>03.03.2024 17:35</span></p>
-<h2>List of Files</h2>
-<p><a href="https://drive.google.com/file/d/1EWPeB7AytJTW25Q13lRh05RgVBBwCYFB/view?usp=sharing">Minecraft For Windows Phone 8.1</a></p>
-<p><a href=http://dedomil.net/games/category/7/all/page/1>more</a> (external link)</p>
+
 </body>
+
+<!-- #EndTemplate -->
+
 </html>

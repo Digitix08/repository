@@ -36,6 +36,14 @@ P
 	FONT-SIZE: 80%;
 	MARGIN-LEFT: 0px
 }
+.prompt{
+	position:fixed;
+	width: 100%;
+	z-index: 1;
+	left: 0px;
+	bottom: 0px;
+	background-color: #C0C0C0;
+}
 button{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
@@ -52,7 +60,7 @@ button:active{
 	BORDER-RIGHT: #ffffff 2px solid;
 	BORDER-TOP: #a0a0a0 2px solid;
 }
-input[type="button"]{
+input[type=button]{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
 	BORDER-BOTTOM: #a0a0a0 2px solid;
@@ -60,7 +68,7 @@ input[type="button"]{
 	BORDER-RIGHT: #a0a0a0 2px solid;
 	BORDER-TOP: #ffffff 2px solid;
 }
-input[type="button"]:active{
+input[type=button]:active{
 	BACKGROUND-COLOR:#f0f0f0;
 	color: #000000;
 	BORDER-BOTTOM: #ffffff 2px solid;
@@ -68,7 +76,7 @@ input[type="button"]:active{
 	BORDER-RIGHT: #ffffff 2px solid;
 	BORDER-TOP: #a0a0a0 2px solid;
 }
-input[type="text"]{
+input[type=text]{
 	BACKGROUND-COLOR:#ffffff;
 	color: #000000;
 	BORDER-BOTTOM: #ffffff 2px solid;
@@ -180,17 +188,49 @@ A:hover
 	COLOR: #cc3300;
 	TEXT-DECORATION: underline
 }
-H1
-{
-	BACKGROUND-COLOR: #003366;
-	BORDER-BOTTOM: #336699 6px solid;
+h1.menu {
+	color: #000000;
+	font-size: 130%;
+	font-weight: normal;
+	BORDER-BOTTOM: #CC6600 6px solid;
 	COLOR: #ffffff;
-	FONT-SIZE: 130%;
-	FONT-WEIGHT: normal;
-	MARGIN: 0em 0em 0em -20px;
-	PADDING-BOTTOM: 8px;
-	PADDING-LEFT: 30px;
-	PADDING-TOP: 16px
+	margin-left: 0px;
+	margin-right: 0em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-left: 30px;
+	padding-top: 16px;
+	padding-bottom: 8px;
+	BACKGROUND-COLOR: #FF9933;
+}
+a.menu, a.menucurrent, a.shopmenu, a.shopmenucurrent{
+	background-size: 100% 100%;
+	width:150px;
+	color:#FFFFFF;
+	display:inline-block;
+	background-repeat: no-repeat;
+	font-size:90%;
+	height: 30px;
+	padding-left: 10px;
+	line-height: 30px;
+}
+a.menu{
+	background-image: url('../images/buttons/menu_tab.png');
+}
+a.menu:hover{
+	background-image: url('../images/buttons/menu_tab_hover.png');
+}
+a.menu:active{
+	background-image: url('../images/buttons/menu_tab_selected.png');
+}
+a.menucurrent{
+	background-image: url('../images/buttons/menu_tab_selected.png');
+}
+table.body{
+	background-color:#ffffff;
+}
+td.menu{
+	BORDER-BOTTOM: #3F48CC 6px solid;
 }
 H2
 {

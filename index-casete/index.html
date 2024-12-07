@@ -1,84 +1,77 @@
-﻿<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../tabbed_desktop.dwt" -->
+
 <head>
-	<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link id="dark" href="../css/style.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="../css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
 	<title>index melodii casete</title>
-	<script src="../dark.js"></script>
-	<script language="javascript" type="text/javascript">
-		var srcset=0;
-		var darkmode = getCookie("dark");
-		if (darkmode == "yes"){
-		  	document.getElementById("dark").href="../css/dark.css";
-			}
-		function FP_swapImg() {//v1.0
-			var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
-			n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
-			elm.$src=elm.src; elm.src=args[n+1]; } }
-		}
-		function FP_getObjectByID(id,o) {//v1.0
-			var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
-			else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
-			if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
-			for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
-			f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
-			for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
-			return null;
-		}
-		function outliner () {
-			oMe = window.event.srcElement
-			//get child element
-			var child = document.all[event.srcElement.getAttribute("child",false)];
-			//if child element exists, expand or collapse it.
-			if (null != child)
-				child.className = child.className == "collapsed" ? "expanded" : "collapsed";
-		}
-		function changepic() {
-			uMe = window.event.srcElement;
-			var check = uMe.src.toLowerCase();
-			if (check.lastIndexOf("../download/Plus.gif") != -1)
-			{
-				uMe.src = "../download/Minus.gif"
-			}
-			else
-			{
-				uMe.src = "../download/Plus.gif"
-			}
-		}
-</script>	
-	<style type="text/css">
-		.collapsed{
-			DISPLAY: none
-		}
-	</style>
+<script src="../dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="../css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// redirects if mobile
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
+function outliner () {
+	oMe = window.event.srcElement
+	//get child element
+	var child = document.all[event.srcElement.getAttribute("child",false)];
+	//if child element exists, expand or collapse it.
+	if (null != child)
+		child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+}
+function changepic() {
+	uMe = window.event.srcElement;
+	var check = uMe.src.toLowerCase();
+	if (check.lastIndexOf("download/plus.gif") != -1)
+	{
+		uMe.src = "../download/Minus.gif"
+	}
+	else
+	{
+		uMe.src = "../download/Plus.gif"
+	}
+}
+</script>
+<!-- #EndEditable -->
 </head>
-	<body topmargin="0" leftmargin="0" rightmargin="0" onload="checkCookie();" onclick="outliner();">
-		<h1>Index-ul melodiilor de pe casete</h1>
-		<table style="width: 100%" class="ctrltable">
-			<tr>
-				<td style="width: 99px"><a href="../index.htm">
-				<img border="0" id="img4" src="../images/buttons/back_cmp_aftrnoon000_back.gif" height="21" width="100" alt="Back" 
-				onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')" 
-				onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back.gif')" 
-				onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" 
-				onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../images/buttons/back_cmp_aftrnoon000_back_p.gif')"/></a>
-				</td>
-				<td>
-				<a name="lnk" style="color:blue" href="../index.htm">Home</a>
-				<a name="lnk" style="color:blue" href="../chrome%20urls.html">
-				Chrome URLs</a>
-				<a name="lnk" style="color:blue" href="http://www.google.com">
-				Google</a>
-				<a name="lnk" style="color:blue" href="../index-old.htm">Search</a>
-				<a name="lnk" style="color:blue" href="../loginregister/login.html">
-				Login</a>
-				<a name="lnk" style="color:blue" href="../photo_gallery.htm">
-				Photo Gallery</a>
-				</td>
-			</tr>
-		</table>
+
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('../images/unnamed.jpg')">
+
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
+	<tr>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
+		</td>
+	</tr>
+	<!-- #BeginEditable "menu" -->
+		<tr><td class="menu">
+			<a class="menu" style="" href="../index.htm">Home</a>
+			<a class="menu" href="../index-old.htm">Search</a>
+			<a class="menu" href="../account/login.html">Login</a>
+			<a class="menu" href="../games/index.html">Games</a>
+			<a class="menu" href="../MINECRAFT.htm">Minecraft srvrs</a>
+			<a class="menucurrent">Index casete</a>
+		</td></tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+		<tr>
+				<td><h1>Index-ul melodiilor de pe casete</h1>
 		<p><span class="note">
-		<b>Last modified:  </b>25.10.2024 14:52</span></p>
+		<b>Last modified:  </b>
+		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->07.12.2024 12:47<!--webbot bot="TimeStamp" endspan i-checksum="26048" --></span></p>
 		<h2>List of Files</h2>
 		<table bgcolor="#1ba2e0" cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
 			<tr>
@@ -86,7 +79,7 @@
 				<td class="header" style="width: 100px">Tape Type</td>
 			</tr>
 		<tr class="row">
-			<td class="content" child="issue0" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue0">
+			<td class="content" child="issue0" style="width: 955px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue0"/>
 			&nbsp;(Global contents)</td>
 			<td class="content"></td>
 		</tr>
@@ -1659,10 +1652,16 @@
 					web browser does not support iframes or https certificates, or you are not loggen in to an @csantipa account</iframe>
 			</td></tr>
 		<tr valign="top">
-			<td class="foot" style="width: 955px">22 Cassettes (page 2/2)</td>
+			<td class="foot" style="width: 955px">22 Cassettes</td>
 			<td class="foot">&nbsp;</td>
 		</tr>
-		</table>
+		</table></td>
+		</tr>
+	<!-- #EndEditable -->
+</table>
+
 </body>
+
+<!-- #EndTemplate -->
 
 </html>

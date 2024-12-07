@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=windows-1250" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="../css/style.css" rel="stylesheet" />
+<title>login</title>
+<script src="cookie.js"></script>
+<script language="javascript" type="text/javascript">
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+else {
+	var path = window.location.pathname;
+	path = path.substring(7);
+	window.location = path;
+}
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="../css/dark.css";
+}
+var login = 0;
+var darkmode = getCookie("login");
+if (login == 1){
+  	login = 1;
+	console.log("Hello, " + user);outliner ();
+}
+function checklogin(){
+	var logstatus = getCookie("login");
+	if (logstatus == 1){
+		var user = getCookie("user");
+	  	login = 1;
+	  	document.getElementById("login-status").innerHTML = "logged in as "+user;
+	  	document.getElementById("logout").className = "expanded";
+		console.log("Hello, " + user);
+	}
+}
+function ValidatePassword() {
+	if (login == 0){
+ 		var user = document.getElementById("user").value;
+		var password = document.getElementById("password").value;
+		if (user == "gabi"&&password == "123456") {
+			document.getElementById("login-status").innerHTML = "logged in as "+user;
+			setCookie("login", 1)
+			setCookie("user", user);
+			login = 1;console.log("Hello, " + user);
+			document.getElementById("logout").className = "expanded";
+			window.location.href = "../index-casete/index.html"
+			return true;
+		}
+		console.log("login fail");
+		document.getElementById("login-status").innerHTML = "login failure, user not in login database";
+		login = 0;
+		return false;
+	}
+}
+function LogOut() {
+	login = 0;
+	console.log("logged out");
+	document.getElementById("login-status").innerHTML = "not logged in";
+	document.getElementById("logout").className = "collapsed";
+	setCookie("login", 0);
+	setCookie("user", null)
+	login = 0;
+	return true;
+}
+			function FP_swapImg() {//v1.0
+ 				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ 				n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ 				elm.$src=elm.src; elm.src=args[n+1]; } }
+			}
+			function FP_getObjectByID(id,o) {//v1.0
+ 				var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ 				else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ 				if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ 				for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ 				f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ 				for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ 				return null;
+			}
+			function outliner () {
+				oMe = window.event.srcElement
+				//get child element
+				var child = document.all[event.srcElement.getAttribute("child",false)];
+				//if child element exists, expand or collapse it.
+				if (login==1)
+				if (null != child)
+					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+			}
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+</script>
+<style type="text/css">
+.collapsed {
+	display: none;
+}
+</style>
+</head>
+
+<!-- #BeginEditable "login only" -->
+<body onclick="outliner();" onload="FP_preloadImgs(/*url*/'../../images/buttons/back_cmp_aftrnoon000_back_p_s.gif',/*url*/'../../images/buttons/back_cmp_aftrnoon000_back_p.gif'); checklogin()">
+
+<!-- #EndEditable -->
+<div id="main-content">
+	<h1 class="auto-style3">Login</h1>
+</div>
+<table style="width: 100%">
+	<tr class="ctrltable" style="background-color: #ead858">
+		<td style="width: 107px"><a href="../index.htm">
+		<img id="img4" alt="Back" border="0" height="21" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'../../images/buttons/back_cmp_aftrnoon000_back_p_s.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'../../images/buttons/back_cmp_aftrnoon000_back.gif')" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'../../images/buttons/back_cmp_aftrnoon000_back_p.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'../../images/buttons/back_cmp_aftrnoon000_back_p.gif')" src="../../images/buttons/back_cmp_aftrnoon000_back.gif" width="100"></a></td>
+		<td><a href="../index.htm" style="color: blue">Home</a>
+		<a href="../../chrome%20urls.html" style="color: blue">Chrome URLs</a>
+		<a href="http://www.google.com" style="color: blue">Google</a>
+		<a href="../MINECRAFT.htm" style="color: blue">Minecraft server(s)</a>
+		<a href="../../index-old.htm" style="color: blue">Search</a>
+		<a href="../../photo_gallery.htm" style="color: blue">Photo Gallery</a>
+		</td>
+	</tr>
+</table>
+<form onsubmit="return false">
+	<table border="1" bordercolor="white" cellpadding="2" cellspacing="0" class="infotable" width="400px">
+		<tr class="expanded">
+			<td style="height: 19px">&nbsp;</td>
+			<td style="height: 19px">&nbsp;</td>
+		</tr>
+		<tr class="row">
+			<td>User:</td>
+			<td><input id="user" autocomplete="username" required type="text" /> </td>
+		</tr>
+		<tr class="row">
+			<td>Password:</td>
+			<td>
+			<input id="password" name="password" autocomplete="current-password" required type="password" /></td>
+		</tr>
+		<tr class="row">
+			<td class="content"><input type="reset" value="Clear" /></td>
+			<td class="content">
+			<input type="submit" value="Log in" onclick="ValidatePassword();" />
+			<input class="collapsed" id="logout" type="button" value="Log out" onclick="LogOut();" /></td>
+		</tr>
+		<tr valign="top">
+			<td id="login-status" class="foot">Not logged in</td>
+			<td class="foot">&nbsp;</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+
+</html>

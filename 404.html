@@ -1,24 +1,62 @@
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "tabbed_desktop.dwt" -->
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link id="dark" rel="stylesheet" href="#">
-  <link rel="icon" type="image/x-icon" href="https://digitix08.github.io/repository/images/favicon.ico">
-  <title>404 not found</title>
-  <script src="https://digitix08.github.io/repository/dark.js"></script>
-  <script language="javascript" type="text/javascript">
-    var darkmode = getCookie("dark");
-    if (darkmode == "yes"){
-      document.getElementById("dark").href="https://digitix08.github.io/repository/css/dark.css";
-    }
-  </script>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link id="dark" href="css/style.css" rel="stylesheet" />
+<!-- #BeginEditable "docprops" -->
+<link rel="icon" type="image/x-icon" href="https://digitix08.github.io/repository/images/favicon.ico"/>
+<title>404 not found</title>
+<script src="https://digitix08.github.io/repository/dark.js"></script>
+<script language="javascript" type="text/javascript">
+var darkmode = getCookie("dark");
+if (darkmode == "yes"){
+	document.getElementById("dark").href="css/dark.css";
+}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// redirects if mobile
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	window.location = "/mobile"+ path;
+}
+</script>
+<!-- #EndEditable -->
 </head>
-<body onload="geturl()">
-  <h1>404 not found</h1>
-  <hr>
+
+<!-- #BeginEditable "onload" -->
+<body style="background-image: url('images/unnamed.jpg')">
+
+<!-- #EndEditable -->
+<table align="center" class="body" style="width: 100%; max-width: 1000px">
+	<tr>
+		<td style="height: 46px">
+		<h1 class="menu">Digitix08's Testsite</h1>
+		</td>
+	</tr>
+	<!-- #BeginEditable "menu" -->
+		<tr><td class="menu">
+			<a class="menu" style="" href="index.htm">Home</a>
+			<a class="menu" href="index-old.htm">Search</a>
+			<a class="menu" href="account/login.html">Login</a>
+			<a class="menu" href="games/index.html">Games</a>
+			<a class="menu" href="MINECRAFT.htm">Minecraft srvrs</a>
+			<a class="menucurrent">Error</a>
+		</td></tr>
+	<!-- #EndEditable -->
+	<!-- #BeginEditable "body" -->
+		<tr>
+				<td><h1>404 not found</h1>
   <h2>The page you are looking for does not exist on this server</h2>
-  <p>The URL "<label id="URLlabel"><em>page.html</em></label>" does not correspond to a page</p>
-  <p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">reload</a>ing the page.</p>
-  <p>If you got here via external (not in site) navigation, please <a href="http://digitix08.github.io/repository/">go to home page</a></p>
+  <p>The URL "<label id="URLlabel"><em>page.html</em></label>" does not 
+  correspond to a page</p>
+  <p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">
+  reload</a>ing the page.</p>
+  <p>If you got here via external (not in site) navigation, please <a href="http://digitix08.github.io/repository/">
+  go to home page</a></p>
   <script>
     function geturl(){
       if (window.location.pathname != "/repository/404.html"){
@@ -27,6 +65,13 @@
         label.innerHTML = url;
       }
     }
-  </script>
+  </script></td>
+		</tr>
+	<!-- #EndEditable -->
+</table>
+
 </body>
+
+<!-- #EndTemplate -->
+
 </html>
