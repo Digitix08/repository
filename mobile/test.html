@@ -2,14 +2,25 @@
 	<head>
 		<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link id="dark" rel="stylesheet" href="../css/style.css">
+		<link id="dark" rel="stylesheet" href="css/style.css">
 		<title>index</title>
-		<script src="../dark.js"></script>
+		<script src="../dark.js"></script><script src="../anchor.js"></script>
 		<script language="javascript" type="text/javascript">
 			var darkmode = getCookie("dark");
-			  	if (darkmode == "yes"){
-			  	document.getElementById("dark").href="css/dark.css";
-				}
+			if (darkmode == "yes"){
+			document.getElementById("dark").href="css/dark.css";
+			}
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+			else {
+				var host = window.location.hostname;
+				var path = window.location.pathname;
+				var root = rootcheck();
+				path = path.substring(root.length, path.length);
+				root = root.substring(0, root.length - 7)
+				console.log(root);
+				console.log(path);
+				window.location = root + path;
+			}
 			function devtools() { 
 				var script = document.createElement('script'); 
 				script.src="https://cdn.jsdelivr.net/npm/eruda"; 

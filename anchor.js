@@ -1,7 +1,10 @@
 ﻿//this script is meant to detect site path for mobile/desktop redirects
 //DO NOT MOVE FROM ROOT OF (sub)SITE
-function rootcheck(){
+function rootcheck(sfolder){
 	var path = window.location.pathname;
-	path = path.substring(0, path.length - 9);
+	var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+	if(sfolder) fileName += sfolder;
+	console.log(fileName);
+	path = path.substring(0, path.length - fileName.length);
 	return path;
 }
