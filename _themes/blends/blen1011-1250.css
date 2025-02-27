@@ -63,6 +63,14 @@ font-family:Arial;
 font-size:1;
 color:#FFCC00;
 }
+.prompt{
+	position:fixed;
+	width: 100%;
+	z-index: 1;
+	left: 0px;
+	bottom: 0px;
+	background-color: #C0C0C0;
+}
 a:link{
 color:#993300;
 }
