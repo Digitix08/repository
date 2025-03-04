@@ -1,71 +1,43 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
-<!-- #BeginTemplate "tabbed_desktop.dwt" -->
-
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<link id="dark" href="css/style.css" rel="stylesheet" />
-<!-- #BeginEditable "docprops" -->
-<link rel="icon" type="image/x-icon" href="https://digitix08.github.io/repository/images/favicon.ico"/>
-<title>404 not found</title>
-<script src="https://digitix08.github.io/repository/dark.js"></script>
-<script language="javascript" type="text/javascript">
-var darkmode = getCookie("dark");
-if (darkmode == "yes"){
-	document.getElementById("dark").href="css/dark.css";
-}
+<meta content="text/html; charset=windows-1250" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="mobile/css/style.css"/>
+<title>Untitled 11</title>
+<script type="text/javascript">
 </script>
-<!-- #EndEditable -->
 </head>
 
-<!-- #BeginEditable "onload" -->
-<body style="background-image: url('images/unnamed.jpg')">
-
+<!-- #BeginEditable "login only" --><body onclick="outliner();">
 <!-- #EndEditable -->
-<table align="center" class="body" style="width: 100%; max-width: 1000px">
-	<tr>
-		<td style="height: 46px">
-		<h1 class="menu">Digitix08's Testsite</h1>
+		<div id="main-content"><h1>404 not found</h1></div>
+<table style="width: 100%">
+	<tr class="ctrltable" style="background-color:#ead858">
+		<td>
+		<a style="color:blue" href="index.htm">Home</a>
+		<a style="color:blue" href="chrome%20urls.html">Chrome URLs</a>
+		<a style="color:blue" href="http://www.google.com">Google</a>
+		<a style="color:blue" href="MINECRAFT.htm">Minecraft server(s)</a>
+		<a style="color:blue" href="index-old.htm">Search</a>
+		<a style="color:blue" href="photo_gallery.htm">Photo Gallery</a>
 		</td>
 	</tr>
-	<!-- #BeginEditable "menu" -->
-		<tr><td class="menu">
-			<a class="menu" style="" href="index.htm">Home</a>
-			<a class="menu" href="index-old.htm">Search</a>
-			<a class="menu" href="account/login.html">Login</a>
-			<a class="menu" href="games/index.html">Games</a>
-			<a class="menu" href="MINECRAFT.htm">Minecraft srvrs</a>
-			<a class="menucurrent">Error</a>
-		</td></tr>
-	<!-- #EndEditable -->
-	<!-- #BeginEditable "body" -->
-		<tr>
-				<td><h1>404 not found</h1>
-  <h2>The page you are looking for does not exist on this server</h2>
-  <p>The URL "<label id="URLlabel"><em>page.html</em></label>" does not 
-  correspond to a page</p>
-  <p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">
-  reload</a>ing the page.</p>
-  <p>If you got here via external (not in site) navigation, please <a href="http://digitix08.github.io/repository/">
-  go to home page</a></p>
-  <script>
-    function geturl(){
-      if (window.location.pathname != "/repository/404.html"){
-        var url = window.location.pathname;
-        var label = document.getElementById("URLlabel");
-        label.innerHTML = url;
-      }
-    }
-  </script></td>
-		</tr>
-	<!-- #EndEditable -->
 </table>
-
+<h2>The page you are looking for does not exist on this server</h2>
+<p>The URL "<label id="URLlabel"><em>page.html</em></label>" does not correspond to a page</p>
+<p>You can try <a href="javascript:history.back()">going back</a> or <a href="javascript:window.location.reload()">reload</a>ing the page.</p>
+<p>If you got here via external (not in site) navigation, please <a href="http://digitix08.github.io/repository/">go to home page</a></p>
+<script>
+	function geturl(){
+		if (window.location.pathname != "/repository/404.html"){
+			var url = window.location.pathname;
+			var label = document.getElementById("URLlabel");
+			label.innerHTML = url;
+			}
+	}
+</script>
 </body>
-
-<!-- #EndTemplate -->
 
 </html>

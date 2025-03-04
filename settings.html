@@ -222,6 +222,14 @@ function prevtheme(){
 		}
 	}
 }
+function eraseCookie(name){
+	setCookie(name, " ", "actualdate+"+"Thu Jan 01 1970 00:00:00 UTC")
+	window.location.reload()
+}
+function getLogStatus(){
+	var user = getCookie("user");var login = getCookie("login");if(user != null&&user != ""&&login==1){document.
+	getElementById("logstatus").innerHTML="Logged in as "+user;document.getElementById("LogOut").style=""}
+}
 </script>
 <style type="text/css">
 
@@ -229,6 +237,7 @@ function prevtheme(){
 
 
 .auto-style1 {
+	border-width: 1px;
 	text-align: right;
 }
 .auto-style2 {
@@ -269,7 +278,7 @@ function prevtheme(){
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body style="background-image: url('images/unnamed.jpg')">
+<body style="background-image: url('images/unnamed.jpg')" onload="getLogStatus()">
 
 <!-- #EndEditable -->
 <table align="center" class="body" style="width: 100%; max-width: 1000px">
@@ -319,8 +328,8 @@ function prevtheme(){
 				</select><br />
 				<input checked="checked" name="Exp" type="radio" value="default" /> 
 				Default<br />
-				<input name="Exp" type="radio" value="none" /> None<span style="font-size: 80%"><span class="auto-style3" style="font-size: 80%"><br />
-				<input name="erase" onclick="makeCookie();" type="button" value="Erase Cookie" /></span></span></td>
+				<input name="Exp" type="radio" value="none" /> None<span style="font-size: 80%"><span style="font-size: 80%"><br />
+				<input name="erase" onclick="eraseCookie('dark');" type="button" value="Erase Cookie" /></span></span></td>
 			</tr>
 			<tr>
 				<td class="auto-style3" style="width: 71px">
@@ -336,15 +345,20 @@ function prevtheme(){
 			<tr class="issuehdr">
 				<td>&nbsp;</td>
 				<td class="auto-style6">&nbsp;</td>
-				<td class="auto-style1" style="border-right-color: #A0A0A0; border-right-width: 2px">
+				<td class="auto-style1" style="border-right-color: #A0A0A0; ">
 				<span style="font-size: 80%">
-				<span class="auto-style3" style="font-size: 80%">
-				<span style="font-size: 80%">
-				<input name="preview" onclick="prevtheme();" type="button" value="Preview" /></span><input name="set" onclick="makeCookie();" type="button" value="Apply" /></span></span></td>
+				<input name="preview" onclick="prevtheme();" type="button" value="Preview" /><input name="set" onclick="makeCookie();" type="button" value="Apply" /></span></td>
 			</tr>
 		</table>
 		</span>
-		<p></p>
+		<h2>Login</h2>
+		<p><label id="logstatus">Not logged in. Go <a href="account/login.html">here</a> to login</label></p>
+		<p id="LogOut" style="display:none">
+		<input name="LogOut" onclick="eraseCookie('login'); eraseCookie('user')" type="button" value="Logout" /></p>
+		<h2>Advanced</h2>
+		<h3>User data (cookies)</h3>
+		<p><input name="eraseAll" onclick="eraseCookie('dark'); eraseCookie('prompt'); eraseCookie('login'); eraseCookie('user')" type="button" value="Erase All Cookies" /> for this site&nbsp;</p>
+		<p>&nbsp;</p>
 		</td>
 	</tr>
 	<!-- #EndEditable -->
