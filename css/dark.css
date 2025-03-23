@@ -26,17 +26,6 @@ P
 	MARGIN-TOP: 0px;
 	PADDING-RIGHT: 10px
 }
-.ctrltable{
-	background-color:#7B5900;
-	color:white;
-	BORDER-BOTTOM: #ffffff 0px solid;
-	BORDER-COLLAPSE: collapse;
-	BORDER-LEFT: #ffffff 0px solid;
-	BORDER-RIGHT: #ffffff 0px solid;
-	BORDER-TOP: #ffffff 0px solid;
-	font-size: 80%;
-	MARGIN-LEFT: 0px
-}
 .prompt{
 	position:fixed;
 	width: 100%;

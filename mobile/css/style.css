@@ -25,6 +25,13 @@ P
 	MARGIN-TOP: 0px;
 	PADDING-RIGHT: 10px
 }
+table.body{
+	background-color:#ffffff;
+	border-collapse:collapse;
+}
+a.menucurrent{
+	display:none;
+}
 .ctrltable
 {
 	BACKGROUND-COLOR: #ead858;

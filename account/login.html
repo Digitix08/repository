@@ -12,10 +12,8 @@
 <title>login</title>
 <script src="../dark.js"></script><script src="../anchor.js"></script>
 <script language="javascript" type="text/javascript">
-var darkmode = getCookie("dark");
-if (darkmode == "yes"){
-	document.getElementById("dark").href="../css/dark.css";
-}
+var darkmode = getCookie("dark"), redirURL;
+if (darkmode == "yes")document.getElementById("dark").href="../css/dark.css";
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	// redirects if mobile
 	var host = window.location.hostname;
@@ -27,6 +25,16 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	console.log(path);
 	window.location = root + "mobile/" + path;
 }
+if (window.location.href.indexOf("?") > -1){
+	var urlString = window.location.href
+	var paramString = urlString.split('?')[1];
+	var params_arr = paramString.split('&');
+	for (let i = 0; i < params_arr.length; i++) {
+		let pair = params_arr[i].split('=');
+		if (pair[0] == "redir")redirURL = pair[1];
+	}
+}
+
 var login = 0;
 function checklogin(){
 	var logstatus = getCookie("login");
@@ -48,7 +56,8 @@ function ValidatePassword() {
 			setCookie("user", user);
 			login = 1;console.log("Hello, " + user);
 			document.getElementById("logout").className = "expanded";
-			window.location.href = "../index-casete/index.html"
+			if(redirURL == null)window.location.href = "../index-casete/index.html"
+			else window.location.href = redirURL;
 			return true;
 		}
 		if(document.getElementById("user").value && document.getElementById("password").value){
@@ -72,9 +81,6 @@ function LogOut() {
 }
 </script>
 <style type="text/css">
-
-
-
 .collapsed {
 	display: none;
 }
@@ -86,10 +92,10 @@ function LogOut() {
 <body style="background-image: url('../images/unnamed.jpg')" onload="checklogin()">
 
 <!-- #EndEditable -->
-<table align="center" class="body" style="width: 100%; max-width: 1000px">
+<table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
 	<tr>
 		<td style="height: 46px">
-		<h1 class="menu">Digitix08's Testsite</h1>
+		<h1 class="menu" id="title">Digitix08's Testsite</h1>
 		</td>
 	</tr>
 	<!-- #BeginEditable "menu" -->

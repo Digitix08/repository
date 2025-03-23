@@ -3,6 +3,16 @@ function checkBody() {
 	if(document.body) {console.log("correct");startChecks();}
 	else {console.log("no");setTimeout(checkPrompt(), 3000);}
 };
+function mobileCheck(){
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+		if(document.getElementById("darkH1")!=null){
+			document.getElementById("title").innerHTML = document.getElementById("darkH1").innerHTML
+			document.getElementById("darkH1").remove()
+			document.getElementsByTagName("body")[0].style="";
+			document.getElementById("body").style="width:100%";
+			}
+		}
+}
 function checkPrompt() {
 	var prompt = getCookie("prompt");
 	if(prompt != "accept"){
@@ -17,6 +27,8 @@ function checkPrompt() {
 	}
 };
 function tabCheck(){
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )return;
+	else
 	if(window.innerWidth < 995&&document.getElementsByClassName("menu").length>0){console.log("narrow view (" + window.innerWidth + "px)")
 		var n=document.getElementsByClassName("menu"),m=document.getElementsByClassName("menucurrent"),i
 		if (!Math.trunc) {
@@ -35,7 +47,8 @@ function tabCheck(){
 	}
 }
 function startChecks(){
-	console.log("page start code, width is " + window.innerWidth); 
+	console.log("page start code, width is " + window.innerWidth);
+	mobileCheck()
 	checkPrompt()
 	tabCheck()
 }
