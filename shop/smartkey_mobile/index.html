@@ -9,19 +9,25 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <link id="dark" href="../../css/style.css" rel="stylesheet" />
 <!-- #BeginEditable "docprops" -->
-<link href="../style.css" rel="stylesheet"/>
+<link id="dark" href="../style.css" rel="stylesheet"/>
 <title>Tastatura SmartKeyMobile</title>
 <script src="../script.js"></script>
 <script src="../../dark.js"></script>
+<script src="../../anchor.js"></script>
 <script language="javascript" type="text/javascript">
 var darkmode = getCookie("dark");
 if (darkmode == "yes"){
 	document.getElementById("dark").href="../../css/dark.css";
 }
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	// redirects if mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+	var host = window.location.hostname;
 	var path = window.location.pathname;
-	window.location = "/mobile"+ path;
+	var root = rootcheck("shop/smartkey_mobile/");
+	path = path.substring(root.length, path.length);
+	root = root.substring(0, root.length)
+	console.log(root);
+	console.log(path);
+	window.location = root + "mobile/" + path;
 }
 </script>
 <!-- #EndEditable -->
@@ -31,10 +37,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 <body style="background-image: url('../../images/unnamed.jpg')">
 
 <!-- #EndEditable -->
-<table align="center" class="body" style="width: 100%; max-width: 1000px">
+<table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
 	<tr>
 		<td style="height: 46px">
-		<h1 class="menu">Digitix08's Testsite</h1>
+		<h1 class="menu" id="title">Digitix08's Testsite</h1>
 		</td>
 	</tr>
 	<!-- #BeginEditable "menu" -->
@@ -89,19 +95,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		<strong><em style="font-size: x-large">Buy Now!</em></strong></button>&nbsp;<strong>OUT 
 		OF STOCK</strong></p>
 		<h2>Descriere</h2>
-		<p>Vi s-a nt mplat vreodată sa nu reusiți să scrieți cu tastatura 
-		on-screen de la telefon? Sau să trebuiască sa folosiți taste precum <code>
+		<p>Vi s-a &#238;nt&#226;mplat vreodat&#259; s&#259; nu reusi&#539;i s&#259; scrie&#539;i cu tastatura 
+		on-screen de la telefon? Sau s&#259; trebuiasc&#259; s&#259; folosi&#539;i taste precum <code>
 		Ctrl</code>, <code>Alt</code> sau <code>Del</code>?</p>
-		<p>Nicio problemă! Vă prezentăm soluția: Tastatura
-		<span lang="en-us"><em>SmartKeyMobile</em></span>! Inspirată de 
+		<p>Nicio problem&#259;! V&#259; prezent&#259;m solu&#539;ia: Tastatura
+		<span lang="en-us"><em>SmartKeyMobile</em></span>! Inspirat&#259; de 
 		telefoanele mai vechi (cu butoane sau tastatură QWERTY), această 
-		tastatură ncearcă să rezolve problemele pe care le-a introdus tastatura 
-		on-screen, aparută odată cu primele smartphone-uri cu touchscreen. 
-		Faptul că are butoane fizice vă ajută să vă dați seama unde sunt tastele 
-		și să scrieți mai ușor la tastatură, ajut ndu-vă să nu mai apăsați pe l 
-		ngă taste.</p>
+		tastatură &#238;ncearcă s&#259; rezolve problemele pe care le-a introdus tastatura 
+		on-screen, ap&#259;rut&#259; odată cu primele smartphone-uri cu touchscreen. 
+		Faptul că are butoane fizice v&#259; ajut&#259; s&#259; v&#259; da&#539;i seama unde sunt tastele 
+		&#537;i s&#259; scrie&#539;i mai u&#537;or la tastatur&#259;, ajut&#226;ndu-vă s&#259; nu mai apăsați pe l&#238;ngă taste.</p>
 		<h2>Specificații tehnice</h2>
-		<p><strong>Conexiune:</strong> Bluetooth , USB-C</p>
+		<p><strong>Conexiune:</strong> Bluetooth&#174;, USB-C</p>
 		<p><strong>Altele:</strong> </p>
 		<ul>
 			<li>Nr. taste: 80</li>
@@ -109,7 +114,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		</ul>
 		<p>&nbsp;</p>
 		<div class="footer">
-			<p>Copyright 2024 IntercomGăbitec</p>
+			<p>Copyright 2024 IntercomG&#259;bitec</p>
 			<p>Copying of this page permitted</p>
 		</div>
 		</td>

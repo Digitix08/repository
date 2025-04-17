@@ -6,10 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link id="dark" href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="../../dark.js"></script>
+<script src="../../anchor.js"></script>
 <script type="text/javascript">
 	var darkmode = getCookie("dark");
 	if (darkmode == "yes"){
 		document.getElementById("dark").href="../css/dark.css";
+	}
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+	else {
+		var host = window.location.hostname;
+		var path = window.location.pathname;
+		var root = rootcheck("index-casete/");
+		path = path.substring(root.length, path.length);
+		root = root.substring(0, root.length - 7)
+		console.log(root);
+		console.log(path);
+		window.location = root + path;
 	}
 			function FP_swapImg() {//v1.0
  				var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
@@ -122,7 +134,7 @@
 				<tr><td class="issuecontent">11</td>
 					<td class="issuecontent">???English</td>
 					<td class="issuecontent">
-					&nbsp;<audio controls style="height: 45px; width: 352px"><source src="../audio/aud2.mp3" type="audio/mp3"></audio></td></tr>
+					&nbsp;<audio controls style="height: 45px; width: 352px"><source src="../../audio/aud2.mp3" type="audio/mp3">your browser does not support html5</audio></td></tr>
 				</table>
 			</td></tr>
 			<tr class="row">
@@ -141,38 +153,38 @@
 					<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
 						???Who knows but maybe</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/who%20knows%20but%20maybe.mp3" type="audio/mp3">
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/who%20knows%20but%20maybe.mp3" type="audio/mp3">
 						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
 						???</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud4.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud4.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
 						???Germana</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud5.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud5.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">10</td><td class="issuecontent">
 						???Germana</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud7.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud7.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">
 						???</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud8.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud8.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">14</td><td class="issuecontent">
 						???Germana</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud9.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud9.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					</table>
 			</td></tr>
@@ -210,8 +222,8 @@
 					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">
 						???italian dream</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/italian%20dream.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/italian%20dream.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 				</table>
 			</td></tr>
@@ -231,27 +243,27 @@
 					<tr><td class="issuecontent" style="width: 10px">1</td>
 						<td class="issuecontent">???I don't like reggae mix</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/I%20don't%20like%20reggae%20mix.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/I%20don't%20like%20reggae%20mix.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px; height: 16px;">
 						4</td>
 						<td class="issuecontent">???Only for you</td>
 						<td class="issuecontent" style="height: 16px">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/Only%20for%20you.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/Only%20for%20you.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">5</td>
 						<td class="issuecontent">?</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/aud15.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/aud15.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">7</td>
 						<td class="issuecontent">???I am what I am</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/I%20am%20what%20I%20am.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/I%20am%20what%20I%20am.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 				</table>
 			</td></tr>
@@ -270,20 +282,20 @@
 					<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">
 						???malibu malibu</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/malibu%20malibu.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/malibu%20malibu.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
 						?</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/melody3.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/melody3.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuecontent" style="width: 10px">10</td><td class="issuecontent">
 						?</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/proj3.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/proj3.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 					<tr><td class="issuetitle" colspan="4">Side B</td>
 						</tr>
@@ -293,8 +305,8 @@
 					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
 						?</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/french%20mus2.mp3" type="audio/mp3">
-						</audio></td>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/french%20mus2.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td>
 					</tr>
 				</table>
 			</td></tr>
@@ -313,18 +325,18 @@
 					<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
 						???not so very long ago</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/not%20so%20very%20long%20ago.m4a" type="audio/mp4">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/not%20so%20very%20long%20ago.m4a" type="audio/mp4">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuecontent" style="width: 10px">9</td><td class="issuecontent">
 						???somewere over the rainbow</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/somewere%20over%20the%20rainbow.m4a" type="audio/mp4">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/somewhere%20over%20the%20rainbow.m4a" type="audio/mp4">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuecontent" style="width: 10px">11</td><td class="issuecontent">
 						???save the moment</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/save%20the%20moment.m4a" type="audio/mp4">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/save%20the%20moment.m4a" type="audio/mp4">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuetitle" colspan="3">Side 2</td>
 						</tr>
 					<tr><td class="issuehdr" style="width: 10px">#</td>
@@ -333,12 +345,12 @@
 					<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
 						???alright alright</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/alright%20alright.m4a" type="audio/mp4">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/alright%20alright.m4a" type="audio/mp4">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuecontent" style="width: 10px">5&nbsp;</td><td class="issuecontent">
 						?</td><td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/melody%205%20of%20agfa%20c90%20yellow.m4a" type="audio/mp4">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/melody%205%20of%20agfa%20c90%20yellow.m4a" type="audio/mp4">
+						your browser does not support html5</audio></td></tr>
 					</table>
 				*the audio recordings for this tape are in .m4a file type, which 
 				may not play on Google Chrome and other Chromium based browsers<br/>
@@ -358,12 +370,12 @@
 						<td class="issuehdr">Name</td></tr>
 					<tr><td class="issuecontent" style="width: 10px">12</td><td class="issuecontent">
 						???Instrumental remix</td><td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/instrumental%20remix.mp3" type="audio/mp3">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/instrumental%20remix.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuecontent" style="width: 10px">+</td><td class="issuecontent">
 						-Radio operator said</td><td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/instrumental%20remix_radio.mp3" type="audio/mp3">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/instrumental%20remix_radio.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td></tr>
 					</table>
 			</td></tr>
 			<tr class="row">
@@ -384,8 +396,8 @@
 					<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
 						???la machinga</td>
 						<td class="issuecontent">
-						<audio controls style="width: 352px; height: 45px"><source src="../audio/la%20machinga.mp3" type="audio/mp3">
-						</audio></td></tr>
+						<audio controls style="width: 352px; height: 45px"><source src="../../audio/la%20machinga.mp3" type="audio/mp3">
+						your browser does not support html5</audio></td></tr>
 					<tr><td class="issuetitle" colspan="3">Side B</td>
 						</tr>
 					<tr><td class="issuehdr" style="width: 10px">#</td>

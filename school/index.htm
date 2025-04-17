@@ -11,23 +11,24 @@
 <!-- #BeginEditable "docprops" -->
 <title>School</title>
 <script src="../dark.js"></script>
+<script src="../anchor.js"></script>
 <script language="javascript" type="text/javascript">
 var darkmode = getCookie("dark");
 if (darkmode == "yes"){
 	document.getElementById("dark").href="../css/dark.css";
 }
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	// redirects if mobile
-	var host = window.location.hostname;
-	var path = window.location.pathname;
-	window.location = "/mobile"+ path;
-}
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+	document.getElementById("dark").href="../mobile/css/style.css";
+	if (darkmode == "yes"){
+		document.getElementById("dark").href="../mobile/css/dark.css";
+		}
+	}
 </script>
 <!-- #EndEditable -->
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body style="background-image: url('../images/unnamed.jpg')">
+<body style="background-image: url('images/peterthal.jpg')">
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
@@ -37,7 +38,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		</td>
 	</tr>
 	<!-- #BeginEditable "menu" -->
-		<tr><td class="menu">
+		<tr><td class="ctrltable">
 			<a class="menu" style="" href="../index.htm">Home</a>
 			<a class="menu" href="../index-old.htm">Search</a>
 			<a class="menu" href="../account/login.html">Login</a>
@@ -49,7 +50,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	<!-- #BeginEditable "body" -->
 		<tr>
 				<td><hr/>
-				<h1>Școală</h1>
+				<h1 id="darkH1">Școală</h1>
 				<p class="newStyle1"><a href="../index.htm">&lt;-- Înapoi</a></p>
 <p>Aici o să găsiţi tot ce am făcut la școală din clasa a vii (șaptea) pÃ¢nă în 
 prezent</p>
