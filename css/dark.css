@@ -1,5 +1,6 @@
 ﻿BODY
 {
+	background-image: url('../images/unnamed_dark.jpg');
 	BACKGROUND-COLOR:#383636;
 	FONT-FAMILY: "Verdana", sans-serif;
 	FONT-SIZE: 100%;
@@ -66,7 +67,7 @@ input[type=button]:active{
 	BORDER-RIGHT: #545454 2px solid;
 	BORDER-TOP: #000000 2px solid;
 }
-input[type="text"]{
+input[type=text]{
 	BACKGROUND-COLOR:#383636;
 	color: #ffffff;
 	BORDER-BOTTOM: #545454 2px solid;

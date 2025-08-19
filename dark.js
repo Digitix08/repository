@@ -1,4 +1,9 @@
 document.onreadystatechange = function (){if (document.readyState === 'complete')startChecks();}
+if (typeof console == "undefined") {
+	if (typeof external == "undefined")
+    	/*this.console = { log: function (msg) { alert(msg); } }*/;
+    else this.console = { log: function (msg) { external.log(msg); } };
+}
 function checkBody() {
 	if(document.body) {console.log("correct");startChecks();}
 	else {console.log("no");setTimeout(checkPrompt(), 3000);}
@@ -16,7 +21,7 @@ function mobileCheck(){
 function checkPrompt() {
 	var prompt = getCookie("prompt");
 	if(prompt != "accept"){
-		const newDiv = document.createElement("div");
+		var newDiv = document.createElement("div");
 		newDiv.id= "prompt";
 		document.getElementsByTagName("body")[0].appendChild(newDiv);
 		document.getElementById("prompt").innerHTML += "To use &quot;premium&quot; features such as dark theme you <strong>MUST</strong> agree to save <strong>LOCAL</strong> cookies containing the theme preference";
@@ -62,7 +67,7 @@ function setCookie(cname, cvalue, exdays){
 		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 	}
 	else{
-		const d = new Date();
+		var d = new Date();
 		d.setTime(d.getTime() + (exdays*24*60*60*1000));
 		var expires = "expires="+ d.toUTCString();
 		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
@@ -119,7 +124,6 @@ function FP_swapImg() {//v1.0
 		}
 	}
 }
-
 function FP_getObjectByID(id,o) {//v1.0
 	var c,el,els,f,m,n;
 	if(!o)o=document;

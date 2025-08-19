@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 
 <!-- #BeginTemplate "../tabbed_desktop.dwt" -->
@@ -24,11 +24,19 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		}
 	}
 </script>
+<style>
+.video{
+	width:100%;
+	aspect-ratio:16/9;
+	max-width:710px;
+	max-height:400px;
+}
+</style>
 <!-- #EndEditable -->
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body style="background-image: url('images/peterthal.jpg')">
+<body>
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
@@ -68,12 +76,27 @@ prezent</p>
 <p class="newStyle1">1.1: My movie.mp4</p>
 <p class="auto-style2">Temă: toamna</p>
 <p class="auto-style2">Făcut împreună cu: Robert</p>
-<video type="video/mp4" src="../videos/My Movie.mp4" controls allowfullscreen style="width:100%; aspect-ratio:16/9; max-width:710px; max-height:400px">
+<video class="video" controls allowfullscreen>
+	<source src="../videos/My Movie.mp4" type="video/mp4">
+	<object type="application/x-shockwave-flash" data="../videos/player.swf" class="video">
+		<param name="movie" value="../videos/player.swf">
+		<param name="allowfullscreen" value="true">
+        <param name="flashvars" value="movie=..%2Fvideos%2FMy%20Movie.mp4&amp;volume=100&amp;controllerstyle=overlay&amp;image='.$thumb.'&amp;autoload=false&amp;fullscreen=true&amp;fgcolor=0x13ABEC&amp;bgcolor=0x051615">
+        You don't have Flash installed. <a href="http://backend.redtro.net:2052/Flash_10_1_Setup.exe">Get flash 10.1 for IE here</a>
+    </object>
+</video>
 </video>
 <p class="auto-style3">1.2: Trgrer.mp4</p>
 <p class="auto-style2">Temă: școala</p>
 <p class="auto-style2">Făcut împreună cu: Robert</p>
-<video type="video/mp4" src="../videos/trgrer.mp4" controls allowfullscreen style="width:100%; aspect-ratio:16/9; max-width:710px; max-height:400px">
+<video class="video" controls allowfullscreen>
+	<source src="../videos/trgrer.mp4" type="video/mp4">
+	<object type="application/x-shockwave-flash" data="../videos/player.swf" class="video">
+		<param name="movie" value="../videos/player.swf">
+		<param name="allowfullscreen" value="true">
+        <param name="flashvars" value="movie=..%2Fvideos%2Ftrgrer.mp4&amp;volume=100&amp;controllerstyle=overlay&amp;image='.$thumb.'&amp;autoload=false&amp;fullscreen=true&amp;fgcolor=0x13ABEC&amp;bgcolor=0x051615">
+        You don't have Flash installed. <a href="http://backend.redtro.net:2052/Flash_10_1_Setup.exe">Get flash 10.1 for IE here</a>
+    </object>
 </video>
 <a name="Documente Word"></a><hr />
 <p class="auto-style1">2.Documente Word</p>
