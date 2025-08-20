@@ -51,44 +51,28 @@ a.menucurrent{
 	bottom: 0px;
 	background-color: #C0C0C0;
 }
-button{
-	BACKGROUND-COLOR:#f0f0f0;
+input[type=button], input[type=submit], input[type=reset], button, select{
+	BACKGROUND-COLOR:#e2e2e2;
 	color: #000000;
 	BORDER-BOTTOM: #a0a0a0 2px solid;
-	BORDER-LEFT: #ffffff 2px solid;
+	BORDER-LEFT: #f0f0f0 2px solid;
 	BORDER-RIGHT: #a0a0a0 2px solid;
-	BORDER-TOP: #ffffff 2px solid;
+	BORDER-TOP: #f0f0f0 2px solid;
 }
-button:active{
-	BACKGROUND-COLOR:#f0f0f0;
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active, button:active, select:active{
+	BACKGROUND-COLOR:#d4d4d4;
 	color: #000000;
-	BORDER-BOTTOM: #ffffff 2px solid;
+	BORDER-BOTTOM: #f0f0f0  2px solid;
 	BORDER-LEFT: #a0a0a0 2px solid;
-	BORDER-RIGHT: #ffffff 2px solid;
+	BORDER-RIGHT: #f0f0f0  2px solid;
 	BORDER-TOP: #a0a0a0 2px solid;
 }
-input[type=button]{
-	BACKGROUND-COLOR:#f0f0f0;
+input[type=text], input[type=date], input[type=password]{
+	BACKGROUND-COLOR:#f5f5f5;
 	color: #000000;
-	BORDER-BOTTOM: #a0a0a0 2px solid;
-	BORDER-LEFT: #ffffff 2px solid;
-	BORDER-RIGHT: #a0a0a0 2px solid;
-	BORDER-TOP: #ffffff 2px solid;
-}
-input[type=button]:active{
-	BACKGROUND-COLOR:#f0f0f0;
-	color: #000000;
-	BORDER-BOTTOM: #ffffff 2px solid;
+	BORDER-BOTTOM: #f0f0f0  2px solid;
 	BORDER-LEFT: #a0a0a0 2px solid;
-	BORDER-RIGHT: #ffffff 2px solid;
-	BORDER-TOP: #a0a0a0 2px solid;
-}
-input[type=text]{
-	BACKGROUND-COLOR:#ffffff;
-	color: #000000;
-	BORDER-BOTTOM: #ffffff 2px solid;
-	BORDER-LEFT: #a0a0a0 2px solid;
-	BORDER-RIGHT: #ffffff 2px solid;
+	BORDER-RIGHT: #f0f0f0  2px solid;
 	BORDER-TOP: #a0a0a0 2px solid;
 }
 .ctrltable2

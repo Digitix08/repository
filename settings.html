@@ -10,7 +10,7 @@
 <link id="dark" href="css/style.css" rel="stylesheet" />
 <!-- #BeginEditable "docprops" -->
 <title>Settings</title>
-<script src="dark.js"></script><script src="anchor.js"></script>
+<script type="text/javascript" src="dark.js"></script><script type="text/javascript" src="anchor.js"></script>
 <script language="javascript" type="text/javascript">
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
 	var host = window.location.hostname;
@@ -22,13 +22,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	console.log(path);
 	window.location = root + "mobile/" + path;
 }
-var darkmode = getCookie("dark");
+var darkmode = getTheme();
 if (darkmode == "yes"){
-	document.getElementById("dark").href="../css/dark.css";
+	document.getElementById("dark").href="css/dark.css";
 }
 function setval(date){
 	var darksel = document.getElementsByName("Theme");
-	var datesel = document.getElementsByName("Exp");
 	var autosel = document.getElementsByName("auto");
 	for (var i = 0; i < darksel.length; i++) {
 		//console.log("4");
@@ -39,12 +38,18 @@ function setval(date){
 				setCookie("dark", darkmode, date);
 			}
 			else if (darkmode == "auto"){
-				//console.log('auto does not work yet');
+				for (var j = 0; j < autosel.length; j++)
+					if (autosel[j].checked){
+						var autoprev = autosel[j].value;
+						if (autoprev == "dark")setCookie("dark", "auto"+autoprev, date);
+						if (autoprev == "black")setCookie("dark", "auto"+autoprev, date);
+					}
 			}
 		}
 	}
 }
 function makeCookie() {
+	var datesel = document.getElementsByName("Exp");
 	var accept = getCookie("prompt");
 	if(accept == "accept"){
 		var date = new Date();
@@ -133,8 +138,8 @@ function prevtheme(){
 	}
 }
 function eraseCookie(name){
-	setCookie(name, " ", "actualdate+"+"Thu Jan 01 1970 00:00:00 UTC")
-	window.location.reload()
+	setCookie(name, " ", "actualdate+"+"Thu Jan 01 1970 00:00:00 UTC");
+	window.location.reload();
 }
 function getLogStatus(){
 	var user = getCookie("user");var login = getCookie("login");if(user != null&&user != ""&&login==1){document.
@@ -182,7 +187,7 @@ function getLogStatus(){
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body>
+<body onload="getLogStatus()">
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
@@ -198,7 +203,7 @@ function getLogStatus(){
 		<a class="menu" href="account/login.html">Login</a>
 		<a class="menu" href="games/index.html">Games</a>
 		<a class="menu" href="MINECRAFT.htm">Minecraft srvrs</a>
-		<a class="menucurrent">Settings</a> </td>
+		<a class="menucurrent">Settings</a></td>
 	</tr>
 	<!-- #EndEditable -->
 	<!-- #BeginEditable "body" -->
@@ -207,8 +212,8 @@ function getLogStatus(){
 		<h1>Settings</h1>
 		<h2>Theme &amp; Aspect</h2>
 		<h3>Theme setting</h3>
-		<span style="font-size: 80%">&nbsp;
-		<table class="auto-style2" style="width: 90%">
+		<div style="height:10px"></div>
+		<table class="auto-style2" style="width: 100%; font-size: 80%">
 			<tr class="header">
 				<td colspan="2" style="border-top-color: #C0C0C0; border-top-width: 2px">Theme mode</td>
 				<td class="auto-style3" style="height: 22px; border-right-color: #A0A0A0; border-right-width: 2px; border-top-color: #C0C0C0; border-top-width: 2px;">
@@ -239,7 +244,9 @@ function getLogStatus(){
 				<td class="auto-style4">Auto mode</td>
 			</tr>
 			<tr>
-				<td class="auto-style3"></td>
+				<td class="auto-style3" style="width:110px">*Auto mode<br />
+				only works on<br />
+				some browsers!</td>
 				<td class="auto-style5">
 				<input checked="checked" name="auto" type="radio" value="dark" />Dark<br />
 				<input name="auto" type="radio" value="oled" />Oled </td>
@@ -251,7 +258,6 @@ function getLogStatus(){
 				<input name="preview" onclick="prevtheme();" type="button" value="Preview" /><input name="set" onclick="makeCookie();" type="button" value="Apply" /></td>
 			</tr>
 		</table>
-		</span>
 		<h2>Login</h2>
 			<p><label id="logstatus">Not logged in. Go 
 			<a href="account/login.html?redir=../settings.html">here</a> to login</label></p>

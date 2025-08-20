@@ -7,8 +7,8 @@
             var urlString = window.location.href
             var paramString = urlString.split('?')[1];
             var params_arr = paramString.split('&');
-            for (let i = 0; i < params_arr.length; i++) {
-                let pair = params_arr[i].split('=');
+            for (var i = 0; i < params_arr.length; i++) {
+                var pair = params_arr[i].split('=');
                     if (pair[0] == "src"){
                     	document.getElementById("pic").src = pair[1];
                     	document.getElementById("dload").href = pair[1];

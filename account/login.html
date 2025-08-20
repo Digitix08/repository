@@ -29,8 +29,8 @@ if (window.location.href.indexOf("?") > -1){
 	var urlString = window.location.href
 	var paramString = urlString.split('?')[1];
 	var params_arr = paramString.split('&');
-	for (let i = 0; i < params_arr.length; i++) {
-		let pair = params_arr[i].split('=');
+	for (var i = 0; i < params_arr.length; i++) {
+		var pair = params_arr[i].split('=');
 		if (pair[0] == "redir")redirURL = pair[1];
 	}
 }
@@ -89,7 +89,7 @@ function LogOut() {
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body style="background-image: url('../images/unnamed.jpg')" onload="checklogin()">
+<body>
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">

@@ -13,7 +13,7 @@
 <script src="../dark.js"></script>
 <script src="../anchor.js"></script>
 <script type="text/javascript">
-var darkmode = getCookie("dark");
+var darkmode = getTheme()
 if (darkmode == "yes"){
 	document.getElementById("dark").href="../css/dark.css";
 }
@@ -27,6 +27,20 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	console.log(path);
 	window.location = root + "mobile/" + path;
 }
+function loadtap(){
+	if (window.location.href.indexOf("?") > -1){
+        var urlString = window.location.href
+        var paramString = urlString.split('?')[1];
+        var params_arr = paramString.split('&');
+        for (var i = 0; i < params_arr.length; i++) {
+            var pair = params_arr[i].split('=');
+            if (pair[0] == "tape"){
+                var tap = document.getElementById("tape"+pair[1]);
+                if (null != tap)tap.className = tap.className == "collapsed" ? "expanded" : "collapsed";
+            }
+        }
+    }
+}	   
 function outliner () {
 	oMe = window.event.srcElement
 	//get child element
@@ -49,18 +63,25 @@ function changepic() {
 }
 </script>	
 <style type="text/css">
-.collapsed{
-	DISPLAY: none
-}
-table.issuetable td{
-	border: 1px solid #dcdcdc
-}
+	.collapsed{
+		DISPLAY: none
+	}
+	.chrome{
+		width: 100px;
+		background-color: #000044;
+		color: #FFFFFF;
+	}
+	.ferric{
+		width: 100px;
+		background-color: #331c05;
+		color: #ffffff;
+	}
 </style>
 <!-- #EndEditable -->
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body>
+<body onclick="outliner()" onload="loadtap()">
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
@@ -84,7 +105,8 @@ table.issuetable td{
 				<td><h1>Melodii neunoscute de pe casete</h1>
 		<p><span class="note">
 		<b>Last modified:  </b>
-		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->19.08.2025 13:46<!--webbot bot="TimeStamp" endspan i-checksum="26031" --></span></p>
+		<b>Last modified:  </b>
+		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->20.08.2025 15:29<!--webbot bot="TimeStamp" endspan i-checksum="26302" --></span></p>
 		
 		<h2>List of Files</h2>
 		<table style="background-color:#1ba2e0; width:98%; border:1px solid white; padding:2"  class="infotable">
@@ -109,12 +131,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue1"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape77"/></td>
 			<td class="content" style="width:21px">77</td>
-			<td class="content" child="issue1" style="width: 100%">Magna C90</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape77" style="width: 100%">Magna C90</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue1"><td colspan="4">
+			<tr class="collapsed" id="tape77"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 				
 				<tr><td colspan="3" class="issuetitle">Side 2</td>
@@ -135,12 +157,13 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue2"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape84"/></td>
 			<td class="content" style="width:21px">84</td>
-			<td class="content" child="issue2" style="width: 100%">Caseta C90 Verde de la bunici</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric?cobalt?</td>
+			<td class="content" child="tape84" style="width: 100%">Caseta C90 Verde de la bunici</td>
+			<td class="content" style="background-color: #6f695d; color: #ffffff">
+			ferric?cobalt?</td>
 		</tr>
-			<tr class="collapsed" id="issue2"><td colspan="4">
+			<tr class="collapsed" id="tape84"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 				<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -215,12 +238,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue5"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape99"/></td>
 			<td class="content" style="width:21px">99</td>
-			<td class="content" child="issue5" style="width: 100%">Maxell C60</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape99" style="width: 100%">Maxell C60</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue5"><td colspan="4">
+			<tr class="collapsed" id="tape99"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side B</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -233,12 +256,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue3"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape134"/></td>
 			<td class="content" style="width:21px">134</td>
-			<td class="content" child="issue3" style="width: 100%">Agfa Ferrocolor C60+6 vișinie</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape134" style="width: 100%">Agfa Ferrocolor C60+6 vi?inie</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue3"><td colspan="4">
+			<tr class="collapsed" id="tape134"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 				<tr><td class="issuetitle" colspan="3">Side 2</td>
 					</tr>
@@ -259,12 +282,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue4"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape135"/></td>
 			<td class="content" style="width:21px">135</td>
-			<td class="content" child="issue4" style="width: 100%">Caseta Orwo C60</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape135" style="width: 100%">Caseta Orwo C60</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue4"><td colspan="4">
+			<tr class="collapsed" id="tape135"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 				<tr><td class="issuetitle" colspan="3">Side B</td></tr>
 				<tr><td class="issuehdr" style="width: 10px">#</td>
@@ -306,12 +329,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue6"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape212"/></td>
 			<td class="content" style="width:21px">212</td>
-			<td class="content" child="issue6" style="width: 100%">BASF C90</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape212" style="width: 100%">BASF C90</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue6"><td colspan="4">
+			<tr class="collapsed" id="tape212"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -369,12 +392,12 @@ table.issuetable td{
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue8"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape262"/></td>
 			<td class="content" style="width:21px">262</td>
-			<td class="content" child="issue8" style="width: 100%">Agfa c90 galbena</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape262" style="width: 100%">Agfa c90 galbena</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue8"><td colspan="4">
+			<tr class="collapsed" id="tape262"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -430,12 +453,12 @@ table.issuetable td{
 				**the recordings were made before performing maintenance on the 
 				tape player, so they have extra flutter</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue9"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape269"/></td>
 			<td class="content" style="width:21px">269</td>
-			<td class="content" child="issue9" style="width: 100%">Basf chromdioxid c90</td>
-			<td class="content" style="width: 100px">chrome</td>
+			<td class="content" child="tape269" style="width: 100%">Basf chromdioxid c90</td>
+			<td class="chrome">chrome</td>
 		</tr>
-			<tr class="collapsed" id="issue9"><td colspan="4">
+			<tr class="collapsed" id="tape269"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -452,12 +475,12 @@ table.issuetable td{
 					</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue7"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape277"/></td>
 			<td class="content" style="width:21px">277</td>
-			<td class="content" child="issue7" style="width: 100%">TDK D60 "7"</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape277" style="width: 100%">TDK D60 "7"</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue7"><td colspan="4">
+			<tr class="collapsed" id="tape277"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -482,12 +505,12 @@ table.issuetable td{
 					</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="issue10"/></td>
+			<td class="content" style="width:21px"><IMG alt="expand/collapse section" class="expandable" height="11" onclick=changepic() src="../download/Plus.gif" width="9" child="tape___"/></td>
 			<td class="content" style="width:21px">n/a</td>
-			<td class="content" child="issue10" style="width: 100%">name here c0</td>
-			<td class="content" style="width: 100px; background-color: #331c05; color: #ffffff">ferric</td>
+			<td class="content" child="tape___" style="width: 100%">name here c0</td>
+			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue10"><td colspan="4">
+			<tr class="collapsed" id="tape___"><td colspan="4">
 				<table style="width:97%; border: 1px solid #dcdcdc" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>

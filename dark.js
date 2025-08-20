@@ -1,7 +1,7 @@
 document.onreadystatechange = function (){if (document.readyState === 'complete')startChecks();}
 if (typeof console == "undefined") {
 	if (typeof external == "undefined")
-    	/*this.console = { log: function (msg) { alert(msg); } }*/;
+    	this.console = { log: function (msg) { /*alert(msg);*/ } };
     else this.console = { log: function (msg) { external.log(msg); } };
 }
 function checkBody() {
@@ -31,6 +31,20 @@ function checkPrompt() {
 		document.getElementById("prompt").className= "prompt";
 	}
 };
+function getTheme(){
+	var darkmode = getTheme();
+	if (darkmode == "yes")return "yes";
+	if (darkmode == "black")return "black";
+	if (darkmode.indexOf("auto")!=-1 && typeof window.matchMedia != "undefined"){
+		var mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
+		var isDarkMode = mediaQueryObj.matches;
+		if (isDarkMode){
+			if(darkmode.indexOf("dark")!=-1)return "yes";
+			if(darkmode.indexOf("dark")!=-1)return "black";
+		}
+	}
+	return "no";
+}
 function tabCheck(){
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )return;
 	else
@@ -86,7 +100,7 @@ function getCookie(cname) {
 			return c.substring(name.length, c.length);
 		}
 	}	
-return"";
+	return"";
 };
 function checkCookie(){
 	if (darkmode == "yes"){

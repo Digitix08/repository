@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../dark.js"></script>
 <script type="text/javascript" src="../anchor.js"></script>
 <script language="javascript" type="text/javascript">
-var darkmode = getCookie("dark");
+var darkmode = getTheme()
 if (darkmode == "yes"){
 	document.getElementById("dark").href="../css/dark.css";
 }
@@ -26,6 +26,20 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	console.log(root);
 	console.log(path);
 	window.location = root + "mobile/" + path;
+}
+function loadtap(){
+    if (window.location.href.indexOf("?") > -1){
+        var urlString = window.location.href
+        var paramString = urlString.split('?')[1];
+        var params_arr = paramString.split('&');
+        for (var i = 0; i < params_arr.length; i++) {
+            var pair = params_arr[i].split('=');
+            if (pair[0] == "tape"){
+                var tap = document.getElementById("tape"+pair[1]);
+                if (null != tap)tap.className = tap.className == "collapsed" ? "expanded" : "collapsed";
+            }
+        }
+    }
 }
 function outliner () {
 	oMe = window.event.srcElement
@@ -47,8 +61,15 @@ function changepic() {
 		uMe.src = "../download/Plus.gif"
 	}
 }
+function setsrc(id, url){
+	var elem = document.getElementById(id);
+    if (null != elem)elem.src = url;
+}
 </script>
 <style type="text/css">
+.collapsed{
+	DISPLAY: none
+}
 .chrome{
 	width: 100px;
 	background-color: #000044;
@@ -64,7 +85,7 @@ function changepic() {
 </head>
 
 <!-- #BeginEditable "onload" -->
-<body>
+<body onclick="outliner()" onload="loadtap()">
 
 <!-- #EndEditable -->
 <table align="center" id="body" class="body" style="width: 100%; max-width: 1000px">
@@ -88,7 +109,7 @@ function changepic() {
 				<td><h1>Index-ul melodiilor de pe casete</h1>
 		<p><span class="note">
 		<b>Last modified:  </b>
-		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->19.08.2025 13:46<!--webbot bot="TimeStamp" endspan i-checksum="26031" --></span></p>
+		<!--webbot bot="TimeStamp" s-format="%d.%m.%Y %H:%M" s-type="EDITED" startspan -->20.08.2025 15:29<!--webbot bot="TimeStamp" endspan i-checksum="26302" --></span></p>
 		<h2>List of Files</h2>
 		<table cellpadding="2" cellspacing="0" width="98%" border="1" style="background-color:#1ba2e0; border-color:white" class="infotable">
 			<tr>
@@ -114,12 +135,12 @@ function changepic() {
 			</td>
 		</tr>
 		<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue1"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape77"/></td>
 			<td class="content" style="width:21px">77</td>
-			<td class="content" child="issue1" style="width: 100%">Magna C90</td>
+			<td class="content" child="tape77" style="width: 100%">Magna C90</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue1"><td colspan="4">
+			<tr class="collapsed" id="tape77"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -191,19 +212,18 @@ function changepic() {
 					Roxette</td>
 					<td class="issuecontent">Dangerous</td></tr>
 				<tr><td style="width:10px" class="issuecontent">11</td>
-					<td class="issuecontent"><a href="melodii_necunoscute.html">
-					necunoscut</a></td>
+					<td class="issuecontent"><a href="melodii_necunoscute.html">necunoscut</a></td>
 					<td class="issuecontent">???English</td></tr>
 
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue2"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape78"/></td>
 			<td class="content" style="width:21px">78</td>
-			<td class="content" child="issue2" style="width: 100%">Agfa superferro C60 de la bunici</td>
+			<td class="content" child="tape78" style="width: 100%">Agfa superferro C60 de la bunici</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue2"><td colspan="4">
+			<tr class="collapsed" id="tape78"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -262,12 +282,12 @@ function changepic() {
 				</table>
 			</td></tr>
 						<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue5"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape82"/></td>
 			<td class="content" style="width:21px">82</td>
-			<td class="content" child="issue5" style="width: 100%">TDK D90 de la bunici</td>
+			<td class="content" child="tape82" style="width: 100%">TDK D90 de la bunici</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue5"><td colspan="4">
+			<tr class="collapsed" id="tape82"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td><td class="issuehdr" nowrap style="width: 50%">
@@ -340,12 +360,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue4"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape83"/></td>
 			<td class="content" style="width:21px">83</td>
-			<td class="content" child="issue4" style="width: 100%">BASF C120 de la bunici (40 min au rămas din 120)</td>
+			<td class="content" child="tape83" style="width: 100%">BASF C120 de la bunici (40 min au rămas din 120)</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue4"><td colspan="4">
+			<tr class="collapsed" id="tape83"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -387,13 +407,13 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue3"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape84"/></td>
 			<td class="content" style="width:21px">84</td>
-			<td class="content" child="issue3" style="width: 100%">Caseta C90 verde de la bunici</td>
+			<td class="content" child="tape84" style="width: 100%">Caseta C90 verde de la bunici</td>
 			<td class="content" style="background-color: #6f695d; color: #ffffff">
 			ferric?cobalt?</td>
 		</tr>
-			<tr class="collapsed" id="issue3"><td colspan="4">
+			<tr class="collapsed" id="tape84"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -453,12 +473,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue12"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape97"/></td>
 			<td class="content" style="width:21px">97</td>
-			<td class="content" child="issue12" style="width: 100%">Agfa superferro HDX(C60+6)</td>
+			<td class="content" child="tape97" style="width: 100%">Agfa superferro HDX(C60+6)</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue12"><td colspan="4">
+			<tr class="collapsed" id="tape97"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -516,12 +536,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue13"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape99"/></td>
 			<td class="content" style="width:21px">99</td>
-			<td class="content" child="issue13" style="width: 100%">Maxell C60</td>
+			<td class="content" child="tape99" style="width: 100%">Maxell C60</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue13"><td colspan="4">
+			<tr class="collapsed" id="tape99"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -566,12 +586,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue15"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape106"/></td>
 			<td class="content" style="width:21px">106</td>
-			<td class="content" child="issue15" style="width: 100%">Radio 2m+ collection (înregistrat peste)</td>
+			<td class="content" child="tape106" style="width: 100%">Radio 2m+ collection (înregistrat peste)</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue15"><td colspan="4">
+			<tr class="collapsed" id="tape106"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -617,12 +637,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue6"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape132"/></td>
 			<td class="content" style="width:21px">132</td>
-			<td class="content" child="issue6" style="width: 100%">BASF C60 cu eticheta verde</td>
+			<td class="content" child="tape132" style="width: 100%">BASF C60 cu eticheta verde</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue6"><td colspan="4">
+			<tr class="collapsed" id="tape132"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -688,12 +708,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue8"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape134"/></td>
 			<td class="content" style="width:21px">134</td>
-			<td class="content" child="issue8" style="width: 100%">Agfa Ferrocolor C60+6 vișinie</td>
+			<td class="content" child="tape134" style="width: 100%">Agfa Ferrocolor C60+6 vișinie</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue8"><td colspan="4">
+			<tr class="collapsed" id="tape134"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -828,12 +848,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue10"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape139"/></td>
 			<td class="content" style="width:21px">139</td>
-			<td class="content" child="issue10" style="width: 100%">BASF C90 cu eticheta portocalie</td>
+			<td class="content" child="tape139" style="width: 100%">BASF C90 cu eticheta portocalie</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue10"><td colspan="4">
+			<tr class="collapsed" id="tape139"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -925,12 +945,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue7"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape140"/></td>
 			<td class="content" style="width:21px">140</td>
-			<td class="content" child="issue7" style="width: 100%">Caseta C60 "bumti bumti"</td>
+			<td class="content" child="tape140" style="width: 100%">Caseta C60 "bumti bumti"</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue7"><td colspan="4">
+			<tr class="collapsed" id="tape140"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -996,12 +1016,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue9"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape141"/></td>
 			<td class="content" style="width:21px">141</td>
-			<td class="content" child="issue9" style="width: 100%">Caseta C60 eticheta roșie</td>
+			<td class="content" child="tape141" style="width: 100%">Caseta C60 eticheta roșie</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue9"><td colspan="4">
+			<tr class="collapsed" id="tape141"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1 (T)</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1079,12 +1099,77 @@ function changepic() {
 				*doar titlul în fr, melodia în english
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue21"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape142"/></td>
+			<td class="content" style="width:21px">142</td>
+			<td class="content" child="tape142" style="width: 100%">Goldstar C60 
+			"Best of..."</td>
+			<td class="ferric">ferric</td>
+		</tr>
+			<tr class="collapsed" id="tape142"><td colspan="4">
+				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
+					<tr><td class="issuehdr" style="width: 20px">#</td>
+					<td class="issuehdr" nowrap style="width: 50%">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+					Guns &amp; Roses</td>
+					<td class="issuecontent">Don't Cry (Original)</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+					Paula Seling</td>
+					<td class="issuecontent">Ploaie în Luna lui Martie</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+					R.E.M</td>
+					<td class="issuecontent">Everybody Hurts</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+					Direcția 5</td>
+					<td class="issuecontent">Esti stilul meu</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">
+					Madonna</td>
+					<td class="issuecontent">You'll See</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+					Scorpions</td>
+					<td class="issuecontent">You and I</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
+					Serge Gainsbourg &amp; Jane Birkin</td>
+					<td class="issuecontent">Je t'aime moi non plus </td></tr>
+				<tr><td class="issuetitle" colspan="3">Side B</td>
+					</tr>
+				<tr><td class="issuehdr" style="width: 10px">#</td>
+					<td class="issuehdr">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+					The Shadows</td>
+					<td class="issuecontent">Chi Mai</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+					Ventura</td>
+					<td class="issuecontent">Love Story </td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+					Vienna Symphonic Orchestra Project</td>
+					<td class="issuecontent">Phantom of the Opera</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">
+					Vanghelis</td>
+					<td class="issuecontent">La Petite Fille De La Mer</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+					Geova Eucarin</td>
+					<td class="issuecontent">Exodus (main theme)</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">
+					Francisco Garcia</td>
+					<td class="issuecontent">What's a Woman</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+					Richard Clayderman</td>
+					<td class="issuecontent">Für Elise</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
+					The London Starlight Orchestra</td>
+					<td class="issuecontent">Lilly Was Here</td></tr>
+				</table>
+			</td></tr>
+			<tr class="row">
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape184"/></td>
 			<td class="content" style="width:21px">184</td>
-			<td class="content" child="issue21" style="width: 100%">BASF Cromdioxid c60 nr4</td>
+			<td class="content" child="tape184" style="width: 100%">BASF Cromdioxid c60 nr4</td>
 			<td class="chrome">chrome</td>
 		</tr>
-			<tr class="collapsed" id="issue21"><td colspan="4">
+			<tr class="collapsed" id="tape184"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1138,12 +1223,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue14"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape192"/></td>
 			<td class="content" style="width:21px">192</td>
-			<td class="content" child="issue14" style="width: 100%">Sony HF60</td>
+			<td class="content" child="tape192" style="width: 100%">Sony HF60</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue14"><td colspan="4">
+			<tr class="collapsed" id="tape192"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1196,12 +1281,77 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue16"/></td>
-			<td class="content" style="width:21px">212</td>
-			<td class="content" child="issue16" style="width: 100%">BASF C90</td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue7"/></td>
+			<td class="content" style="width:21px">193</td>
+			<td class="content" child="issue7" style="width: 100%">Philips SQC60</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue16"><td colspan="4">
+			<tr class="collapsed" id="issue7"><td colspan="4">
+				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
+					<tr><td class="issuehdr" style="width: 20px">#</td>
+					<td class="issuehdr" nowrap style="width: 50%">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+					2 Unlimited</td>
+					<td class="issuecontent">Jump for Joy</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+					N-Trance</td>
+					<td class="issuecontent">Electronic Pleasure</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+					Kadoc</td>
+					<td class="issuecontent">The Nighttrain (Radio Edit) </td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+					Saint Etienne</td>
+					<td class="issuecontent">He's on the Phone</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">
+					E-Type</td>
+					<td class="issuecontent">Set the World On Fire (Extended 
+					Version) </td></tr>
+				<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+					Worlds Apart</td>
+					<td class="issuecontent">Baby Come Back</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
+					Dr. Alban</td>
+					<td class="issuecontent">Sing Hallelujah!</td></tr>
+				<tr><td class="issuetitle" colspan="3">Side B</td>
+					</tr>
+				<tr><td class="issuehdr" style="width: 10px">#</td>
+					<td class="issuehdr">Artist</td>
+					<td class="issuehdr">Name</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">1</td><td class="issuecontent">
+					The Shadows</td>
+					<td class="issuecontent">Chi Mai</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">2</td><td class="issuecontent">
+					Ventura</td>
+					<td class="issuecontent">Love Story </td></tr>
+				<tr><td class="issuecontent" style="width: 10px">3</td><td class="issuecontent">
+					Vienna Symphonic Orchestra Project</td>
+					<td class="issuecontent">Phantom of the Opera</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">4</td><td class="issuecontent">
+					Vanghelis</td>
+					<td class="issuecontent">La Petite Fille De La Mer</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">5</td><td class="issuecontent">
+					Geova Eucarin</td>
+					<td class="issuecontent">Exodus (main theme)</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">6</td><td class="issuecontent">
+					Francisco Garcia</td>
+					<td class="issuecontent">What's a Woman</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">7</td><td class="issuecontent">
+					Richard Clayderman</td>
+					<td class="issuecontent">Für Elise</td></tr>
+				<tr><td class="issuecontent" style="width: 10px">8</td><td class="issuecontent">
+					The London Starlight Orchestra</td>
+					<td class="issuecontent">Lilly Was Here</td></tr>
+				</table>
+			</td></tr>
+			<tr class="row">
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape212"/></td>
+			<td class="content" style="width:21px">212</td>
+			<td class="content" child="tape212" style="width: 100%">BASF C90</td>
+			<td class="ferric">ferric</td>
+		</tr>
+			<tr class="collapsed" id="tape212"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1306,12 +1456,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue17"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape211"/></td>
 			<td class="content" style="width:21px">211</td>
-			<td class="content" child="issue17" style="width: 100%">Goldstar HP60</td>
+			<td class="content" child="tape211" style="width: 100%">Goldstar HP60</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue17"><td colspan="4">
+			<tr class="collapsed" id="tape211"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1350,12 +1500,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue19"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape262"/></td>
 			<td class="content" style="width:21px">262</td>
-			<td class="content" child="issue19" style="width: 100%">Agfa c90 galbena</td>
+			<td class="content" child="tape262" style="width: 100%">Agfa c90 galbena</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue19"><td colspan="4">
+			<tr class="collapsed" id="tape262"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 					<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1432,12 +1582,12 @@ function changepic() {
 				</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue20"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape263"/></td>
 			<td class="content" style="width:21px">263</td>
-			<td class="content" child="issue20" style="width: 100%">Agfa superferro c90+6</td>
+			<td class="content" child="tape263" style="width: 100%">Agfa superferro c90+6</td>
 			<td class="ferric">ferric</td>
 		</tr>
-			<tr class="collapsed" id="issue20"><td colspan="4">
+			<tr class="collapsed" id="tape263"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side A</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1502,12 +1652,12 @@ function changepic() {
 					</table>
 			</td></tr>
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="issue22"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape269"/></td>
 			<td class="content" style="width:21px">269</td>
-			<td class="content" child="issue22" style="width: 100%">Basf chromdioxid c90</td>
+			<td class="content" child="tape269" style="width: 100%">Basf chromdioxid c90</td>
 			<td class="chrome">chrome</td>
 		</tr>
-			<tr class="collapsed" id="issue22"><td colspan="4">
+			<tr class="collapsed" id="tape269"><td colspan="4">
 				<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 					<tr><td colspan="3" class="issuetitle">Side 1</td></tr>
 						<tr><td class="issuehdr" style="width: 20px">#</td>
@@ -1595,7 +1745,7 @@ function changepic() {
 			</td></tr>
 			
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="tape273"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape273"/></td>
 			<td class="content" style="width:21px">273</td>
 			<td class="content" child="tape273" style="width: 955px">
 			Sony C90</td>
@@ -1791,7 +1941,7 @@ function changepic() {
 				</table>
 			</td></tr>
 <tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="tape273"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape273"/></td>
 			<td class="content" style="width:21px">289</td>
 			<td class="content" child="tape273" style="width: 955px">
 			Sony CHF 60 Michael Jackson - "Dangerous"</td>
@@ -1868,7 +2018,7 @@ function changepic() {
 			</td></tr>
 
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="tape290"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape290"/></td>
 			<td class="content" style="width:21px">290</td>
 			<td class="content" child="tape290" style="width: 955px">
 			Sony CHF 60 "36"</td>
@@ -1960,9 +2110,9 @@ function changepic() {
 			</td></tr>
 
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="tape294"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="tape294"/></td>
 			<td class="content" style="width:21px">294</td>
-			<td class="content" onclick="setsrc();" child="tape294" style="width: 955px">TDK D60</td>
+			<td class="content" child="tape294" style="width: 955px">TDK D60</td>
 			<td class="ferric">ferric</td>
 		</tr>
 			<tr class="collapsed" id="tape294"><td colspan="4">
@@ -2044,13 +2194,13 @@ function changepic() {
 			</td></tr>
 
 			<tr class="row">
-			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="issue109"/></td>
+			<td class="content" style="width:21px"><img alt="expand/collapse section" class="expandable" height="11" onclick="changepic()" src="../download/Plus.gif" width="9" child="extramus"/></td>
 			<td class="content" style="width:21px">N/A</td>
-			<td class="content" child="issue109" style="width: 955px">
+			<td class="content" child="extramus" style="width: 955px">
 			extra melodies</td>
 			<td class="content">music</td>
 		</tr>
-			<tr class="collapsed" id="issue109"><td colspan="4">
+			<tr class="collapsed" id="extramus"><td colspan="4">
 			<table width="97%" border="1" style="border-color:#dcdcdc" rules="cols" class="issuetable">
 				<tr><td class="issuecontent" style="width: 10px">9</td><td class="issuecontent">
 					Renée &amp; Renato</td><td class="issuecontent">Save Your Love</td></tr>
@@ -2084,14 +2234,14 @@ function changepic() {
 			<tr class="row">
 			<td class="content" style="width:21px; height: 21px;"><img alt="expand/collapse section" class="expandable" height="11" onclick="setsrc(); changepic()" src="../download/Plus.gif" width="9" child="issue110"/></td>
 			<td class="content" style="width:21px; height: 21px;">N/A</td>
-			<td class="content" onclick="setsrc();" child="issue110" style="width: 955px; height: 21px;">Masura-pentru-masura-Greutatea-si-energia - Google Drive (requires @csantipa account)</td>
+			<td class="content" onclick="setsrc('mov', 'https://drive.google.com/file/d/1rVO5p0Si97nHuxdZvbHhldUjNTPuSOTM/view?usp=sharing'); setsrc('smallview', 'index.html')" child="issue110" style="width: 955px; height: 21px;">Masura-pentru-masura-Greutatea-si-energia - Google Drive (requires @csantipa account)</td>
 			<td class="content" style="height: 21px">movie</td>
 		</tr>
 			<tr class="collapsed" id="issue110"><td colspan="4">
 
-					<iframe id="mov" style="width:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allowfullscreen allow="autoplay" name="film">
+					<iframe id="mov" style="width:100%; height:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allowfullscreen allow="autoplay" name="film">
 					web browser does not support iframes or https certificates, or you are not loggen in to an @csantipa account</iframe><br/>
-					<iframe id="smallview" style="width:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allow="autoplay" name="I2" id="I1">
+					<iframe id="smallview" style="width:100%; aspect-ratio:4/3; max-width:640px; max-height:480px" allow="autoplay" name="I2">
 					web browser does not support iframes or https certificates, or you are not loggen in to an @csantipa account</iframe>
 			</td></tr>
 		<tr valign="top">

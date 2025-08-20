@@ -9,7 +9,7 @@
 <title>Home page</title>
 <script src="dark.js"></script>
 <script language="javascript" type="text/javascript">
-var darkmode = getCookie("dark");
+var darkmode = getTheme();
 if (darkmode == "yes"){
 	document.getElementById("dark").href="_themes/blends_dark/blen1011-1250.css";
 }
@@ -70,39 +70,44 @@ function MSFPpreload(img)
   var a=new Image(); a.src=img; return a; 
 }
 // --></script><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav1n=MSFPpreload("images/buttons/chrome urls.html_cmp_corporat010_vbtn.gif"); MSFPnav1h=MSFPpreload("images/buttons/chrome urls.html_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="chrome%20urls.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src"><img alt="Chrome urls" border="0" height="40" name="MSFPnav1" src="images/buttons/chrome%20urls.html_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav2n=MSFPpreload("images/buttons/ext1007_cmp_corporat010_vbtn.gif"); MSFPnav2h=MSFPpreload("images/buttons/ext1007_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="http://www.google.com/" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src"><img alt="Google" border="0" height="40" name="MSFPnav2" src="images/buttons/ext1007_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav3n=MSFPpreload("images/buttons/index-old.htm_cmp_corporat010_vbtn.gif"); MSFPnav3h=MSFPpreload("images/buttons/index-old.htm_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="index-old.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src"><img alt="Search" border="0" height="40" name="MSFPnav3" src="images/buttons/index-old.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav4n=MSFPpreload("images/buttons/user_registration.htm_cmp_corporat010_vbtn.gif"); MSFPnav4h=MSFPpreload("images/buttons/user_registration.htm_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="account/user_registration.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src"><img alt="Register" border="0" height="40" name="MSFPnav4" src="images/buttons/user_registration.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav5n=MSFPpreload("images/buttons/games.html_cmp_corporat010_vbtn.gif"); MSFPnav5h=MSFPpreload("images/buttons/games.html_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="games/index.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src"><img alt="Games" border="0" height="40" name="MSFPnav5" src="images/buttons/games.html_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav6n=MSFPpreload("images/buttons/MINECRAFT.htm_cmp_corporat010_vbtn.gif"); MSFPnav6h=MSFPpreload("images/buttons/MINECRAFT.htm_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="MINECRAFT.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src"><img alt="MINECRAFT.htm" border="0" height="40" name="MSFPnav6" src="images/buttons/MINECRAFT.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
-if(MSFPhover) { MSFPnav7n=MSFPpreload("images/buttons/shop.html_cmp_corporat010_vbtn.gif"); MSFPnav7h=MSFPpreload("images/buttons/shop.html_cmp_corporat010_vbtn_a.gif"); }
-// --></script><a href="shop/index.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src"><img alt="Shop" border="0" height="40" name="MSFPnav7" src="images/buttons/shop.html_cmp_corporat010_vbtn.gif" width="140"></a><!--webbot bot="Navigation" endspan i-checksum="48600" -->
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/chrome urls.html_cmp_corporat010_vbtn.gif"); MSFPnav1h=MSFPpreload("_derived/chrome urls.html_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="chrome%20urls.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src"><img alt="Chrome urls" border="0" height="40" name="MSFPnav1" src="_derived/chrome%20urls.html_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/ext1007_cmp_corporat010_vbtn.gif"); MSFPnav2h=MSFPpreload("_derived/ext1007_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="http://www.google.com/" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src"><img alt="Google" border="0" height="40" name="MSFPnav2" src="_derived/ext1007_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/index-old.htm_cmp_corporat010_vbtn.gif"); MSFPnav3h=MSFPpreload("_derived/index-old.htm_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="index-old.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src"><img alt="Search" border="0" height="40" name="MSFPnav3" src="_derived/index-old.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("account/_derived/user_registration.htm_cmp_corporat010_vbtn.gif"); MSFPnav4h=MSFPpreload("account/_derived/user_registration.htm_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="account/user_registration.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src"><img alt="Register" border="0" height="40" name="MSFPnav4" src="account/_derived/user_registration.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("games/_derived/index.html_cmp_corporat010_vbtn.gif"); MSFPnav5h=MSFPpreload("games/_derived/index.html_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="games/index.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src"><img alt="Games" border="0" height="40" name="MSFPnav5" src="games/_derived/index.html_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/MINECRAFT.htm_cmp_corporat010_vbtn.gif"); MSFPnav6h=MSFPpreload("_derived/MINECRAFT.htm_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="MINECRAFT.htm" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src"><img alt="MINECRAFT.htm" border="0" height="40" name="MSFPnav6" src="_derived/MINECRAFT.htm_cmp_corporat010_vbtn.gif" width="140"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("shop/_derived/index.html_cmp_corporat010_vbtn.gif"); MSFPnav7h=MSFPpreload("shop/_derived/index.html_cmp_corporat010_vbtn_a.gif"); }
+// --></script><a href="shop/index.html" language="JavaScript" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src"><img alt="Shop" border="0" height="40" name="MSFPnav7" src="shop/_derived/index.html_cmp_corporat010_vbtn.gif" width="140"></a><!--webbot bot="Navigation" endspan i-checksum="48600" -->
 <p><a href="download/index.htm">Download</a></p>
 <p><a href="basic_view/index.html">Basic mode</a></p>
 <p><a href="photo_gallery.htm">Photo gallery</a></p>
 				<td valign="top" height="52">
 				<!-- MSCellType="ContentHead2" -->
 				
-<marquee behavior="slide" height="30"><font size="5">Home page</font></marquee></td>
+<font size="5"><marquee behavior="slide" height="30">Home page</marquee></font></td>
 			</tr>
 			<tr>
 				<td style="border-width: 1px;" valign="top" height="607" width="727">
 				<!-- MSCellType="ContentBody" -->
 				<table>
 					<tr>
-						<td class="UserToolbar" style="text-align:center">Attention!
-						</td>
+						<td class="UserToolbar" style="text-align:center">Happy 
+						1000th commit!</td>
 					</tr>
 					<tr>
-						<td>All users from &quot;<a href="http://htmlpreview.github.io/?http://raw.githubusercontent.com/digitix08/repository/main/index.htm">htmlpreview.github.io/?http://raw.githubusercontent.com/digitix08/repository/main/index.htm</a>&quot;&nbsp; 
-						will be automatically redirected to &quot;<a href="http://digitix08.github.io/repository">digitix08.github.io/repository</a>&quot;</td>
+						<td style="height: 38px">To celebrate this repository reaching the 1000th 
+						commit (or at least 1000th workflow), I've decided to 
+						move this site to the root of
+						<a href="http://digitix08.github.io">digitix08.github.io</a>, 
+						out from the &quot;repository&quot; area.<br>Just so you know, 
+						this area (<a href="http://digitix08.github.io/repository/">http://digitix08.github.io/repository/</a>) 
+						will no longer be updated</td>
 					</tr>
 				</table>
 

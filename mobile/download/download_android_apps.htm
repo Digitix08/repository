@@ -12,7 +12,7 @@
 		path = path.substring(7);
 		window.location = path;
 	}
-	var darkmode = getCookie("dark");
+	var darkmode = getTheme()
   	if (darkmode == "yes")
   	document.getElementById("dark").href="../css/dark.css";
 	function FP_swapImg() {//v1.0

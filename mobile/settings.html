@@ -21,7 +21,7 @@ else {
 	window.location = root + path;
 }
 function checkCookie() {
-	var darkmode = getCookie("dark");
+	var darkmode = getTheme();
 	if (darkmode == "yes"){
 	  	document.getElementById("dark").href="css/dark.css";
 	  	var elements = document.getElementsByName("lnk");
@@ -30,159 +30,74 @@ function checkCookie() {
 		}
 	}
 }
+function setval(date){
+	var darksel = document.getElementsByName("Theme");
+	var autosel = document.getElementsByName("auto");
+	for (var i = 0; i < darksel.length; i++) {
+		//console.log("4");
+		if (darksel[i].checked){
+			var darkmode = darksel[i].value;
+			console.log(darkmode);
+			if (darkmode == "no" || darkmode == "yes"){
+				setCookie("dark", darkmode, date);
+			}
+			else if (darkmode == "auto"){
+				for (var j = 0; j < autosel.length; j++)
+					if (autosel[j].checked){
+						var autoprev = autosel[j].value;
+						if (autoprev == "dark")setCookie("dark", "auto"+autoprev, date);
+						if (autoprev == "black")setCookie("dark", "auto"+autoprev, date);
+					}
+			}
+		}
+	}
+}
 function makeCookie() {
+	var datesel = document.getElementsByName("Exp");
 	var accept = getCookie("prompt");
 	if(accept == "accept"){
-		var darksel = document.getElementsByName("Theme");
-		var datesel = document.getElementsByName("Exp");
-		var autosel = document.getElementsByName("auto");
 		var date = new Date();
 		console.log(date);
 		for (var i = 0; i < datesel.length; i++) {
 			if (datesel[i].checked){
-			console.log("2");
+			//console.log("2");
 				var expdate = datesel[i].value;
                 if(expdate == "default"){
-				console.log("3");
-					for (var i = 0; i < darksel.length; i++) {
-					console.log("4");
-						if (darksel[i].checked){
-							var darkmode = darksel[i].value;
-							console.log(darkmode);
-							if (darkmode == "no"){
-								setCookie("dark", darkmode, 365);
-							}
-							else if (darkmode == "yes"){
-								setCookie("dark", darkmode, 365);
-							}
-							else if (darkmode == "auto"){
-										
-							}
-						}
-					}
+					//console.log("3");
+					setval(365);
                 }
                 else if (expdate == "date"){
 					var input = document.getElementById("Date").value
 					var dateEntered = new Date(input);
 					console.log(input); //e.g. 2024-11-13
 					console.log(dateEntered); //e.g. Fri Nov 13 2024 00:00:00 GMT+0000 (GMT Standard Time)
-					console.log("3");
-					for (var i = 0; i < darksel.length; i++) {
-					console.log("4");
-						if (darksel[i].checked){
-							var darkmode = darksel[i].value;
-							console.log(darkmode);
-							if (darkmode == "no"){
-								setCookie("dark", darkmode, "actualdate+"+dateEntered);
-							}
-							else if (darkmode == "yes"){
-								setCookie("dark", darkmode, "actualdate+"+dateEntered);
-							}
-							else if (darkmode == "auto"){
-										
-							}
-						}
-					}
+					//console.log("3");
+					setval("actualdate+"+dateEntered);
                 }
                 else if (expdate == "altdate"){
 					var value = document.getElementById("Select1").value
 					console.log(value);
 						if (value == "day"){
-							console.log("3");
-							for (var i = 0; i < darksel.length; i++) {
-								console.log("4");
-								if (darksel[i].checked){
-									var darkmode = darksel[i].value;
-									console.log(darkmode);
-									if (darkmode == "no"){
-										setCookie("dark", darkmode, 1);
-									}
-									else if (darkmode == "yes"){
-										setCookie("dark", darkmode, 1);
-									}
-									else if (darkmode == "auto"){
-	
-									}
-								}
-							}
+							//console.log("3");
+							setval(1);
 						}
 						else if (value == "week"){
-							console.log("3");
-							for (var i = 0; i < darksel.length; i++) {
-							console.log("4");
-								if (darksel[i].checked){
-									var darkmode = darksel[i].value;
-									console.log(darkmode);
-									if (darkmode == "no"){
-										setCookie("dark", darkmode, 7);
-									}
-									else if (darkmode == "yes"){
-										setCookie("dark", darkmode, 7);
-									}
-									else if (darkmode == "auto"){
-									
-									}
-								}
-							}
+							//console.log("3");
+							setval(7);
 						}
 						else if (value == "month"){
-							console.log("3");
-							for (var i = 0; i < darksel.length; i++) {
-							console.log("4");
-								if (darksel[i].checked){
-									var darkmode = darksel[i].value;
-									console.log(darkmode);
-									if (darkmode == "no"){
-										setCookie("dark", darkmode, 30);
-									}
-									else if (darkmode == "yes"){
-										setCookie("dark", darkmode, 30);
-									}
-									else if (darkmode == "auto"){
-										
-									}
-								}
-							}
+							//console.log("3");
+							setval(30);
 						}
 						else if (value == "year"){
-							console.log("3");
-							for (var i = 0; i < darksel.length; i++) {
-							console.log("4");
-								if (darksel[i].checked){
-									var darkmode = darksel[i].value;
-									console.log(darkmode);
-									if (darkmode == "no"){
-										setCookie("dark", darkmode, 365);
-									}
-									else if (darkmode == "yes"){
-										setCookie("dark", darkmode, 365);
-									}
-									else if (darkmode == "auto"){
-										
-									}
-								}
-							}
+							//console.log("3");
+							setval(365);
 						}
 						else if (value == "9999"){
-							console.log("3");
-								const dexp = new Date('31 dec 9999');
-								console.log(dexp);
-								for (var i = 0; i < darksel.length; i++) {
-								console.log("4");
-								if (darksel[i].checked){
-									var darkmode = darksel[i].value;
-									console.log(darkmode);
-									if (darkmode == "no"){
-										setCookie("dark", darkmode, "actualdate+"+dexp);
-									}
-									else if (darkmode == "yes"){
-										setCookie("dark", darkmode, "actualdate+"+dexp);
-									}
-									else if (darkmode == "auto"){
-										
-									}
-								}
-							}
+							//console.log("3");
+							var dexp = new Date('31 dec 9999');
+							console.log(dexp);
+							setval("actualdate"+dexp);
 						}
                 }
 			}
@@ -203,12 +118,12 @@ function prevtheme(){
 				document.getElementById("dark").href="css/dark.css";
 			}
 			else if (darkprev == "oled"){
-				alert("oled dark is not available")
+				alert("oled dark is not available");
 				document.getElementById("dark").href="css/black.css";
 			}
 			else if (darkprev == "auto"){
-				let mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
-				let isDarkMode = mediaQueryObj.matches;
+				var mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
+				var isDarkMode = mediaQueryObj.matches;
 				if (isDarkMode){
 					for (var j = 0; j < autosel.length; j++) {
 					if (autosel[j].checked){
@@ -227,8 +142,8 @@ function prevtheme(){
 	}
 }
 function eraseCookie(name){
-	setCookie(name, " ", "actualdate+"+"Thu Jan 01 1970 00:00:00 UTC")
-	window.location.reload()
+	setCookie(name, " ", "actualdate+"+"Thu Jan 01 1970 00:00:00 UTC");
+	window.location.reload();
 }
 function getLogStatus(){
 	var user = getCookie("user");var login = getCookie("login");if(user != null&&user != ""&&login==1){document.
@@ -291,8 +206,8 @@ function getLogStatus(){
 </table>
 <h2>Theme &amp; Aspect</h2>
 <h3>Theme setting</h3>
-<span style="font-size: 80%">&nbsp;
-<table class="auto-style2" style="width: 90%">
+<div style="height:10px"></div>
+<table class="auto-style2" style="width: 100%; font-size: 80%">
 	<tr class="header">
 		<td colspan="2" style="border-top-color: #C0C0C0; border-top-width: 2px">
 		Theme mode</td>
@@ -324,7 +239,9 @@ function getLogStatus(){
 		<td class="auto-style4">Auto mode</td>
 	</tr>
 	<tr>
-		<td class="auto-style3"></td>
+		<td class="auto-style3" style="width:110px">*Auto mode<br />
+				only works on<br />
+				some browsers!</td>
 		<td class="auto-style5">
 		<input checked="checked" name="auto" type="radio" value="dark" />Dark<br />
 		<input name="auto" type="radio" value="oled" />Oled </td>
@@ -339,7 +256,6 @@ function getLogStatus(){
 		<input name="preview" onclick="prevtheme();" type="button" value="Preview" /></span><input name="set" onclick="makeCookie();" type="button" value="Apply" /></span></span></td>
 	</tr>
 </table>
-</span>
 <h2>Login</h2>
 	<p><label id="logstatus">Not logged in. Go <a href="account/login.html?redir=../settings.html">here</a> to login</label></p>
 	<p id="LogOut" style="display:none">

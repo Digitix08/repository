@@ -14,7 +14,7 @@
 <script src="../dark.js"></script>
 <script src="../anchor.js"></script>
 <script language="javascript" type="text/javascript">
-var darkmode = getCookie("dark");
+var darkmode = getTheme()
 if (darkmode == "yes"){
 	document.getElementById("dark").href="../css/dark.css";
 }
@@ -29,6 +29,40 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	window.location = root + "mobile/" + path;
 }
 </script>
+<style type="text/css">
+.rec{
+	width:333px;
+}
+img.rec{
+	height:208px;
+}
+div.rec{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: #F47820;
+	z-index: 1;
+}
+div.element{
+	 position: relative;
+	 display: inline-block;
+}
+.element{
+	 max-height: 208px;
+	 max-width: 333px;
+	 width: 100%
+}
+.text{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: #F47820;
+	max-width: 333px;
+	width: 100%;
+	z-index: 1;
+	display: inline-block
+}
+</style>
 <!-- #EndEditable -->
 </head>
 
@@ -58,29 +92,29 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		<h1 lang="en-us">Inter<em>shop</em></h1>
 		<h2>Featured products</h2>
 		<div id="featured" style="overflow: scroll">
-			<table style="width: 1200px">
+			<table style="width: 1000px">
 				<tr>
 					<td id="featured1" lang="en-us">
 					<div id="feat1" style="position: relative">
 						<a href="smartkey_mobile/index.html">
-						<img alt="Tastatura SmartKeyMobile" height="250" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" width="400" /></a>
-						<div id="text1" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+						<img alt="Tastatura SmartKeyMobile" class="rec" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" /></a>
+						<div id="text1" class="rec">
 							Tastatura SmartKeyMobile</div>
 					</div>
 					</td>
 					<td id="featured2" lang="en-us">
 					<div id="feat2" style="position: relative">
 						<a href="#">
-						<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
-						<div id="text2" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+						<img alt="no image :(" class="rec" src="error.jpg" /></a>
+						<div id="text2" class="rec">
 							no element :(</div>
 					</div>
 					</td>
 					<td id="featured3" lang="en-us">
-					<div id="feat3" style="position: relative;">
+					<div id="feat3" style="position: relative">
 						<a href="#">
-						<img alt="no image :(" height="250" src="error.jpg" width="400" /></a>
-						<div id="text3" style="position: absolute; left: 0px; bottom: 0px; background-color: #F47820; width: 400px; z-index: 1;">
+						<img alt="no image :(" class="rec" src="error.jpg" /></a>
+						<div id="text3" class="rec">
 							no element :(</div>
 					</div>
 					</td>
@@ -88,58 +122,58 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 			</table>
 		</div>
 		<h2>All products</h2>
-		<div id="prod1" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod1" class="element">
 			<a href="smartkey_mobile/index.html">
-			<img alt="Tastatura SmartKeyMobile" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text10" style="position: absolute; bottom: 0px; left: 0px; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1;">
+			<img alt="Tastatura SmartKeyMobile" src="smartkey_mobile/smart_key_mobile_keyboard_prev.jpg" class="element" /></a>
+			<div id="text10" class="text">
 				Tastatura SmartKeyMobile</div>
 		</div>
-		<div id="prod2" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod2" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text11" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text11" class="text">
 				no element :(2</div>
 		</div>
-		<div id="prod3" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod3" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text12" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text12" class="text">
 				no element :(3</div>
 		</div>
-		<div id="prod4" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod4" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text4" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text4" class="text">
 				no element :(4</div>
 		</div>
-		<div id="prod5" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod5" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text5" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text5" class="text">
 				no element :(5</div>
 		</div>
-		<div id="prod6" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod6" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text6" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text6" class="text">
 				no element :(6</div>
 		</div>
-		<div id="prod7" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod7" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text7" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text7" class="text">
 				no element :(7</div>
 		</div>
-		<div id="prod8" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%">
+		<div id="prod8" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text8" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text8" class="text">
 				no element :(8</div>
 		</div>
-		<div id="prod9" style="position: relative; display: inline-block; max-height: 250px; max-width: 400px; width: 100%; width: 100%">
+		<div id="prod9" class="element">
 			<a href="#">
-			<img alt="no image :(" src="error.jpg" style="max-height: 250px; max-width: 400px; width: 100%" /></a>
-			<div id="text9" style="position: absolute; bottom: 0; left: 0; background-color: #F47820; max-width: 400px; width: 100%; z-index: 1; display: inline-block">
+			<img alt="no image :(" src="error.jpg" class="element" /></a>
+			<div id="text9" class="text">
 				no element :(9</div>
 		</div>
 		<p></p>

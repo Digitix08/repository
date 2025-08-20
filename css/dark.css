@@ -35,7 +35,7 @@ P
 	bottom: 0px;
 	background-color: #606060;
 }
-select{
+input[type=button], input[type=submit], input[type=reset], button, select{
 	BACKGROUND-COLOR:#383636;
 	color: #ffffff;
 	BORDER-BOTTOM: #000000 2px solid;
@@ -43,7 +43,7 @@ select{
 	BORDER-RIGHT: #000000 2px solid;
 	BORDER-TOP: #545454 2px solid;
 }
-select:active{
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active, button:active, select:active{
 	BACKGROUND-COLOR:#383636;
 	color: #ffffff;
 	BORDER-BOTTOM: #545454 2px solid;
@@ -51,23 +51,7 @@ select:active{
 	BORDER-RIGHT: #545454 2px solid;
 	BORDER-TOP: #000000 2px solid;
 }
-input[type=button]{
-	BACKGROUND-COLOR:#383636;
-	color: #ffffff;
-	BORDER-BOTTOM: #000000 2px solid;
-	BORDER-LEFT: #545454 2px solid;
-	BORDER-RIGHT: #000000 2px solid;
-	BORDER-TOP: #545454 2px solid;
-}
-input[type=button]:active{
-	BACKGROUND-COLOR:#383636;
-	color: #ffffff;
-	BORDER-BOTTOM: #545454 2px solid;
-	BORDER-LEFT: #000000 2px solid;
-	BORDER-RIGHT: #545454 2px solid;
-	BORDER-TOP: #000000 2px solid;
-}
-input[type=text]{
+input[type=text], input[type=date], input[type=password]{
 	BACKGROUND-COLOR:#383636;
 	color: #ffffff;
 	BORDER-BOTTOM: #545454 2px solid;
@@ -193,7 +177,7 @@ h1.menu {
 	padding-bottom: 8px;
 	BACKGROUND-COLOR: #663300;
 }
-a.menu, a.menucurrent, a.shopmenu, a.shopmenucurrent{
+a.menu, a.menucurrent, a.shopmenu, a.shopmenucurrent, a.menu:visited, a.menucurrent:visited, a.shopmenu:visited, a.shopmenucurrent:visited{
 	background-size: 100% 100%;
 	width:150px;
 	color:#FFFFFF;

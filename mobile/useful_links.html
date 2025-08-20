@@ -6,12 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link id="dark" rel="stylesheet" href="css/style.css"/>
 <title>Useful links</title>
-<script src="../dark.js"></script>
+<script src="../dark.js"></script><script src="../anchor.js"></script>
 <script language="javascript" type="text/javascript">
-  	var darkmode = getCookie("dark");
-	var color = 1;
-  	if (darkmode == "yes")
-  	document.getElementById("dark").href="css/dark.css";
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+else {
+	var host = window.location.hostname;
+	var path = window.location.pathname;
+	var root = rootcheck();
+	path = path.substring(root.length, path.length);
+	root = root.substring(0, root.length - 7)
+	console.log(root);
+	console.log(path);
+	window.location = root + path;
+}
+var darkmode = getTheme()
+var color = 1;
+if (darkmode == "yes")
+document.getElementById("dark").href="css/dark.css";
 function checkCookie(){
 	if (darkmode == "yes"){
 		var elements = document.getElementsByName("lnk");

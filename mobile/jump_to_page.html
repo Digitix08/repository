@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -7,16 +7,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Jump to page</title>
 <link id="dark" href="css/style.css" rel="stylesheet" type="text/css" />
-<script src="../dark.js"></script>
+<script src="../dark.js"></script><script src="../anchor.js"></script>
 <script src="../sitemap.js"></script>
 <script>
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
 	else {
+		var host = window.location.hostname;
 		var path = window.location.pathname;
-		path = path.substring(7);
-		window.location = path;
+		var root = rootcheck();
+		path = path.substring(root.length, path.length);
+		root = root.substring(0, root.length - 7)
+		console.log(root);
+		console.log(path);
+		window.location = root + path;
 	}
-	var darkmode = getCookie("dark");
+	var darkmode = getTheme()
   	if (darkmode == "yes")
   	document.getElementById("dark").href="css/dark.css";
   	function checkCookie() {
@@ -107,15 +112,16 @@ function FP_getObjectByID(id,o) {//v1.0
 <p id="selectarea">
 	<select id="Select1" onchange="dropdownchange()">
 	<option selected="selected">/</option>
-	<option>account/</option>
-	<option>basic_view/</option>
-	<option>download/</option>
-	<option>games/</option>
-	<option>index-casete/</option>
-	<option>mobile/</option>
-	<option>school/</option>
-	<option>shop/</option>
-	<option>weird-ram/</option>
+	<option selected="selected" value="/">/</option>
+	<option value="account/">account/</option>
+	<option value="basic_view/">basic_view/</option>
+	<option value="download/">download/</option>
+	<option value="games/">games/</option>
+	<option value="index-casete/">index-casete/</option>
+	<option value="mobile/">mobile/</option>
+	<option value="school/">school/</option>
+	<option value="shop/">shop/</option>
+	<option value="weird-ram/">weird-ram/</option>
 	</select>
 	<select id="Select2" onchange="subfolder()">
 	<option></option>
