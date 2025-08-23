@@ -32,7 +32,7 @@ function checkPrompt() {
 	}
 };
 function getTheme(){
-	var darkmode = getTheme();
+	var darkmode = getCookie("dark");
 	if (darkmode == "yes")return "yes";
 	if (darkmode == "black")return "black";
 	if (darkmode.indexOf("auto")!=-1 && typeof window.matchMedia != "undefined"){
